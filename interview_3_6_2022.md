@@ -1,4 +1,6 @@
 #Tại sao java là nn độc lập nền tảng
+
+
 jvm giúp cho java chạy tốt các nền tảng khác nhau
 -Tại sao lại dùng bản jdk 8 
 Là vì tính ổn định cần khi phát triển sản phẩm
