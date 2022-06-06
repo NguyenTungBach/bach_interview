@@ -36,7 +36,7 @@ cùng 1 phương thức đó nhưng được thể hiện nhiều cách khác*
 - Khi 2 thằng gọi đến nhau thì nó sẽ chỉ là 1(defaul là v). Nếu muốn tách ra thì sẽ có funcion để tách
 Khi tương tác vs db nếu lỗi giữa chùng thì sẽ rollback lại
 
-**VD: Khi insert 100 nhưng nếu đến 10 lỗi thì sẽ quay lại từ đầu(hoặc vào all hoặc ko vào)**
+**VD: Khi insert 100 nhưng nếu đến 5 lỗi thì sẽ quay lại từ đầu(hoặc vào all hoặc ko vào). Tức là 1 là 100 thằng vào cùng 1 lúc còn 2 không có thằng nào vào vì lỗi**
 
 ### 8.Sự khác nhau giữa == và equal
 
@@ -55,10 +55,13 @@ Khi tương tác vs db nếu lỗi giữa chùng thì sẽ rollback lại
 
 ### 11.Kiểu dữ liệu Enum
 
-- Giới hạn lựa chọn
+- Giới hạn giá trị sử dụng, tránh những giá trị không mong muốn VD status
 
 ### 12.Reflection trong java
 
+- Giúp xem tất cả thông tin trong class. Vấn đề nằm ở chỗ ta có thể nhìn sâu vào trong class mà ko cần biết class đó có gì
+**VD: khi ta viết 1 class mà dành cho tất cả các thể loại class khác nhau**
+**VD: Nếu ta viết 1 hàm save mà nó hoạt **
 - (Ko còn vì dùng framework)(autowired)(nguy hiểm, gây những lỗi ko xác định)
 Vd: khi extend JpaRepos có thể truyền vào dù là cus, std
 - Là một cách nhìn lại tất cả tt trong class
