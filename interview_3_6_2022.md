@@ -61,7 +61,7 @@ Khi tương tác vs db nếu lỗi giữa chùng thì sẽ rollback lại
 
 - Giúp xem tất cả thông tin trong class. Vấn đề nằm ở chỗ ta có thể nhìn sâu vào trong class mà ko cần biết class đó có gì
 **VD: khi ta viết 1 class mà dành cho tất cả các thể loại class khác nhau**
-**VD điển hình là @Autowire **
+**VD điển hình là @Autowire**
 - (Ko còn vì dùng framework)(autowired)(nguy hiểm, gây những lỗi ko xác định)
 Vd: khi extend JpaRepos có thể truyền vào dù là cus, std
 - Là một cách nhìn lại tất cả tt trong class
@@ -70,7 +70,7 @@ Vd: khi extend JpaRepos có thể truyền vào dù là cus, std
 ### 13.Generate type
 
 - Là tham số hóa kiểu dữ liệu
-**VD: array list **
+**VD: array list**
 
 ### 14.Spring profile
 - Được sử dụng để test
