@@ -24,7 +24,7 @@ cùng 1 phương thức đó nhưng được thể hiện nhiều cách khác*
 
 ### 5.Heap, stack trong java
 
-- heap(lỗi: out of memory: tràn bộ nhớ): chứa các kiểu dữ liệu **obj**  
+- heap(lỗi: out of memory: tràn bộ nhớ, xảy ra khi tạo new đối tượng không đủ): chứa các kiểu dữ liệu **object**  
 - stack(stack overflow): nhỏ hơn heap, thường lưu kiểu dữ liệu nguyên thủy
 
 ### 6.Luồng
@@ -61,37 +61,50 @@ Khi tương tác vs db nếu lỗi giữa chùng thì sẽ rollback lại
 
 - Giúp xem tất cả thông tin trong class. Vấn đề nằm ở chỗ ta có thể nhìn sâu vào trong class mà ko cần biết class đó có gì
 **VD: khi ta viết 1 class mà dành cho tất cả các thể loại class khác nhau**
-**VD: Nếu ta viết 1 hàm save mà nó hoạt **
+**VD điển hình là @Autowire **
 - (Ko còn vì dùng framework)(autowired)(nguy hiểm, gây những lỗi ko xác định)
 Vd: khi extend JpaRepos có thể truyền vào dù là cus, std
 - Là một cách nhìn lại tất cả tt trong class
 - Nhìn sâu vào class mà ko cần bt là class j
 
 ### 13.Generate type
+
 - Là tham số hóa kiểu dữ liệu
 **VD: array list **
 
-### 14.Spring profile (Đang cần xem lại)
-- Db:
-- Spring: 
-- Var aguiment: có thể xử lý 1 hay nhiều chuỗi cx đc
-Có thể cho không giới hạn vào
+### 14.Spring profile
+- Được sử dụng để test
 
-### 15.fail-fast và fail-safe (Đang cần xem lại)
-- khi sửa mà sinh ra lỗi thì là lỗi ff fs. Khi làm việc với các phần tử có thể xảy ra lỗi
+### 15.fail-fast và fail-safe
+
+- Là quá trình lỗi xảy ra khi mà ta làm việc với tập hợp các phần tử mà ta sửa hoặc xóa các phần tử bên trong
 
 ### 16.Builer design pattern
-- Thay vì làm việc trên 1 dòng lệnh thì sẽ làm trên nhiều dòng
 
-### 17.Singertern design pattern
-- static, get instant đảm bảo obj đấy là duy nhất trong pr
+- Thay vì khởi tạo nhiều constructor **(VD: Student(int id, string name) hay Student(int id) )** với các tham số truyền vào, thì ta chỉ cần làm trên 1 dòng lệnh với **Builder**
+- Khi ta dùng **Builer** thì ta có thể sử dụng tạo ra obj đơn giản Thay vì làm việc trên nhiều dòng lệnh
+thì sẽ làm trên 1 dòng
+**VD: (.name.rollNumber.email.build()) => 1 Obj** 
+
+### 17.Singertern pattern
+
+- Đảm bảo đối tượng đó được tạo 1 lần duy nhất
+- Là những thằng như getConnection(), getInstant() luôn luôn là 1 hàm static để đảm bảo đối tượng đó được tạo 1 lần duy nhất
+**vd: if connection == null || connection.isClose() thì sẽ tạo mới, còn else thì trả về luôn connection**
 
 ### 18.List và mảng
+
 - List có thể mở rộng phần tử
 - mảng cố định các phần tử
 
 ### 19.Hashset
-- Put vào đó 2 int hay 2 string thì nó sẽ phân biệt đc là 1, nếu put vào 2 đối tg thì sẽ là 2
-- Class dùng thì phải compare to, vd 2 id giống nhau thì là 1 thg ob
-- Phải làm cho hashset phân biệt thế nào là 2 ob khác nhau
 
+- Hashset không thể phân biệt được các đối tượng.
+- Vấn đề với Hashset xảy ra khi ta **Add hay Put vào 1 số nguyên thì Add 2 số 5 thì sẽ thành 1 số 5 hay Add 2 Hùng thì sẽ trở thành 1 Hùng.**
+*Nhưng nếu ta add 2 đối tượng student có cùng mã id giống nhau thì nó sẽ tạo ra 2 đối tượng khác nhau 
+- Để giải quyết vấn đề phân biệt đối tượng khác nhau thì ta phải ghi đè lại 2 thằng là compareTo() và hashCode() 
+**VD: trong compareTo() chỉ cần 1 thằng rollNumber nó trùng nhau trong Student thì nó là 1 Student**
+
+### 20.Dấu ... trong function
+
+- Cho phép truyền bất cứ tham số nào vào. Tạo sự dynamic
