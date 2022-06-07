@@ -48,10 +48,10 @@ Khi tương tác vs db nếu lỗi giữa chùng thì sẽ rollback lại
 - Tính bao quát
 - Dễ bảo trì
 
-### 10.Tham chiếu và tham trị
+### 10.Tham chiếu và tham trị trong Java
 
-- Tham chiếu: truyền theo tham chiếu
-- Tham trị: truyền theo giá trị
+- Tham chiếu (pass by reference): truyền theo tham chiếu **(gọi đến địa chỉ của đối tượng, cụ thể ở đây là Reference Types (những biến có kiểu dữ liệu class, cứ new là sẽ tạo ra 1 vùng nhớ bên heap)**
+- Tham trị (pass by value): truyền theo giá trị **(xảy ra khi gọi đến 1 hàm và truyền giá trị cho hàm đó)**
 
 ### 11.Kiểu dữ liệu Enum
 
