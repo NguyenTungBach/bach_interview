@@ -7,7 +7,7 @@
 | Số lượng kế thừa | Interface được nhiều | Abstract classextend được 1  |
 | Access modifile | Mặc định access modifile của Interface là public | Abstract class có thể lựa chọn public, private, default, protect  |
 | Chứa bên trong | Interface chỉ chứa hàm | Abstract có chứa thuộc tính, function implementation **(function abtract)** , function chi tiết  |
-| Thường sử dụng | Interface thể hiện 100% tính trừu tượng nên hay dùng làm bản phác thảo giúp cho các tính năng ko bị thiếu | Abstract class thường dùng khi muốn các class con kế thừa đến có thể sử dụng chung hàm, ngoài ra cho phép chứa các thuộc tính giới hạn truy cập access modifile |
+| Thường sử dụng | Interface thể hiện 100% tính trừu tượng nên hay dùng làm bản phác thảo giúp cho các tính năng ko bị thiếu | Abstract class thường dùng khi muốn các class con kế thừa nó có thể sử dụng chung hàm, ngoài ra cho phép chứa các thuộc tính giới hạn truy cập access modifile |
 
 ## 2. Đa hình
 1 hành vi của đối tượng thì sẽ thể hiện theo nhiều cách khác nhau
