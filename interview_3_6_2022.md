@@ -47,6 +47,7 @@ Khi tương tác vs db nếu lỗi giữa chùng thì sẽ rollback lại
 
 - Tính bao quát
 - Dễ bảo trì
+
 **VD Ngày mai tôi muốn dùng trên thằng này ngày kia tôi muốn dùng thằng khác. Thì tôi phải dùng
 interface để khai báo. Vì lúc cần mình có thể dễ dàng thay đổi**
 
