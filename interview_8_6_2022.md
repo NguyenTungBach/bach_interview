@@ -59,11 +59,18 @@ Reload lại nó sẽ tải file jar về. Nếu có rồi thì nó sẽ ko tả
 **VD: **
 
 ## 10. Dependency injection (DI)
-
+***Lưu ý: Dependency là những thuộc tính từ class khác VD: private Student student; private Teacher teacher;***
 - Là một mẫu thiết kế phần mềm mà các đối tượng phụ thuộc sẽ được inject vào một lớp nào đó
 - Mục đích tạo ra nhằm giảm phụ thuộc giữa các Class với nhau 
-**VD: **
+- Có 3 dạng DI gồm:
+ - Constructor Injection: 
+ - Setter Injection:
+ - Interface Injection:
 
-## Mối quan hệ giữa Dependency in version, Inversion of Control và Dependency injection (mối liên hệ giữa ba câu 8,9,10)
+![](https://toidicodedao.files.wordpress.com/2015/09/ioc-and-mapper-in-c-8-638.jpg?w=474&zoom=5)
 
+## 11. Mối quan hệ giữa Dependency in version, Inversion of Control và Dependency injection (mối liên hệ giữa ba câu 8,9,10)
+- Dependency injection
 **VD: 
+
+
