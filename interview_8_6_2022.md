@@ -68,7 +68,7 @@ Reload lại nó sẽ tải file jar về. Nếu có rồi thì nó sẽ ko tả
  - Interface Injection:
 - Mục đích tạo ra nhằm giảm phụ thuộc giữa các Class với nhau
 
-**VD: tính giảm phụ thuộc thể hiện ở @autowire. Trong project làm về Api, mỗi lần gọi sẽ đến api thì các đối tượng trong project đó sẽ bị khởi tạo lại 1 lần. Để tránh việc khởi tạo new đối tượng nhiều lần như vậy thì @autowire sẽ giúp khởi tạo 1 lần trên project, giúp cho mỗi lần gọi đến api các đối tượng đã khởi tạo rồi sẽ không phải khởi tại lại. Từ đó làm giảm tính phụ thuộc giữa các class với nhau 
+**VD: tính giảm phụ thuộc thể hiện ở @autowire. Trong project làm về Api, mỗi lần gọi sẽ đến api thì các đối tượng trong project đó sẽ bị khởi tạo lại 1 lần. Để tránh việc khởi tạo new đối tượng nhiều lần như vậy thì @autowire sẽ giúp khởi tạo 1 lần trên project, giúp cho mỗi lần gọi đến api các đối tượng đã khởi tạo rồi sẽ không phải khởi tại lại. Từ đó làm giảm tính phụ thuộc giữa các class với nhau**
 
 ![](https://toidicodedao.files.wordpress.com/2015/09/ioc-and-mapper-in-c-8-638.jpg?w=474&zoom=5)
 
