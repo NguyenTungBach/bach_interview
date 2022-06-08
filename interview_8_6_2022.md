@@ -36,3 +36,34 @@ quản lý các Bean đó.
 - @Repository: chú thích cho class giúp truy vấn dữ liệu database
 - @Service: chú thích cho class xử lý logic
 - @Controller: chú thích class làm việc với Request
+
+## 6. Khác nhau giữa String và String Builder
+
+- String Khi tạo ra 1 biến thì nó là không thay đổi, kể cả khi ta có gán cho nó 1 giá trị khác
+hay cộng chuỗi vào nó thì bản chất nó sẽ chỉ tạo ra giá trị khác với giá trị được cộng dồn vào.
+
+**Nên khi nối chuỗi sẽ dùng String Builder. Nhưng chi khi nào nối nhiều chuỗi**
+
+## 7. Maven 
+
+- Dùng để lưu trữ các thư viện
+- Cách sử dụng: Vào file pom.xml copy thẻ dependency lấy từ trên mạng rồi đưa vào trong dependencies. 
+Reload lại nó sẽ tải file jar về. Nếu có rồi thì nó sẽ ko tải nữa
+
+## 8. Dependency in version
+- Là 1 nguyên lý thiết kế code 
+
+## 9. Inversion of Control (IoC)
+
+- Là 1 desgin partten
+**VD: **
+
+## 10. Dependency injection (DI)
+
+- Là một mẫu thiết kế phần mềm mà các đối tượng phụ thuộc sẽ được inject vào một lớp nào đó
+- Mục đích tạo ra nhằm giảm phụ thuộc giữa các Class với nhau 
+**VD: **
+
+## Mối quan hệ giữa Dependency in version, Inversion of Control và Dependency injection (mối liên hệ giữa ba câu 8,9,10)
+
+**VD: 
