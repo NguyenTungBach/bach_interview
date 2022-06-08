@@ -59,13 +59,16 @@ Reload lại nó sẽ tải file jar về. Nếu có rồi thì nó sẽ ko tả
 **VD: **
 
 ## 10. Dependency injection (DI)
+
 ***Lưu ý: Dependency là những thuộc tính từ class khác VD: private Student student; private Teacher teacher;***
-- Là một mẫu thiết kế phần mềm mà các đối tượng phụ thuộc sẽ được inject vào một lớp nào đó
-- Mục đích tạo ra nhằm giảm phụ thuộc giữa các Class với nhau 
+- Là một mẫu thiết kế phần mềm mà các đối tượng phụ thuộc sẽ được inject vào một lớp nào đó 
 - Có 3 dạng DI gồm:
  - Constructor Injection: 
  - Setter Injection:
  - Interface Injection:
+- Mục đích tạo ra nhằm giảm phụ thuộc giữa các Class với nhau
+
+**VD: tính giảm phụ thuộc thể hiện ở @autowire. Trong project làm về Api, mỗi lần gọi sẽ đến api thì các đối tượng trong project đó sẽ bị khởi tạo lại 1 lần. Để tránh việc khởi tạo new đối tượng nhiều lần như vậy thì @autowire sẽ giúp khởi tạo 1 lần trên project, giúp cho mỗi lần gọi đến api các đối tượng đã khởi tạo rồi sẽ không phải khởi tại lại. Từ đó làm giảm tính phụ thuộc giữa các class với nhau 
 
 ![](https://toidicodedao.files.wordpress.com/2015/09/ioc-and-mapper-in-c-8-638.jpg?w=474&zoom=5)
 
