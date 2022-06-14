@@ -77,4 +77,30 @@ Reload lại nó sẽ tải file jar về. Nếu có rồi thì nó sẽ ko tả
 - Dependency injection
 **VD: 
 
+## 12. Vai trò của queue trong microservice
+**VD: ta gửi quảng cáo hay tri ân cảm ơn cho 1000 khách hàng. 
+Theo thông thường thì ta sẽ dùng vòng lặp for cho mỗi khách hàng để gửi cái mail. Nhưng nếu đã gửi theo cách đó thì xác định cái biểu tượng thực hiện sẽ xoay xoay mãi, chưa kể bị lỗi.**
 
+- Từ đó Queue sinh ra là để giúp admin không phải chờ. Cụ thể ở đây gửi mail là luồng chính sẽ không thực hiện nữa. Chỉ hiểu đơn giản ở đây là tôi gửi 1 danh sách lưu trữ lại.
+
+**VD khác: Khi đi tìm việc, thay vì mình phải đi khắp nơi rồi chờ để phỏng vấn thì mình đi đến nơi trung gian là trung tâm việc làm để đăng tin rồi chờ đợi có người nhận**
+
+### => RabbitMQ là 1 thằng trung gian giúp tránh sự chờ đợi hay phụ thuộc. Dùng để giảm tải xử lý request dồn dập
+
+## 13. Các loại queue trong rabitMQ
+
+- 1 ) Fanout: one for all (1 cho tất cả). Ta gửi 1 thông báo, tất cả đều nhận
+
+- 2 ) Direct : gửi theo khóa định tuyến routing key. Giống mapping, ta gửi và kèm theo key là hello thì tất cả thằng nhận nào có key là hello sẽ nhận được (ĐÂY LÀ CÁI RabbitMQ mà mình hay dùng) 
+
+- 3 ) Topic: cách gửi cũng giống Direct thông qua routing key nhưng khác biệt ở chỗ là gửi đến những cái key có tên giống và  có *. 
+
+**VD: ta gửi thông qua key taxi.any.larger thì queue sẽ gửi đến những thằng key có tên thế này taxi.*.larger**
+
+- 4 ) Header: thay vì gửi thông qua routing key thì nó định tuyến dựa trên giá trị tiêu đề. Ta sẽ gửi thông qua tất cả những thằng header nào có cùng key và value.
+
+**VD: gửi headers {from=New York; to = New York} nhận arguments {x-match= all; from=New York; to New York}**
+
+**VD 2: gửi headers {from=New York; to = Jersey} nhận arguments {x-match= any; from=New York; to = New York}**
+
+- 5 ) Dead Letter: là cái mà không thấy cái hàng đợi nào có cùng routing key hay headers sẽ tự động hủy
