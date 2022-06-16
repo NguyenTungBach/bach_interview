@@ -20,3 +20,5 @@
 ## Orchestration
 ![](https://images.viblo.asia/fad9847b-431a-4fa3-8a0a-0ea1c5557a30.png)
 
+# 4. Một số cách xử lý lỗi trong Queue
+ - Tạo order backup trong database: Nếu lỗi thì sẽ tự động lưu trong các hàng cần gửi trong database. Phía bên service sẽ dùng craw job hoặc thread dùng sleep để mỗi lần gọi lại lên Queue để xem nó hết lỗi chưa
