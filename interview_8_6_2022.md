@@ -32,7 +32,7 @@ quản lý các Bean đó.
 ## 5. Các cách khai báo Bean
 
 - @Bean: đặt trên hàm, kết quả của hàm này sẽ được IOC quản lý và trả về kết quả đó
-- @Component: chú thích trên class
+- @Component: chú thích trên class, là một khuôn mẫu chung cho bất kỳ thành phần nào do Spring quản lý
 - @Repository: chú thích cho class giúp truy vấn dữ liệu database
 - @Service: chú thích cho class xử lý logic
 - @Controller: chú thích class làm việc với Request
