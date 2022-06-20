@@ -38,6 +38,8 @@ Hiện nay có 2 kiểu xây dựng:
 # 6. DI là gì?
 
 # 7. Application Context là gì?
+- Là khái niệm Spring Boot dùng để chỉ Spring IoC container, tương tự như bean là đại diện cho các dependency.
+- Khi ứng dụng Spring chạy, Spring IoC container sẽ quét toàn bộ packages, tìm ra các bean và đưa vào ApplicationContext.
 
 # 8. Bean factory là gì?
 
