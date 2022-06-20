@@ -22,11 +22,11 @@ Các thành phần trong Spring Boot:
 |  | Spring boot | Spring MVC |
 |---|---|---|
 | Mô tả dễ hiểu | Là công nghệ | Mô hình (degin parten) |
-| Mô tả trực quan | Là công nghệ và công nghệ này có thể dùng để xây dựng mô hình String MVC hoặc có thể dùng để viết API | Degin parten này có rất nhiều công nghệ được sử dụng trong đó có Spring Framework, thì Spring Framework dùng thằng MVC này để tạo ra Spring MVC để nó xây dựng Web site |
+| Mô tả trực quan | Là công nghệ và công nghệ này có thể dùng để xây dựng dựa theo mô hình String MVC hoặc có thể dùng để viết API | Degin parten này có rất nhiều công nghệ được sử dụng trong đó có Spring Framework, thì Spring Framework dùng thằng MVC này để tạo ra Spring MVC để nó xây dựng Web site |
 
 Hiện nay có 2 kiểu xây dựng: 
  - Kiểu xây dụng thuần túy (cấu hình bằng tay, cần cái gì làm cái gì sẽ add cái đó )
- - Dùng Spring boot để build (tự động cấu hình sẵn, cụ thể là tự động tạo Spring MVC giống như laravel và php)
+ - Dùng Spring boot để build (tự động cấu hình sẵn, cụ thể là tự động tạo dựa theo Spring MVC giống như laravel và php)
  
 # 4. Khái niệm tight-coupling (liên kết ràng buộc) và cách loosely couple
  - tight-coupling hay "liên kết ràng buộc" là một khái niệm trong Java ám chỉ việc mối quan hệ giữa các Class quá chặt chẽ. Khi yêu cầu thay đổi logic hay một class bị lỗi sẽ dẫn tới ảnh hưởng tới toàn bộ các Class khác.
