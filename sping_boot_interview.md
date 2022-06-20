@@ -35,7 +35,8 @@ Hiện nay có 2 kiểu xây dựng:
 
 # 5. IoC là gì?
 
-# 6. DI là gì?
+# 6. DI (Dendency Injection) là gì?
+- Là 1 kỹ thuật lập trình giúp cho các class không bị phụ thuộc vào nhau
 
 # 7. Application Context là gì?
 - Là khái niệm Spring Boot dùng để chỉ Spring IoC container, tương tự như bean là đại diện cho các dependency.
