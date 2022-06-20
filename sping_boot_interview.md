@@ -33,10 +33,11 @@ Hiện nay có 2 kiểu xây dựng:
 
  - loosely-coupled là cách ám chỉ việc làm giảm bớt sự phụ thuộc giữa các Class với nhau.
 
-# 5. IoC là gì?
-
-# 6. DI (Dendency Injection) là gì?
+# 5. DI (Dendency Injection) là gì?
 - Là 1 kỹ thuật lập trình giúp cho các class không bị phụ thuộc vào nhau
+
+# 6. IoC (Inversion of Control) là gì?
+- 
 
 # 7. Application Context là gì?
 - Là khái niệm Spring Boot dùng để chỉ Spring IoC container, tương tự như bean là đại diện cho các dependency.
