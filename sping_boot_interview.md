@@ -24,8 +24,8 @@ Các thành phần trong Spring Boot:
 | Mô tả dễ hiểu | Là công nghệ | Mô hình (degin parten) |
 | Mô tả trực quan | Là công nghệ và công nghệ này có thể dùng để xây dựng dựa theo mô hình String MVC hoặc có thể dùng để viết API | Degin parten này có rất nhiều công nghệ được sử dụng trong đó có Spring Framework, thì Spring Framework dùng thằng MVC này để tạo ra Spring MVC để nó xây dựng Web site |
 
-Hiện nay có 2 kiểu xây dựng: 
- - Kiểu xây dụng thuần túy (cấu hình bằng tay, cần cái gì làm cái gì sẽ add cái đó )
+Hiện nay có 2 cách xây dựng mô hình MVC: 
+ - Kiểu xây dụng thuần túy (cấu hình bằng tay, cần cái gì làm cái gì sẽ add cái đó. **VD: để cấu hình được server thì cần cài concat còn Spring boot đã có sẵn rồi**)
  - Dùng Spring boot để build (tự động cấu hình sẵn, cụ thể là tự động tạo dựa theo Spring MVC giống như laravel và php)
  
 # 4. Khái niệm tight-coupling (liên kết ràng buộc) và cách loosely couple
@@ -37,15 +37,30 @@ Hiện nay có 2 kiểu xây dựng:
 - Là 1 kỹ thuật lập trình giúp cho các class không bị phụ thuộc vào nhau
 
 # 6. IoC (Inversion of Control) là gì?
-- 
+- Inversion of Control có thể hiểu là một nguyên lý thiết kế trong công nghệ phần mềm. Các kiến trúc phần mềm được được áp dụng thiết kế này sẽ được **đảo ngược quyền điều khiển so với kiểu lập trình hướng thủ tục**
+
+- Để có thể hiểu rõ hơn về IoC, ta có thể lấy một ví dụ như sau: Giả sử có 1 class mẹ là A và hai class con là B và C ( lúc này B và C sẽ được gọi là các dependencies)
+Với mô hình không sử dụng IoC thì Class A cần phải khởi tạo và điều khiển hai class B và C, bất kỳ thay đổi nào ở Class A đều dẫn đến thay đổi ở Class B và C. Một thay đổi sẽ kéo theo hàng loạt những thay đổi khác từ đó làm giảm khả năng bảo trì của code. Trong khi đó, nếu trong mô hình sử dụng IoC, các class B và C sẽ được đưa đến độc lập so với class A thông qua một bên thứ ba, từ đó các class không phụ thuộc lẫn nhau mà chỉ phụ thuộc vào interface. Điều này cũng đồng nghĩa rằng sự thay đổi ở class cấp cao sẽ không ảnh hưởng tới các class cấp thấp hơn
+![N|Solid](https://xuanthulab.net/photo/ioc-4477.png)
 
 # 7. Application Context là gì?
 - Là khái niệm Spring Boot dùng để chỉ Spring IoC container, tương tự như bean là đại diện cho các dependency.
 - Khi ứng dụng Spring chạy, Spring IoC container sẽ quét toàn bộ packages, tìm ra các bean và đưa vào ApplicationContext.
 
-# 8. Bean factory là gì?
+# 8. Bean là gì?
+- Bean là những class mà mình sử dụng trong project. Khi khai báo Bean sẽ được IOC trong spring quản lý các Bean đó.
 
-# 9. Các cách khởi tạo bean
+# 9. Spring container (IoC Container) là gì?
+- Quản lý vòng chạy của Bean: khởi tạo, cấu hình và tương tác giữa các Bean
+
+# 10. Bean Factory và ApplicationContext interface
+BeanFactory và ApplicationContext interface là 2 interface đại diện và để khởi tạo cho cho Spring IoC container
+
+|  | Bean Factory | ApplicationContext Interface |
+|---|---|---|
+| Mô tả | Là root interface dùng để thao tác với Spring container, nó cung cấp những tính năng cơ bản để quản lý bean trong ứng dụng | là một sub-interface của BeanFactory, vì vậy nó cung cấp tất cả các tính năng trong BeanFactory |
+
+# 10. Các cách khởi tạo bean
 Các cách tạo bean
  - @Bean: chú thích trên hàm
  - @Component: chú thích trên class
@@ -53,10 +68,10 @@ Các cách tạo bean
  - @Service: chú thích cho class xử lý logic
  - @Controller: chú thích class làm việc với Request
 
-# 10. Các Anotation
+# 11. Các Anotation
 
 
-# 11. Lập trình hướng khía cạnh AOP và lập trình hướng đối tượng OOP
+# 12. Lập trình hướng khía cạnh AOP và lập trình hướng đối tượng OOP
 
 |  | AOP (Aspect Oriented Programming) | OOP (Object Oriented Programming) |
 |---|---|---|
