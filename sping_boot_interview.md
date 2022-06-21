@@ -68,11 +68,28 @@ Các cách tạo bean
  - @Service: chú thích cho class xử lý logic
  - @Controller: chú thích class làm việc với Request
 
-# 11. Các Anotation
-
-
-# 12. Lập trình hướng khía cạnh AOP và lập trình hướng đối tượng OOP
+# 11. Lập trình hướng khía cạnh AOP và lập trình hướng đối tượng OOP
 
 |  | AOP (Aspect Oriented Programming) | OOP (Object Oriented Programming) |
 |---|---|---|
 | Mô tả | Kiểu lập trình cho phép tách các module (chia nhỏ và dùng lại) | Là phương pháp lập trình dựa trên khái niệm về lớp và đối tượng |
+
+# 12. @Autowired
+- Đánh dấu cho Spring biết rằng sẽ tự động inject bean tương ứng vào vị trí được đánh dấu.
+>>Trong thực tế, sẽ có trường hợp chúng ta sử dụng @Autowired khi Spring Boot có chứa 2 Bean cùng loại trong Context. Lúc này thì Spring sẽ bối rối và không biết sử dụng Bean nào để inject vào đối tượng. Có 2 cách để giải quyết vấn đề này: @Primary và Qualifier
+
+ # 13. @Primary
+ - Là annotation đánh dấu trên một Bean, giúp nó luôn được ưu tiên lựa chọn trong trường hợp có nhiều Bean cùng loại trong Context
+ 
+ # 14. @Qualifier
+ - Xác định tên của một Bean mà bạn muốn chỉ định inject
+ 
+ # 15. @RestController
+ - Khác với @Controller là sẽ trả về một template. @RestController trả về dữ liệu dưới dạng JSON.
+ 
+ # 16. CORS trong Spring Boot?
+ - CORS là viết tắt của Cross-Origin Resource Sharing là một cơ chế được thực hiện bởi các trình duyệt và giúp người dùng cho phép các yêu cầu giữa các miền
+
+# 17. CSRF là gì?
+- là kỹ thuật tấn công bằng cách sử dụng quyền chứng thực của người dùng đối với một website.
+- Hiểu đơn giản, đây là kỹ thuật tấn công dựa vào mượn quyền trái phép
