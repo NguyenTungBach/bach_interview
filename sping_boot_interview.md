@@ -93,3 +93,9 @@ Các cách tạo bean
 # 17. CSRF là gì?
 - là kỹ thuật tấn công bằng cách sử dụng quyền chứng thực của người dùng đối với một website.
 - Hiểu đơn giản, đây là kỹ thuật tấn công dựa vào mượn quyền trái phép
+
+# 18. @Data là gì?
+- Gồm sẽ biên dịch @Getter, @Setter, @RequiredArgsConstructor, @ToString và @EqualsAndHashCode
+Vấn đề hàm toString: nó sẽ gọi đến những thuộc tính không mong muốn ví dụ như thuộc tính của mình là
+class khác. Nếu chẳng may mà class được gọi đó lại có gọi đến thuộc tính của class mà mình đang
+gọi => sẽ dẫn đến vòng lặp vô tận
