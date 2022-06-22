@@ -99,3 +99,19 @@ Các cách tạo bean
 Vấn đề hàm toString: nó sẽ gọi đến những thuộc tính không mong muốn ví dụ như thuộc tính của mình là
 class khác. Nếu chẳng may mà class được gọi đó lại có gọi đến thuộc tính của class mà mình đang
 gọi => sẽ dẫn đến vòng lặp vô tận
+
+# 19. Java JDBC
+- Là một Java API được sử dụng để kết nối và thực hiện truy vấn với cơ sở dữ liệu. Nhưng cần ghi rõ Select * From Where ... **(Hồi kỳ 2 đã học)**
+
+# 20. JPA là gì?
+- Java Persistence API là 1 quy chuẩn chung để làm việc với tất cả database 
+(Đặc điểm nhận biết )
+
+# 21. Spring JPA là gì?
+- Được xây dựng dựa trên JPA. Là một phần trong hệ sinh thái Spring Data, nó tạo ra một layer ở giữa tầng service và database, giúp chúng ta thao tác với database một cách dễ dàng hơn, tự động config và giảm thiểu code thừa thãi.
+
+# 22. ORM là gì?
+- Object-Relational-Mapping là 1 thư viện cho phép chuyển đổi từ các object trong lập trình OOP sang database quan hệ và ngược lại.
+
+# 21. Hibernate là gì?
+- Là 1 thư viện của ORM cho phép map các objects trong class để tạo bảng
