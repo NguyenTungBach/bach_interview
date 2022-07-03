@@ -119,7 +119,7 @@ gọi => sẽ dẫn đến vòng lặp vô tận
 # 22. Các scope trong spring?
 - Singleton: Các đối tượng trong bean chỉ được khởi tạo 1 lần duy nhất.
 - Prototype: Các đối tượng trong bean được khởi tạo mỗi lần khi được gọi đến.
-- Request: giống với prototype scope, tuy nhiên nó dùng cho ứng dụng web, một thể hiện của bean sẽ được tạo cho mỗi HTTP request. Tức là cứ mỗi 1 dữ liệu request được sinh ra  thì các hàm liên quan đến HTTPServelet (hàm này hỗ trợ cho các request) đều có thể dùng chung cái dữ liệu request đó
-- Session: Mỗi thể hiện của bean sẽ được tạo cho mỗi HTTP Session
-- Global-Session: Được sử dụng để tạo global sesion bean cho các ứng dụng Portlet
+- Request: giống với prototype scope, tuy nhiên nó dùng cho ứng dụng web, một thể hiện của bean sẽ được tạo cho mỗi HTTP request. Tức là mình truyền giá trị vào view nào thì view đó sẽ được truyền những giá trị đó
+- Session: Mỗi thể hiện của bean sẽ được tạo cho mỗi HTTP Session. Tức là các giá trị truyền vào view sẽ đc lưu vào session, nếu trong view đó ko có giá trị cần truyền thì nó sẽ kiểm tra xem trong session có ko
+- Application: Được sử dụng để tạo global sesion bean cho các ứng dụng Portlet. Tức là nếu mình tính toán trên view, mỗi lần refresh lại trang thì giá trị sẽ được thay đổi
 
