@@ -115,3 +115,11 @@ gọi => sẽ dẫn đến vòng lặp vô tận
 
 # 21. Hibernate là gì?
 - Là 1 thư viện của ORM cho phép map các objects trong class để tạo bảng
+
+# 22. Các scope trong spring?
+- Singleton: Các đối tượng trong bean chỉ được khởi tạo 1 lần duy nhất.
+- Prototype: Các đối tượng trong bean được khởi tạo mỗi lần khi được gọi đến.
+- Request: giống với prototype scope, tuy nhiên nó dùng cho ứng dụng web, một thể hiện của bean sẽ được tạo cho mỗi HTTP request. Tức là cứ mỗi 1 dữ liệu request được sinh ra  thì các hàm liên quan đến HTTPServelet (hàm này hỗ trợ cho các request) đều có thể dùng chung cái dữ liệu request đó
+- Session: Mỗi thể hiện của bean sẽ được tạo cho mỗi HTTP Session
+- Global-Session: Được sử dụng để tạo global sesion bean cho các ứng dụng Portlet
+
