@@ -117,8 +117,22 @@ gọi => sẽ dẫn đến vòng lặp vô tận
 - Là 1 thư viện của ORM cho phép map các objects trong class để tạo bảng
 
 # 22. Các scope trong spring?
-- Singleton: Các đối tượng trong bean chỉ được khởi tạo 1 lần duy nhất.
+- Singleton: Các đối tượng trong bean chỉ được khởi tạo 1 lần duy nhất. Mặc định khi chạy bean là thằng này
+```sh
+VD:
+@Scope("singleton")
+public class Dress{
+}
+```
+
 - Prototype: Các đối tượng trong bean được khởi tạo mỗi lần khi được gọi đến.
+```sh
+VD:
+@Scope("prototype")
+public class Dress{
+}
+```
+
 - Request: giống với prototype scope, tuy nhiên nó dùng cho ứng dụng web, một thể hiện của bean sẽ được tạo cho mỗi HTTP request. Tức là mình truyền giá trị vào view nào thì view đó sẽ được truyền những giá trị đó
 
 ```sh
