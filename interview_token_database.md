@@ -6,5 +6,6 @@ Token là đoạn mã được sinh ra từ phía server sử dụng để xác 
 - Chỉ nên đánh khi bản ghi khoảng 100 nghìn
 
 # 3. Cơ chế đánh Index? 
-- ## 3.1 Hash index: 
-
+## 3.1 Hash index: 
+- Có dạng key-value của column được đánh Index nên có thể tìm kiếm chính xác ROW tương ứng. 
+- Mạnh mẽ khi truy vấn cới các toán tử = <> (IN, NOT IN)
