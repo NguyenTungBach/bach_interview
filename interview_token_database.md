@@ -11,3 +11,12 @@ Token là đoạn mã được sinh ra từ phía server sử dụng để xác 
 - Mạnh mẽ khi truy vấn cới các toán tử chính xác = <> (IN, NOT IN) **=>Chỉ nên cân nhắc đánh Index này khi truy vấn với sự chính xác tuyệt đối **
 - Vô dụng với > < LIKE vì chỉ tìm toán tử chính xác
 - Vô dụng với ORDER BY vì Hash không thể tìm kiếm các phần tử tiếp theo trong Order **(Chỉ foreach được chứ không for i)**
+## 3.2 B-tree index:
+- Là mặc định khi đánh Index
+- Sử dụng thuật toán nhị phân để tìm kiếm **(Chia giữa ra nhiều lần để tìm kiếm)**
+- Có 2 trường hợp đánh B-tree index:
+  - Đánh 1 trường
+  - Đánh nhiều trường **(Tìm kiếm theo trường đầu tiên VD: (country, name, email) thì sẽ tìm kiếm theo country trước rồi name rồi mới email)**
+
+# 4. Lưu ý đánh Index? 
+- Chỉ nên đánh Index với dữ liệu lớn khoảng 100 nghìn vì việc tạo Index sẽ làm chậm add hoặc update vì nó sẽ phải tổ chức lại danh sách
