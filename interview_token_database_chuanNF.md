@@ -27,3 +27,9 @@ Token là đoạn mã được sinh ra từ phía server sử dụng để xác 
 - 1NF: Cột không chứa giá trị trùng lặp, tính toán được từ cột khác, trong cột chỉ chưa 1 giá trị duy nhất chứ ko phải nhiều giá trị trong đó
 - 2NF: Chỉ chứa các trường liên quan khóa chính
 - 3NF: Các trường chỉ liên quan khóa chính (tách bỏ ra những trường liên quan đến khóa chính nhưng vẫn tách được)
+
+# 6. UNION: 
+- Là câu lệnh SQL dùng để gom kết quả từ 2 bảng với nhau.
+- Yêu cầu sử dụng: 
+  - kết quả 2 bên trả về số cột phải giống nhau
+  - Cùng kiểu dữ liệu
