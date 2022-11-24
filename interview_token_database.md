@@ -8,4 +8,6 @@ Token là đoạn mã được sinh ra từ phía server sử dụng để xác 
 # 3. Cơ chế đánh Index? 
 ## 3.1 Hash index: 
 - Có dạng key-value của column được đánh Index nên có thể tìm kiếm chính xác ROW tương ứng. 
-- Mạnh mẽ khi truy vấn cới các toán tử = <> (IN, NOT IN)
+- Mạnh mẽ khi truy vấn cới các toán tử chính xác = <> (IN, NOT IN) **=>Chỉ nên cân nhắc đánh Index này khi truy vấn với sự chính xác tuyệt đối **
+- Vô dụng với > < LIKE vì chỉ tìm toán tử chính xác
+- Vô dụng với ORDER BY vì Hash không thể tìm kiếm các phần tử tiếp theo trong Order **(Chỉ foreach được chứ không for i)**
