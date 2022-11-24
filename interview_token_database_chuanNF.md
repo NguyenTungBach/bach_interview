@@ -22,3 +22,8 @@ Token là đoạn mã được sinh ra từ phía server sử dụng để xác 
 
 # 4. Partition là gì? 
 - Chỉa dữ liệu trong 1 bảng thành vùng
+
+# 5.Chuẩn hóa trong Database
+- 1NF: Cột không chứa giá trị trùng lặp, tính toán được từ cột khác, trong cột chỉ chưa 1 giá trị duy nhất chứ ko phải nhiều giá trị trong đó
+- 2NF: Chỉ chứa các trường liên quan khóa chính
+- 3NF: Các trường chỉ liên quan khóa chính (tách bỏ ra những trường liên quan đến khóa chính nhưng vẫn tách được)
