@@ -17,6 +17,8 @@ Token là đoạn mã được sinh ra từ phía server sử dụng để xác 
 - Có 2 trường hợp đánh B-tree index:
   - Đánh 1 trường
   - Đánh nhiều trường **(Tìm kiếm theo trường đầu tiên VD: (country, name, email) thì sẽ tìm kiếm theo country trước rồi name rồi mới email)**
-
-# 4. Lưu ý đánh Index? 
+## 3.3 Lưu ý đánh Index? 
 - Chỉ nên đánh Index với dữ liệu lớn khoảng 100 nghìn vì việc tạo Index sẽ làm chậm add hoặc update vì nó sẽ phải tổ chức lại danh sách
+
+# 4. Partition là gì? 
+- Chỉa dữ liệu trong 1 bảng thành vùng
