@@ -23,7 +23,7 @@ Token là đoạn mã được sinh ra từ phía server sử dụng để xác 
 # 4. Partition là gì? 
 - Chỉa dữ liệu trong 1 bảng thành vùng
 
-# 5.Chuẩn hóa trong Database
+# 5. Chuẩn hóa trong Database
 - 1NF: Cột không chứa giá trị trùng lặp, tính toán được từ cột khác, trong cột chỉ chưa 1 giá trị duy nhất chứ ko phải nhiều giá trị trong đó
 - 2NF: Chỉ chứa các trường liên quan khóa chính
 - 3NF: Các trường chỉ liên quan khóa chính (tách bỏ ra những trường liên quan đến khóa chính nhưng vẫn tách được)
@@ -31,5 +31,20 @@ Token là đoạn mã được sinh ra từ phía server sử dụng để xác 
 # 6. UNION: 
 - Là câu lệnh SQL dùng để gom kết quả từ 2 bảng với nhau.
 - Yêu cầu sử dụng: 
-  - kết quả 2 bên trả về số cột phải giống nhau
+  - Kết quả 2 bên trả về số cột phải giống nhau
   - Cùng kiểu dữ liệu
+  
+# 7. So sánh Sub query và Inner Join
+Sub query truy vấn nhanh hơn join vì Inner join sẽ phải lấy 2 bảng để so sánh. Còn sub query sẽ chỉ lấy những cái nào mình cần so sánh
+
+# 8. Constraint
+Là những quy tắc được áp dụng trên các cột dữ liệu trên bảng
+- Not Null: Đảm bảo dữ liệu của cột không nhận giá trị null
+- Default: Gán giá trị mặc định cho cột trong trường hợp dữ liệu không được nhập vào hoặc không xác định
+- Unique: Đảm bảo dữ liệu của cột là duy nhất, không trùng lặp
+- Primary key: Thiết lập khóa chính cho bảng, không cho phép null hoặc duplicate
+- Foreign key: Thiết lập khóa ngoại trên bảng tham chiếu tới một giá trị duy nhất trong bảng khác
+- Check: Đảm bảo dữ liệu đầu vào thỏa mã điều kiện như Where **(VD CHECK age > 1)**
+
+# 9. Trigger
+- Dùng để thực hiện thêm 1 tác vụ trong khi đang làm tác vụ này VD: như trong khi thêm bảng này ta có thể thêm sửa xóa bảng khác
