@@ -19,3 +19,8 @@ Là giao thức định nghĩa ra các chuẩn giao thức viết API
   - VD: { "typ": "JWT", "alg": "HS256" }
 - Payload: chứa các thông tin mình muốn đặt trong chuỗi token như username, password,...
 - Signature: chữ ký mã hóa. Phần chử ký này sẽ được tạo ra bằng cách mã hóa phần header , payload kèm theo một chuỗi secret (khóa bí mật)
+
+# 4. SOAP
+- Là 1 giao thức dựa trên XML dùng để truy cập vào các Webserice
+- SOAP chậm bởi vì sử dụng định dạng XML để phân tích cú pháp
+- VD: https://www.youtube.com/watch?v=WZalO30AppI
