@@ -101,7 +101,8 @@ class khác. Nếu chẳng may mà class được gọi đó lại có gọi đ�
 gọi => sẽ dẫn đến vòng lặp vô tận
 
 # 19. Java JDBC
-- Là một Java API được sử dụng để kết nối và thực hiện truy vấn với cơ sở dữ liệu. Nhưng cần ghi rõ Select * From Where ... **(Hồi kỳ 2 đã học)**
+- *Là một Java API được sử dụng để kết nối và thực hiện truy vấn với cơ sở dữ liệu. Nhưng cần ghi rõ Select * From Where ... **(Hồi kỳ 2 đã học)**
+- Là một thư viện xây dựng từ Java Core giúp kết nối cơ sở dữ liệu
 
 # 20. JPA là gì?
 - Java Persistence API là 1 quy chuẩn chung để làm việc với tất cả database 
