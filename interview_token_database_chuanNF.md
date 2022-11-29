@@ -53,5 +53,11 @@ Là những quy tắc được áp dụng trên các cột dữ liệu trên b�
 - Foreign key: Thiết lập khóa ngoại trên bảng tham chiếu tới một giá trị duy nhất trong bảng khác
 - Check: Đảm bảo dữ liệu đầu vào thỏa mã điều kiện như Where **(VD CHECK age > 1)**
 
-# 9. Trigger
+# 9. Trigger:
 - Dùng để thực hiện thêm 1 tác vụ trong khi đang làm tác vụ này VD: như trong khi thêm bảng này ta có thể thêm sửa xóa bảng khác
+
+# 10. Toán tử Join:
+- Inner Join(hoặc Join): Trả về tất cả các hàng khi có ít nhất 1 giá trị  ở cả 2 bảng.
+- Left Join: Trả lại tất cả các bản ghi từ bản bên trái và các dòng tương ứng trong bảng bên phải.
+- Right Join: Trả lại tất cả các bản ghi từ bảng bên phải, và các bản ghi tương ứng trong  bảng bên trái.
+- Outer Join: Trả về tất cả các bản ghi được kết hợp từ các bảng.
