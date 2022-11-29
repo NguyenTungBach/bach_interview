@@ -33,6 +33,13 @@ Token là đoạn mã được sinh ra từ phía server sử dụng để xác 
 - Yêu cầu sử dụng: 
   - Kết quả 2 bên trả về số cột phải giống nhau
   - Cùng kiểu dữ liệu
+## 6.1 Union với Union All: 
+  - Giống nhau:
+	  - Là sự kết hợp kết quả của 2 hoặc nhiều câu lệnh select trong sql
+  - Khác nhau:
+	  - Union: Chỉ trả về những kết quả không trùng lặp.
+	  - Union All: Trả về tất cả các kết quả kể cả trùng lặp
+ 
   
 # 7. So sánh Sub query và Inner Join
 Sub query truy vấn nhanh hơn join vì Inner join sẽ phải lấy 2 bảng để so sánh. Còn sub query sẽ chỉ lấy những cái nào mình cần so sánh
