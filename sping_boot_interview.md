@@ -115,7 +115,7 @@ gọi => sẽ dẫn đến vòng lặp vô tận
 - Object-Relational-Mapping là 1 framework cho phép chuyển đổi từ các object trong lập trình OOP sang database quan hệ và ngược lại.
 
 # 21. Hibernate là gì?
-- Là 1 thư viện của ORM cho phép map các objects trong class để tạo bảng
+- Là 1 framework của ORM cho phép map các objects trong class để tạo bảng
 
 # 22. Các scope trong spring?
 - Singleton: Các đối tượng trong bean chỉ được khởi tạo 1 lần duy nhất. Mặc định khi chạy bean là thằng này
