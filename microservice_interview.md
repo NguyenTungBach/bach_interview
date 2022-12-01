@@ -27,6 +27,10 @@
  - Là một API viết chung, dùng để gọi đến các service
 
 ***VD: Mình có API của Product, Order, Payment. Tương ứng với địa chỉ localhost: 8091,8092,8093***
+- **VD gọi tìm đến tất cả Product: http://localhost:8091/api/v1/product**
+- **VD gọi tìm đến tất cả Order: http://localhost:8092/api/v1/order**
+- **VD gọi tìm đến tất cả Payment: http://localhost:8093/api/v1/payment**
+
 **Thay vì gọi đến các địa chỉ localhost: 8091,8092,8093 thì ta gọi thông qua 1 API chung được gọi là API Gateway có 8760**
 - **VD gọi tìm đến tất cả Product: http://localhost:8760/api/v1/app1/api/v1/product**
 - **VD gọi tìm đến tất cả Order: http://localhost:8760/api/v1/app1/api/v1/order**
