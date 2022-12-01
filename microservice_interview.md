@@ -37,3 +37,11 @@
 - **VD gọi tìm đến tất cả Payment: http://localhost:8760/api/v1/app1/api/v1/payment**
  
 ![](https://genk.mediacdn.vn/139269124445442048/2022/3/4/photo-1-16463882949582105196548-1646389517721-1646389518274932690753.jpg)
+
+
+# 5. Service discovery:
+- Là service dùng để quản lý thông tin các microservice đã được đăng ký vào nó (đăng ký tên và địa chỉ bằng Service Registry)
+
+![](https://giaiphap.mctt.com.vn/wp-content/uploads/2021/11/cac-khai-niem-chinh-trong-micros_5.png)
+
+![](https://www.dontpanicblog.co.uk/wp-content/uploads/2016/09/Eureka-with-all-1024x636.png)
