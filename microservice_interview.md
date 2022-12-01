@@ -40,7 +40,7 @@
 
 
 # 5. Service discovery:
-- Là service dùng để quản lý thông tin các microservice đã được đăng ký vào nó (đăng ký tên và địa chỉ bằng Service Registry)
+- Là service dùng để quản lý thông tin các microservice đã được đăng ký vào nó (đăng ký thông tin id, tên và địa chỉ bằng Service Registry ***vì service này nằm trong discovery nên có thể tự hiểu***)
 
 ![](https://giaiphap.mctt.com.vn/wp-content/uploads/2021/11/cac-khai-niem-chinh-trong-micros_5.png)
 
