@@ -22,3 +22,14 @@
 
 # 4. Một số cách xử lý lỗi trong Queue
  - Tạo order backup trong database: Nếu lỗi thì sẽ tự động lưu trong các hàng cần gửi trong database. Phía bên service sẽ dùng craw job hoặc thread dùng sleep để mỗi lần gọi lại lên Queue để xem nó hết lỗi chưa
+
+# 5. API Gateway:
+ - Là một API viết chung, dùng để gọi đến các service
+
+***VD: Mình có API của Product, Order, Payment. Tương ứng với địa chỉ localhost: 8091,8092,8093***
+**Thay vì gọi đến các địa chỉ localhost: 8091,8092,8093 thì ta gọi thông qua 1 API chung được gọi là API Gateway có 8760**
+- **VD gọi tìm đến tất cả Product: http://localhost:8760/api/v1/app1/api/v1/product**
+- **VD gọi tìm đến tất cả Order: http://localhost:8760/api/v1/app1/api/v1/order**
+- **VD gọi tìm đến tất cả Payment: http://localhost:8760/api/v1/app1/api/v1/payment**
+ 
+![](https://genk.mediacdn.vn/139269124445442048/2022/3/4/photo-1-16463882949582105196548-1646389517721-1646389518274932690753.jpg)
