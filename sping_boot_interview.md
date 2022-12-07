@@ -112,10 +112,12 @@ gọi => sẽ dẫn đến vòng lặp vô tận
 - Được xây dựng dựa trên JPA. Là một phần trong hệ sinh thái Spring Data, nó tạo ra một layer ở giữa tầng service và database, giúp chúng ta thao tác với database một cách dễ dàng hơn, tự động config và giảm thiểu code thừa thãi.
 
 # 22. ORM là gì?
+- ORM(Object Relational Mapping: Ánh xạ quan hệ đối tượng)
 - Object-Relational-Mapping là 1 framework cho phép chuyển đổi từ các object trong lập trình OOP sang database quan hệ và ngược lại.
+- Là 1 kỹ thuật lập trình giúp ánh xạ cơ sở dữ liệu sang dạng đối tượng class
 
 # 21. Hibernate là gì?
-- Là 1 framework của ORM cho phép map các objects trong class để tạo bảng
+- Là 1 framework của ORM cho phép map các objects trong class để truy vấn tạo bảng
 
 # 22. Các scope trong spring?
 - Singleton: Các đối tượng trong bean chỉ được khởi tạo 1 lần duy nhất. Mặc định khi chạy bean là thằng này
