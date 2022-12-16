@@ -13,6 +13,7 @@
 |---|---|---|
 | Lưu trữ | Lưu trên RAM nên truy vấn nhanh | Lưu trên RAM khi khởi động lại máy, hay sever thì dữ liệu sẽ mất hết nếu không Back up |
 | Single Thread | Sử dụng IO mutilplexing | ??? |
+| Tính nhất quán dữ liệu | ??? | vấn đề xảy ra khi cả hay cùng update dữ liệu |
 
 # 4. Đồng bộ và bất đồng bộ
 - Đa luồng giúp giải quyết nhiều công việc cùng 1 lúc
