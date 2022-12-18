@@ -6,6 +6,7 @@
 - Khác với các database lưu trên disk thì REDIS lưu trên RAM. **Mặc dù xử lý nhanh nhưng Điều này dẫn đến 1 vấn đề đó là khi ta khởi động máy tính thì tất cả bộ nhớ trên RAM cũng mất luôn. Nếu đang sử dụng server mà đùng cái mất điện thì xác định mất toàn bộ dữ liệu Redis nếu không Back Up**
 - Chính vì nhưng điều này mà Redis không dùng để lưu dữ liệu. Mà nó dùng để lưu những dữ liệu dùng đi dùng lại (tài khoản, user id), dùng cho web (VD thông tin người dùng), bộ nhớ đệm để sau có thể sử dụng sau này. Đó là lý do Redis Cache thường được dùng
 - Caching là một kỹ thuật tăng độ truy xuất dữ liệu và giảm tải cho hệ thống. Lưu ý phải update cache
+- Cache server
 - Rabitt MQ là 1 message queue
 - Thường để lưu dữ liệu dụng JSON
 
@@ -34,4 +35,11 @@
 - Process là 1 app dựng lên
 
 # 6. Khi nào dùng thread
-- 
+
+
+# 7. @Cache able và Redis Template
+
+# 8. Elastic search
+- thường lưu log (VD: log xem quảng cáo, thời gian xem của người dùng)
+- Là search engine
+- lưu dưới dạng bảng
