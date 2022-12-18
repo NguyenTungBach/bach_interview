@@ -15,7 +15,7 @@
 # 2. Redis các ứng dụng
 - Caching
 - Counting (đếm lượt view)
-- Pubsub (Hiện thông báo)
+- Pubsub (Hiện thông báo, lấy thông tin chung)
 - Queue
 
 # 3. Caching
