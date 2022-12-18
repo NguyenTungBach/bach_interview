@@ -43,3 +43,6 @@
 - thường lưu log (VD: log xem quảng cáo, thời gian xem của người dùng)
 - Là search engine
 - lưu dưới dạng bảng
+
+# 9. Biết đang dùng index
+- 
