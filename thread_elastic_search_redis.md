@@ -10,6 +10,9 @@
 - Rabitt MQ là 1 message queue
 - Thường để lưu dữ liệu dụng JSON
 
+# 3. Caching
+- Là một kỹ thuật giúp hệ thống tăng tốc độ truy vấn dữ liệu và giảm tải truy vấn. Bằng cách lưu trữ và dùng lại các dữ liệu đã được truy vấn từ trước, giúp cho hệ thống không phải truy vấn lại.
+
 # 3. Ưu và nhược điểm của redis
 - Cùng nằm trong Spring Framework
 
