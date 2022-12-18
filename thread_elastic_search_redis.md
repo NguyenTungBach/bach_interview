@@ -10,6 +10,7 @@
 - Cache server
 - Rabitt MQ là 1 message queue
 - Thường để lưu dữ liệu dụng JSON
+- Enqueue (Ghi) và Dequeue (Đọc)
 
 # 2. Redis các ứng dụng
 - Caching
