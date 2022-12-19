@@ -41,6 +41,18 @@
 
 - Đa luồng là nhiều người làm nhiều công việc. Vấn đề là về xung đột tài nguyên như thằng rửa rau và rang thịt đều cần dùng chung cái bếp.
 
+# 4. Chu kỳ sống của thread trong java được kiểm soát bởi JVM
+- New: tạo lớp Thread
+- Runnable: sau khi gọi đến phương thức start(). Chuẩn bị chạy chương trình
+- Running: Chạy chương trình
+- Non-Runnable (Blocked): Trong quá trình Running. Thread bị sleep hoặc chặn vì phải đợi Thread khác chạy xong 
+- Terminated: Kết thúc Thread	
+
+# 4. Thread cách khởi tạo:
+- Cách 1: extend từ Thread 
+- Cách 2: impliment từ Runable
+- Cách 3: tải thư viện
+
 # 5. Thread và Process
 - Thread là 1 đơn vị xử lý nhỏ nhất của máy tính, hoạt động của cpu
 - Process là 1 app dựng lên
