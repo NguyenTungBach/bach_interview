@@ -215,6 +215,9 @@ Thread Thread-2-Send-Email exiting.
 
 # 7. @Cache able và Redis Template
 
+# 8. ELK Stack (Elastic Stack)
+- Là hệ thống quản lý log tập trung (quá trình hoạt động của các server có phát trinh log thì sẽ đc quản lý bởi hệ thống này). Có nhiều thành phần dựa trên Elastic search.
+
 # 8. Elastic search
 - thường lưu log (VD: log xem quảng cáo, thời gian xem của người dùng)
 - Là search engine
@@ -222,10 +225,10 @@ Thread Thread-2-Send-Email exiting.
 - Là công cụ tìm kiếm FULL Text Search giúp nhanh chóng tìm kiếm dữ liệu
 
 # 8. Log Stash
--
+- Xử lý định dạng lại dữ liệu log, sau đó gửi cho Elastic search
 
 # 8. Kibana
-- Cung cấp giao diện để người dùng tương tác với Elastic search
+- Cung cấp giao diện trực quan để người dùng tương tác truy vấn với Elastic search
 
 # 9. Biết đang dùng index
 - 
