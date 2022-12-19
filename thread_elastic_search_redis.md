@@ -208,7 +208,7 @@ Thread Thread-2-Send-Email exiting.
 
 # 5. Thread và Process
 - Thread là 1 đơn vị xử lý nhỏ nhất của máy tính, hoạt động của cpu
-- Process là 1 app dựng lên
+- Process là quá trình hoạt động của một ứng dụng. 1 process sẽ có nhiều luồng
 
 # 6. Khi nào dùng thread
 
