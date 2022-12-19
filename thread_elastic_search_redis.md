@@ -16,7 +16,7 @@
 - Caching
 - Counting (đếm lượt view)
 - Pubsub (Hiện thông báo, lấy thông tin chung)
-- Queue
+- Message broker (modul trung gian trung chuyển message từ người gửi đến người nhận)
 
 # 3. Caching
 - Là một kỹ thuật giúp hệ thống tăng tốc độ truy vấn dữ liệu và giảm tải truy vấn. Bằng cách lưu trữ và dùng lại các dữ liệu đã được truy vấn từ trước, giúp cho hệ thống không phải truy vấn lại.
