@@ -50,7 +50,160 @@
 
 # 4. Thread cách khởi tạo:
 - Cách 1: extend từ Thread 
+```sh
+package com.gpcoder.flow;
+ 
+public class ThreadDemo extends Thread {
+    private Thread t;
+    private String threadName;
+ 
+    ThreadDemo(String name) {
+        threadName = name;
+        System.out.println("Creating " + threadName);
+    }
+ 
+    @Override
+    public void run() {
+        System.out.println("Running " + threadName);
+        try {
+            for (int i = 4; i > 0; i--) {
+                System.out.println("Thread: " + threadName + ", " + i);
+                // Let the thread sleep for a while.
+                Thread.sleep(50);
+            }
+        } catch (InterruptedException e) {
+            System.out.println("Thread " + threadName + " interrupted.");
+        }
+        System.out.println("Thread " + threadName + " exiting.");
+    }
+ 
+    public void start() {
+        System.out.println("Starting " + threadName);
+        if (t == null) {
+            t = new Thread(this, threadName);
+            t.start();
+        }
+    }
+ 
+}
+```
+
+```sh
+package com.gpcoder.flow;
+ 
+public class ThreadDemoTest {
+    public static void main(String args[]) {
+        System.out.println("Main thread running... ");
+ 
+        ThreadDemo T1 = new ThreadDemo("Thread-1-HR-Database");
+        T1.start();
+ 
+        ThreadDemo T2 = new ThreadDemo("Thread-2-Send-Email");
+        T2.start();
+ 
+        System.out.println("==&gt; Main thread stopped!!! ");
+    }
+}
+```
+
+```sh
+Main thread running...
+Creating Thread-1-HR-Database
+Starting Thread-1-HR-Database
+Creating Thread-2-Send-Email
+Starting Thread-2-Send-Email
+==&amp;amp;gt; Main thread stopped!!!
+Running Thread-1-HR-Database
+Running Thread-2-Send-Email
+Thread: Thread-2-Send-Email, 4
+Thread: Thread-1-HR-Database, 4
+Thread: Thread-1-HR-Database, 3
+Thread: Thread-2-Send-Email, 3
+Thread: Thread-2-Send-Email, 2
+Thread: Thread-1-HR-Database, 2
+Thread: Thread-2-Send-Email, 1
+Thread: Thread-1-HR-Database, 1
+Thread Thread-2-Send-Email exiting.
+Thread Thread-1-HR-Database exiting.
+```
 - Cách 2: impliment từ Runable
+```sh
+package com.gpcoder.flow;
+ 
+class RunnableDemo implements Runnable {
+    private Thread t;
+    private String threadName;
+ 
+    RunnableDemo(String name) {
+        threadName = name;
+        System.out.println("Creating " + threadName);
+    }
+ 
+    @Override
+    public void run() {
+        System.out.println("Running " + threadName);
+        try {
+            for (int i = 4; i > 0; i--) {
+                System.out.println("Thread: " + threadName + ", " + i);
+                // Let the thread sleep for a while.
+                Thread.sleep(50);
+            }
+        } catch (InterruptedException e) {
+            System.out.println("Thread " + threadName + " interrupted.");
+        }
+        System.out.println("Thread " + threadName + " exiting.");
+    }
+ 
+    public void start() {
+        System.out.println("Starting " + threadName);
+        if (t == null) {
+            t = new Thread(this, threadName);
+            t.start();
+        }
+    }
+ 
+}
+```
+
+```sh
+package com.gpcoder.flow;
+ 
+public class RunnableDemoTest {
+    public static void main(String args[]) {
+        System.out.println("Main thread running... ");
+ 
+        RunnableDemo R1 = new RunnableDemo("Thread-1-HR-Database");
+        R1.start();
+ 
+        RunnableDemo R2 = new RunnableDemo("Thread-2-Send-Email");
+        R2.start();
+ 
+        System.out.println("==&gt; Main thread stopped!!! ");
+    }
+}
+```
+
+```sh
+Main thread running...
+Creating Thread-1-HR-Database
+Starting Thread-1-HR-Database
+Creating Thread-2-Send-Email
+Starting Thread-2-Send-Email
+==&amp;amp;gt; Main thread stopped!!!
+Running Thread-1-HR-Database
+Running Thread-2-Send-Email
+Thread: Thread-1-HR-Database, 4
+Thread: Thread-2-Send-Email, 4
+Thread: Thread-1-HR-Database, 3
+Thread: Thread-2-Send-Email, 3
+Thread: Thread-1-HR-Database, 2
+Thread: Thread-2-Send-Email, 2
+Thread: Thread-1-HR-Database, 1
+Thread: Thread-2-Send-Email, 1
+Thread Thread-1-HR-Database exiting.
+Thread Thread-2-Send-Email exiting.
+```
+
 - Cách 3: tải thư viện
 
 # 5. Thread và Process
