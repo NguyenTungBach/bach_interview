@@ -219,6 +219,13 @@ Thread Thread-2-Send-Email exiting.
 - thường lưu log (VD: log xem quảng cáo, thời gian xem của người dùng)
 - Là search engine
 - lưu dưới dạng bảng
+- Là công cụ tìm kiếm FULL Text Search giúp nhanh chóng tìm kiếm dữ liệu
+
+# 8. Log Stash
+-
+
+# 8. Kibana
+- Cung cấp giao diện để người dùng tương tác với Elastic search
 
 # 9. Biết đang dùng index
 - 
