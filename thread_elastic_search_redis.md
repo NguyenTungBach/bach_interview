@@ -15,7 +15,7 @@
 # 2. Redis các ứng dụng
 - Caching
 - Counting (đếm lượt view)
-- Pubsub (Hiện thông báo, lấy thông tin chung)
+- Pubsub (Là cơ chế giống Youtube, khi mình gửi 1 video lên thì những người khác đăng ký rồi đều nhận đc thông báo)
 - Message broker (modul trung gian trung chuyển message từ người gửi đến người nhận)
 
 # 3. Caching
