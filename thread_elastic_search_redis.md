@@ -36,7 +36,7 @@
 
 - Đồng bộ là chạy theo từng dòng. Dòng trên chưa xong thì dòng dưới nó ko đc chạy tiếp. (asyn, synchronization).
 
-- Khác nhau giữa đa luồng và bất đồng bộ là số người làm công việc. 
+- Khác nhau giữa đồng bộ và bất đồng bộ là số người làm công việc. 
 - Bất đồng bộ là 1 mình tôi làm nhưng nhiều công việc
 
 - Đa luồng là nhiều người làm nhiều công việc. Vấn đề là về xung đột tài nguyên như thằng rửa rau và rang thịt đều cần dùng chung cái bếp.
@@ -207,7 +207,7 @@ Thread Thread-2-Send-Email exiting.
 - Cách 3: tải thư viện
 
 # 5. Thread và Process
-- Thread là 1 đơn vị xử lý nhỏ nhất của máy tính, hoạt động của cpu
+- Thread là 1 đơn vị xử lý nhỏ nhất của máy tính, hoạt động của cpu. Hiểu là 1 tiến trình con
 - Process là quá trình hoạt động của một ứng dụng. 1 process sẽ có nhiều luồng
 
 # 6. Khi nào dùng thread
