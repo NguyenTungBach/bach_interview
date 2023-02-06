@@ -22,7 +22,7 @@ Các thành phần trong Spring Boot:
 |  | Spring boot | Spring MVC |
 |---|---|---|
 | Mô tả dễ hiểu | Là 1 modun nằm trong Spring framework | Là 1 modun nằm trong Spring framework và là 1 thằng trong Spring boot |
-| Mô tả trực quan | Là framework và framework này hầu như được cấu thành từ String MVC (tất cả ngoài database) hoặc có thể dùng chỉ để viết API | Framework này có rất nhiều công nghệ được sử dụng trong đó có Spring Framework  |
+| Mô tả trực quan | Là framework và framework này hầu như được cấu thành từ String MVC (tất cả ngoài database) hoặc Spring webflux ***(Spring MVC là đồng bộ còn Spring webflux là bất đồng bộ)*** hoặc có thể dùng chỉ để viết API | Framework này có rất nhiều công nghệ được sử dụng trong đó có Spring Framework  |
 
 Hiện nay có 2 cách xây dựng mô hình MVC: 
  - Kiểu xây dụng thuần túy (cấu hình bằng tay, cần cái gì làm cái gì sẽ add cái đó. **VD: để cấu hình được server thì cần cài concat còn Spring boot đã có sẵn rồi**)
