@@ -43,3 +43,8 @@ Là giao thức định nghĩa ra các chuẩn giao thức viết API
 # 6. DTO (Data transfer object)
 - Là các class dùng để hứng những dữ liệu mình mong muốn, tránh dư thừa dữ liệu. 
 - ***VD: Ngân hàng có class tận 1 nghìn trường. Nếu không dùng DTO thì sẽ bị dư thừa dữ liệu***
+
+# 7. CORS
+- Dùng để cho phép các trang web truy cập tài nguyên của một API
+- VD: Nhà của mình có tủ lạnh, TV, máy giặt. Người nào đó muốn sử dụng dịch vụ của mình thì phải được cấp phép có chìa khóa hoặc định danh mặt
+- Lý do cần bởi vì đề phòng tránh các trang web truy cập tài nguyên API một cách bừa bãi và cũng để bảo mật đề phong web độc hại truy cập API.
