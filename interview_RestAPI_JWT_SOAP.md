@@ -39,3 +39,7 @@ Là giao thức định nghĩa ra các chuẩn giao thức viết API
   - Người dùng sau khi đăng nhập vào Authorization server và nhấn đồng ý. Phía Authorization server sẽ gửi về 1 đoạn mã authorization code cho Client dùng để xác minh lại thông tin người dùng gửi. Trong đó có Client ID, Client sercret (Ứng dụng phải này đã đăng ký với Authorization server trước đó).
   - Nếu thông tin hợp lệ Authorization sẽ trả về access token cùng với refresh token (nếu có).
   - Ứng dụng từ đó lần sau chỉ cần gửi access token cho Authorization server là được phép truy cập tài nguyên
+
+# 6. DTO (Data transfer object)
+- Là các class dùng để hứng những dữ liệu mình mong muốn, tránh dư thừa dữ liệu. 
+- ***VD: Ngân hàng có class tận 1 nghìn trường. Nếu không dùng DTO thì sẽ bị dư thừa dữ liệu***
