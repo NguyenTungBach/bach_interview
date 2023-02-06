@@ -48,3 +48,4 @@ Là giao thức định nghĩa ra các chuẩn giao thức viết API
 - Dùng để cho phép các trang web truy cập tài nguyên của một API
 - VD: Nhà của mình có tủ lạnh, TV, máy giặt. Người nào đó muốn sử dụng dịch vụ của mình thì phải được cấp phép có chìa khóa hoặc định danh mặt
 - Lý do cần bởi vì đề phòng tránh các trang web truy cập tài nguyên API một cách bừa bãi và cũng để bảo mật đề phong web độc hại truy cập API.
+- VD: Facebook muốn truy cập vào api của mình thì trong API đó phải có link của facebook
