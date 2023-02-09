@@ -162,4 +162,7 @@ if(hit == null || hit == 0){
 application.setAttribute("hitCounter", hit)
 ```
 
-
+# 23. Fecth LAZY và EAGER là gì?
+>>![](https://stackjava.com/wp-content/uploads/2017/11/hibernate-1-1.png)
+- LAZY: Không lấy dữ liệu từ các bảng liên quan. Ví dụ nếu lấy dữ liệu bảng Company thì sẽ không lấy thêm dữ liệu gì khác
+- EAGER: Lấy dữ liệu từ các bảng liên quan. Ví dụ nếu lấy dữ liệu bảng Company thì sẽ lấy dữ liệu bảng liên quan là Employee
