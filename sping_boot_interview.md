@@ -72,7 +72,7 @@ Các cách tạo bean
 
 |  | AOP (Aspect Oriented Programming) | OOP (Object Oriented Programming) |
 |---|---|---|
-| Mô tả | Là 1 kỹ thuật lập trình dùng để tách logic chương trình thành các phần riêng biệt, VD: mình muốn xử lý riêng modul exception trả về báo lỗi theo ý mình | Là phương pháp lập trình dựa trên khái niệm về lớp và đối tượng |
+| Mô tả | Là 1 kỹ thuật lập trình dùng để tách logic chương trình thành các phần riêng biệt, VD: mình muốn xử lý riêng modul exception trả về báo lỗi theo ý mình. AOP sẽ làm nhiệm vụ sẽ bắt một exception nào đó trong chương trình | Là phương pháp lập trình dựa trên khái niệm về lớp và đối tượng |
 
 # 12. @Autowired
 - Đánh dấu cho Spring biết rằng sẽ tự động inject bean tương ứng vào vị trí được đánh dấu.
