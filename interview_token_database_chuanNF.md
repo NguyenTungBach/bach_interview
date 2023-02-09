@@ -55,6 +55,7 @@ Là những quy tắc được áp dụng trên các cột dữ liệu trên b�
 
 # 9. Trigger:
 - Dùng để thực hiện thêm 1 tác vụ trong khi đang làm tác vụ này VD: như trong khi thêm bảng này ta có thể thêm sửa xóa bảng khác
+>>![](https://images.viblo.asia/180efac6-8957-48a8-bc32-b2b468e20b79.jpg)
 
 # 10. Toán tử Join:
 - Inner Join(hoặc Join): Trả về tất cả các hàng khi có ít nhất 1 giá trị  ở cả 2 bảng.
