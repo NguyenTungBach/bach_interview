@@ -25,3 +25,7 @@
 - Ưu điểm: có thể SEO đc. Khi render phía server
 - VueJS Server-side Rendering: Thuận tiện cho SEO (Chú trọng đọc các thẻ trong HTML). Bot của google có thể đọc hết tất cả các thẻ vì SSR đã render ra HTML
 - VueJS client-side : Khi render phía client. Đóng gói vào 1 file script, Boot của google chỉ nhìn được file script thôi.
+
+## 8 .Computed và watch
+- computed lắng nghe trước khi dữ liệu đã render, computed có thể là 1 biến
+- watch lắng nghe sự thay đổi sau khi dữ liệu đã render, chỉ là hàm lắng nghe sự thay đổi của biến tại 1 component
