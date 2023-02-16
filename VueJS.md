@@ -20,6 +20,7 @@
 
 ## 6. VueJS Transitions and Animations: Hỏi về cách sử dụng các transitions và animations trong VueJS để tạo hiệu ứng cho giao diện.
 - Tạo hiệu ứng cho giao diện
+- transitions: lưu ý chỉ cho 1 cặp thẻ
 
 ## 7 .VueJS Server-side Rendering (SSR): Hỏi về việc sử dụng VueJS cho server-side rendering (SSR) và cách nó ưu điểm so với việc render trên client-side.
 - Ưu điểm: có thể SEO đc. Khi render phía server
