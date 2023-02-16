@@ -27,5 +27,5 @@
 - VueJS client-side : Khi render phía client. Đóng gói vào 1 file script, Boot của google chỉ nhìn được file script thôi.
 
 ## 8 .Computed và watch
-- computed lắng nghe trước khi dữ liệu đã render, computed có thể là 1 biến. Khi lưu giá thay đổi thì sẽ lưu vào bộ nhớ cache ở thời điểm đã render ra, không gán đc biến.
+- computed lắng nghe trước khi dữ liệu đã render, computed có thể là 1 biến. Khi lưu giá thay đổi thì sẽ lưu vào bộ nhớ cache ở thời điểm đã render ra, không gán đc biến ngay từ đầu.
 - watch lắng nghe sự thay đổi sau khi dữ liệu đã render, chỉ là hàm lắng nghe sự thay đổi của biến tại 1 component
