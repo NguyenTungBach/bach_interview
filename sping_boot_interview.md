@@ -168,9 +168,9 @@ application.setAttribute("hitCounter", hit)
 - EAGER: Lấy dữ liệu từ các bảng liên quan. Ví dụ nếu lấy dữ liệu bảng Company thì sẽ lấy dữ liệu bảng liên quan là Employee
 
 # 24. Nguyên lý solid?
-Là một tập hợp các nguyên tắc thiết kế phần mềm gồm:
-- Single Responsibility Principle (SRP): Một class nên chỉ có một trách nhiệm duy nhất. Mục đích là để giúp dễ bảo trì và tái sử dụng hơn
-- Open-Closed Principle (OCP): Các class, module và phần mềm nên được thiết kế để có thể mở rộng, nhưng đóng với những thay đổi.
+Là một tập hợp các nguyên tắc thiết kế phần mềm, mục đích là để giúp dễ bảo trì và tái sử dụng hơn gồm:
+- Single Responsibility Principle (SRP): Một class nên chỉ có một trách nhiệm duy nhất.
+- Open-Closed Principle (OCP): Các class, module và phần mềm nên được thiết kế để có thể mở rộng, nhưng không làm ảnh hưởng chức năng hiện tại.
 - Liskov Substitution Principle (LSP): Các object của một subclass nên có thể thay thế được object của superclass mà không làm thay đổi tính đúng đắn của chương trình.
-- Interface Segregation Principle (ISP): Các client không nên phải phụ thuộc vào các interface mà chúng không sử dụng.
+- Interface Segregation Principle (ISP): Các interface lớn tách thành các interface nhỏ hơn, nhằm giảm sự phụ thuộc và tăng tính linh hoạt của hệ thống.
 - Dependency Inversion Principle (DIP): Module cấp cao không nên phụ thuộc vào các module cấp thấp, mà hai module này nên phụ thuộc vào abstraction.
