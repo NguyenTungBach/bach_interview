@@ -166,3 +166,11 @@ application.setAttribute("hitCounter", hit)
 >>![](https://stackjava.com/wp-content/uploads/2017/11/hibernate-1-1.png)
 - LAZY: Không lấy dữ liệu từ các bảng liên quan. Ví dụ nếu lấy dữ liệu bảng Company thì sẽ không lấy thêm dữ liệu gì khác
 - EAGER: Lấy dữ liệu từ các bảng liên quan. Ví dụ nếu lấy dữ liệu bảng Company thì sẽ lấy dữ liệu bảng liên quan là Employee
+
+# 24. Nguyên lý solid?
+Là một tập hợp các nguyên tắc thiết kế phần mềm gồm:
+- Single Responsibility Principle (SRP): Một class nên chỉ có một trách nhiệm duy nhất. Mục đích là để giúp dễ bảo trì và tái sử dụng hơn
+- Open-Closed Principle (OCP): Các class, module và phần mềm nên được thiết kế để có thể mở rộng, nhưng đóng với những thay đổi.
+- Liskov Substitution Principle (LSP): Các object của một subclass nên có thể thay thế được object của superclass mà không làm thay đổi tính đúng đắn của chương trình.
+- Interface Segregation Principle (ISP): Các client không nên phải phụ thuộc vào các interface mà chúng không sử dụng.
+- Dependency Inversion Principle (DIP): Module cấp cao không nên phụ thuộc vào các module cấp thấp, mà hai module này nên phụ thuộc vào abstraction.
