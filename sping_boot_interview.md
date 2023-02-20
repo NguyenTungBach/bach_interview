@@ -173,4 +173,4 @@ Là một tập hợp các nguyên tắc thiết kế phần mềm, mục đích
 - Open-Closed Principle (OCP): Các class, module và phần mềm nên được thiết kế để có thể mở rộng, nhưng không làm ảnh hưởng chức năng hiện tại.
 - Liskov Substitution Principle (LSP): Các object của một subclass nên có thể thay thế được object của superclass mà không làm thay đổi tính đúng đắn của chương trình.
 - Interface Segregation Principle (ISP): Các interface lớn tách thành các interface nhỏ hơn, nhằm giảm sự phụ thuộc và tăng tính linh hoạt của hệ thống.
-- Dependency Inversion Principle (DIP): Module cấp cao không nên phụ thuộc vào các module cấp thấp, mà hai module này nên phụ thuộc vào abstraction.
+- Dependency Inversion Principle (DIP): Các class không phụ thuộc lẫn nhau. Nguyên tắc này khuyến khích việc sử dụng dependency injection để tách các phụ thuộc và giảm sự phụ thuộc của các class
