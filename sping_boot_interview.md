@@ -22,7 +22,9 @@ Các thành phần trong Spring Boot:
 |  | Spring boot | Spring MVC |
 |---|---|---|
 | Mô tả dễ hiểu | Là 1 modun nằm trong Spring framework | Là 1 modun nằm trong Spring framework và là 1 thằng trong Spring boot |
-| Mô tả trực quan | Là framework và framework này hầu như được cấu thành từ String MVC (tất cả ngoài database) hoặc Spring webflux ***(Spring MVC là đồng bộ còn Spring webflux là bất đồng bộ)*** hoặc có thể dùng chỉ để viết API | Framework này có rất nhiều công nghệ được sử dụng trong đó có Spring Framework  |
+| Mô tả trực quan | Spring Boot là một framework giúp cho việc phát triển ứng dụng Spring trở nên đơn giản và nhanh chóng hơn bằng cách cung cấp sẵn các cấu hình mặc định và tích hợp các công nghệ phổ biến như Spring MVC, Spring Data, Spring Security,... trong một package duy nhất. Spring Boot cung cấp các cấu hình mặc định và tích hợp các công nghệ phổ biến | Spring MVC là một phần trong Spring Framework, cung cấp các class và annotation để xây dựng ứng dụng web theo kiến trúc MVC (Model-View-Controller). Các class và annotation của Spring MVC giúp cho việc xử lý request và trả về response trở nên đơn giản và dễ dàng hơn. Ngoài ra, Spring MVC còn cung cấp các tính năng như validation, exception handling, data binding,... giúp cho việc phát triển ứng dụng web trở nên thuận tiện hơn  |
+
+***Tóm lại: Spring Boot cung cấp các cấu hình mặc định và tích hợp các công nghệ phổ biến, trong khi Spring MVC cung cấp các class và annotation để xây dựng ứng dụng web theo kiến trúc MVC***
 
 Hiện nay có 2 cách xây dựng mô hình MVC: 
  - Kiểu xây dụng thuần túy (cấu hình bằng tay, cần cái gì làm cái gì sẽ add cái đó. **VD: để cấu hình được server thì cần cài concat còn Spring boot đã có sẵn rồi**)
@@ -35,7 +37,7 @@ Hiện nay có 2 cách xây dựng mô hình MVC:
 
 # 5. DI (Dendency Injection) là gì?
 - Là 1 kỹ thuật lập trình giúp cho các class không bị phụ thuộc vào nhau(giảm việc sử dụng new)
-- Ví dụ ách sử dụng Constructor Injection:
+- Ví dụ cách sử dụng Constructor Injection:
   ```sh
   public class MyService {
     private MyDependency myDependency;
