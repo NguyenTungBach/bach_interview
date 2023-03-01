@@ -127,5 +127,5 @@ thì sẽ làm trên 1 dòng
 
 ### 22.Sự khác nhau giữa equal và hashcode
 - equal được sử dụng để so sánh hai đối tượng với nhau
-- hashcode  trả về một giá trị số nguyên (integer) (mã băm) được tính toán dựa trên các thuộc tính của đối tượng. Mục đích là để sắp xếp vị trí cho các cấu trúc dữ liệu như HashMap hoặc HashSet
-
+- hashcode  trả về một giá trị băm số nguyên (integer) được tính toán dựa trên các thuộc tính của đối tượng. Mục đích là để tính toán giá trị cho các cấu trúc dữ liệu như HashMap hoặc HashSet
+  - Ví dụ khi thêm một cặp key value trong HashMap. Nó sẽ tính toán giá trị của cặp key value bằng hashCode. Khi truy vấn một key, HashMap sẽ băm dựa trên hashcode và tìm đến giá trị trùng với hashcode đó
