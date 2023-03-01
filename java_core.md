@@ -129,3 +129,54 @@ thì sẽ làm trên 1 dòng
 - equal được sử dụng để so sánh hai đối tượng với nhau
 - hashcode  trả về một giá trị băm số nguyên (integer) được tính toán dựa trên các thuộc tính của đối tượng. Mục đích là để tính toán giá trị cho các cấu trúc dữ liệu như HashMap hoặc HashSet
   - Ví dụ khi thêm một cặp key value trong HashMap. Nó sẽ tính toán giá trị của cặp key value bằng hashCode. Khi truy vấn một key, HashMap sẽ băm dựa trên hashcode và tìm đến giá trị trùng với hashcode đó
+  - Trường hợp hai key khác nhau giá trị hashcode bị trùng:
+  ```sh
+  class Person {
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    @Override
+    public int hashCode() {
+        return age % 10; // giá trị băm được tính dựa trên tuổi của người
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        }
+        if (!(obj instanceof Person)) {
+            return false;
+        }
+        Person other = (Person) obj;
+        return this.age == other.age && this.name.equals(other.name);
+    }
+    }
+
+    Map<Person, String> map = new HashMap<>();
+    map.put(new Person("John", 25), "John's value");
+    map.put(new Person("Mary", 35), "Mary's value");
+    map.put(new Person("Dave", 15), "Dave's value");
+    map.put(new Person("Jane", 25), "Jane's value");
+
+  ```
+    Ở ví dụ trên, ta định nghĩa một lớp Person có hai thuộc tính name và age. Phương thức hashCode() được định nghĩa dựa trên thuộc tính age của người, trả về giá trị băm là age % 10. Phương thức equals() được định nghĩa để so sánh hai đối tượng Person dựa trên cả name và age. 
+    
+    Sau khi thêm các đối tượng Person vào HashMap, ta có bảng băm như sau:
+    
+    ```sh
+    Index 0:
+    - Person{name='Dave', age=15} -> "Dave's value"
+    Index 5:
+    - Person{name='John', age=25} -> "John's value"
+    - Person{name='Jane', age=25} -> "Jane's value"
+    Index 8:
+    - Person{name='Mary', age=35} -> "Mary's value"
+
+    ```
+    Như vậy, ta có hai đối tượng Person có cùng giá trị băm là 5, đó là John và Jane. Chúng được lưu trữ trong cùng một vị trí và được đánh dấu bằng dấu mũi tên trong bảng băm. Khi truy vấn giá trị của John, HashMap sẽ duyệt qua danh sách liên kết tại vị trí này và trả về giá trị của John. Tương tự, khi truy vấn giá trị của Jane, HashMap cũng sẽ tìm kiếm
