@@ -270,3 +270,89 @@ Là một tập hợp các nguyên tắc thiết kế phần mềm, mục đích
 @SessionAttribute: được sử dụng để lưu trữ một đối tượng trong session.
 
 @InitBinder: được sử dụng để cấu hình một đối tượng Binder cho phép thực hiện data binding.
+
+
+# 26. Code VD về sự khác nhau giữa Hibernate và JPA:
+- sử dụng JPA: 
+```sh
+@Entity
+@Table(name = "employees")
+public class Employee {
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+    
+    private String name;
+    
+    // getters and setters
+
+}
+```
+```sh
+@Repository
+public class EmployeeRepository {
+
+    @PersistenceContext
+    private EntityManager entityManager;
+    
+    public Employee findById(Long id) {
+        return entityManager.find(Employee.class, id);
+    }
+    
+    public void save(Employee employee) {
+        entityManager.persist(employee);
+    }
+    
+    public void delete(Employee employee) {
+        entityManager.remove(employee);
+    }
+    
+    // other methods
+    
+}
+```
+
+- sử dụng Hibernate:
+```sh
+@Entity
+@Table(name = "employees")
+public class Employee {
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+    
+    private String name;
+    
+    // getters and setters
+
+}
+```
+```sh
+@Repository
+public class EmployeeRepository {
+
+    @Autowired
+    private SessionFactory sessionFactory;
+    
+    public Employee findById(Long id) {
+        Session session = sessionFactory.getCurrentSession();
+        return session.get(Employee.class, id);
+    }
+    
+    public void save(Employee employee) {
+        Session session = sessionFactory.getCurrentSession();
+        session.save(employee);
+    }
+    
+    public void delete(Employee employee) {
+        Session session = sessionFactory.getCurrentSession();
+        session.delete(employee);
+    }
+    
+    // other methods
+    
+}
+```
+trong JPA sử dụng EntityManager để truy vấn còn Hibernate dùng SessionFactory. Hibernate là một implementation của JPA, vì vậy nó có thể được sử dụng như một thay thế cho JPA. Tuy nhiên, khi sử dụng Hibernate, ta sẽ phải sử dụng những đối tượng được cung cấp bởi Hibernate như SessionFactory và Session thay vì EntityManager.
