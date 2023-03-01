@@ -127,5 +127,5 @@ thì sẽ làm trên 1 dòng
 
 ### 22.Sự khác nhau giữa equal và hashcode
 - equal được sử dụng để so sánh hai đối tượng với nhau
-- hashcode được sử dụng để tạo ra một giá trị số duy nhất từ các thuộc tính của đối tượng. Mục đích là để sắp xếp vị trí cho các cấu trúc dữ liệu như HashMap hoặc HashSet
+- hashcode là để tạo ra một giá trị mã băm duy nhất từ các thuộc tính của đối tượng. Mục đích là để sắp xếp vị trí cho các cấu trúc dữ liệu như HashMap hoặc HashSet
 
