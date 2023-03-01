@@ -232,3 +232,21 @@ Là một tập hợp các nguyên tắc thiết kế phần mềm, mục đích
 - Liskov Substitution Principle (LSP): Các object của một subclass nên có thể thay thế được object của superclass mà không làm thay đổi tính đúng đắn của chương trình.
 - Interface Segregation Principle (ISP): Các interface lớn tách thành các interface nhỏ hơn, nhằm giảm sự phụ thuộc và tăng tính linh hoạt của hệ thống.
 - Dependency Inversion Principle (DIP): Các class không phụ thuộc lẫn nhau. Nguyên tắc này khuyến khích việc sử dụng dependency injection để tách các phụ thuộc và giảm sự phụ thuộc của các class
+
+# 25. Các annotation chính trong Spring MVC bao gồm:
+
+@Controller: được sử dụng để đánh dấu một class là một controller trong Spring MVC.
+
+@RequestMapping: được sử dụng để ánh xạ một URL đến một phương thức xử lý trong controller.
+
+@PathVariable: được sử dụng để trích xuất giá trị từ URL và gán vào một tham số của phương thức xử lý.
+
+@RequestParam: được sử dụng để trích xuất giá trị từ các tham số của request và gán vào một tham số của phương thức xử lý.
+
+@ResponseBody: được sử dụng để đánh dấu một phương thức trả về dữ liệu là response body chứ không phải view.
+
+@ModelAttribute: được sử dụng để đưa các đối tượng vào model và chuyển đến view.
+
+@SessionAttribute: được sử dụng để lưu trữ một đối tượng trong session.
+
+@InitBinder: được sử dụng để cấu hình một đối tượng Binder cho phép thực hiện data binding.
