@@ -34,15 +34,69 @@ Hiện nay có 2 cách xây dựng mô hình MVC:
  - loosely-coupled là cách ám chỉ việc làm giảm bớt sự phụ thuộc giữa các Class với nhau.
 
 # 5. DI (Dendency Injection) là gì?
-- Là 1 kỹ thuật lập trình giúp cho các class không bị phụ thuộc vào nhau
+- Là 1 kỹ thuật lập trình giúp cho các class không bị phụ thuộc vào nhau(giảm việc sử dụng new)
+- Ví dụ ách sử dụng Constructor Injection:
+  ```sh
+  public class MyService {
+    private MyDependency myDependency;
+
+    public MyService(MyDependency myDependency) {
+        this.myDependency = myDependency;
+    }
+
+    public void doSomething() {
+        myDependency.doSomethingElse();
+    }
+   }
+
+   public interface MyDependency {
+       void doSomethingElse();
+   }
+
+   public class MyDependencyImpl implements MyDependency {
+       public void doSomethingElse() {
+           System.out.println("Doing something else.");
+       }
+   }
+  ```
+  Ở đây, lớp MyService có một thuộc tính MyDependency và một constructor được sử dụng để thiết lập MyDependency. Lớp MyDependency có một phương thức doSomethingElse() để thực hiện một hành động
+  Để sử dụng MyService, chúng ta có thể làm như sau
+  ```sh
+  MyDependency myDependency = new MyDependencyImpl();
+  MyService myService = new MyService(myDependency);
+  myService.doSomething();
+  ```
+  Khi đó, kết quả sẽ là in ra dòng chữ "Doing something else.". Trong trường hợp này, MyDependency được truyền vào qua constructor của MyService thay vì thông qua một phương thức setter
 
 # 6. IoC (Inversion of Control) là gì?
-- Inversion of Control có thể hiểu là một nguyên lý thiết kế trong công nghệ phần mềm. Các kiến trúc phần mềm được được áp dụng thiết kế này sẽ được **đảo ngược quyền điều khiển so với kiểu lập trình hướng thủ tục**
+- Inversion of Control có thể hiểu là một nguyên lý thiết kế trong công nghệ phần mềm dựa trên kỹ thuật lập trình DI (Dendency Injection).  Các kiến trúc phần mềm được được áp dụng thiết kế này sẽ được **đảo ngược quyền điều khiển so với kiểu lập trình hướng thủ tục**. Mục đích là để tránh việc khởi tạo new
 
-- Để có thể hiểu rõ hơn về IoC, ta có thể lấy một ví dụ như sau: Giả sử có 1 class mẹ là A và hai class con là B và C ( lúc này B và C sẽ được gọi là các dependencies)
-Với mô hình không sử dụng IoC thì Class A cần phải khởi tạo và điều khiển hai class B và C, bất kỳ thay đổi nào ở Class A đều dẫn đến thay đổi ở Class B và C. Một thay đổi sẽ kéo theo hàng loạt những thay đổi khác từ đó làm giảm khả năng bảo trì của code. Trong khi đó, nếu trong mô hình sử dụng IoC, các class B và C sẽ được đưa đến độc lập so với class A thông qua một bên thứ ba, từ đó các class không phụ thuộc lẫn nhau mà chỉ phụ thuộc vào interface. Điều này cũng đồng nghĩa rằng sự thay đổi ở class cấp cao sẽ không ảnh hưởng tới các class cấp thấp hơn
-![N|Solid](https://xuanthulab.net/photo/ioc-4477.png)
+- Ví dụ: Ta đăng ký đối tượng UserService với Spring Container
+  ```sh
+  @Configuration
+  public class AppConfig {
 
+      @Bean
+      public UserService userService() {
+          return new UserServiceImpl();
+      }
+  }
+  ```
+  Tiếp theo, sử dụng UserService trong một đối tượng khác
+  ```sh
+  @Service
+  public class UserController {
+
+      private UserService userService;
+
+      @Autowired
+      public UserController(UserService userService) {
+          this.userService = userService;
+      }
+  }
+  ```
+  Ở đây, đối tượng UserController sử dụng UserService để thực hiện một số tác vụ. Spring tự động đưa UserService đến constructor của UserController khi tạo đối tượng, thay vì UserController phải tạo ra đối tượng UserService bằng tay. Việc này giúp giảm thiểu sự phụ thuộc giữa các đối tượng trong ứng dụng
+  
 # 7. Application Context là gì?
 - Là khái niệm Spring Boot dùng để chỉ Spring IoC container, tương tự như bean là đại diện cho các dependency.
 - Khi ứng dụng Spring chạy, Spring IoC container sẽ quét toàn bộ packages, tìm ra các bean và đưa vào ApplicationContext.
