@@ -175,7 +175,27 @@ gọi => sẽ dẫn đến vòng lặp vô tận
 - Là 1 kỹ thuật lập trình giúp ánh xạ cơ sở dữ liệu sang dạng đối tượng class
 
 # 21. Hibernate là gì?
-- Là 1 framework của ORM cho phép map các objects trong class để truy vấn tạo bảng
+- Là 1 framework của ORM cho phép map các objects trong class để truy vấn tạo bảng. Được xây dựng dựa trên JPA, và có chức năng tương tự như JPA nhưng Hibernate cung cấp các tính năng mở rộng hơn so với JPA.
+- VD Sử dụng hibernate để thực hiện cache data và tối ưu hoá hiệu suất truy vấn cơ sở dữ liệu để cấu hình tùy chọn mở rộng: 
+  - Sử dụng hibernate để thực hiện các truy vấn đặc biệt như truy vấn theo nhiều điều kiện khác nhau
+  ```sh
+  public interface UserRepository extends JpaRepository<User, Long> {
+
+    @Query("SELECT u FROM User u WHERE u.name = :name AND u.age = :age")
+    List<User> findByNameAndAge(@Param("name") String name, @Param("age") int age);
+  }
+  ```
+  
+  - Sử dụng hibernate để thực hiện cache data và tối ưu hoá hiệu suất truy vấn cơ sở dữ liệu
+  ```sh
+  @Cache(usage = CacheConcurrencyStrategy.READ_ONLY)
+  @Entity
+  public class User {
+      @Id
+      private Long id;
+      private String name;
+  }
+  ```
 
 # 22. Các scope trong spring?
 - Singleton: Các đối tượng trong bean chỉ được khởi tạo 1 lần duy nhất. Mặc định khi chạy bean là thằng này
