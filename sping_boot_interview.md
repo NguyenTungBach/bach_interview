@@ -356,3 +356,5 @@ public class EmployeeRepository {
 }
 ```
 trong JPA sử dụng EntityManager để truy vấn còn Hibernate dùng SessionFactory. Hibernate là một implementation của JPA, vì vậy nó có thể được sử dụng như một thay thế cho JPA. Tuy nhiên, khi sử dụng Hibernate, ta sẽ phải sử dụng những đối tượng được cung cấp bởi Hibernate như SessionFactory và Session thay vì EntityManager.
+
+***nếu ta sử dụng các annotation và API được định nghĩa trong gói javax.persistence, thì bạn đang sử dụng JPA. Nếu bạn sử dụng các annotation và API được định nghĩa trong gói org.hibernate, thì bạn đang sử dụng Hibernate.***
