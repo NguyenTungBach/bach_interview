@@ -163,7 +163,7 @@ gọi => sẽ dẫn đến vòng lặp vô tận
 - Là một thư viện xây dựng từ Java Core giúp kết nối cơ sở dữ liệu
 
 # 20. JPA là gì?
-- Java Persistence API là 1 quy chuẩn chung để làm việc với tất cả database 
+- Java Persistence API là 1 quy chuẩn chung để làm việc với tất cả database qua việc sử dụng các đối tượng thay vì phải truy vấn SQL trực tiếp.
 (Đặc điểm nhận biết )
 
 # 21. Spring JPA là gì?
