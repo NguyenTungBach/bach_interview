@@ -38,7 +38,7 @@ Hiện nay có 2 cách xây dựng mô hình MVC:
  - loosely-coupled là cách ám chỉ việc làm giảm bớt sự phụ thuộc giữa các Class với nhau.
 
 # 5. DI (Dendency Injection) là gì?
-- Là 1 kỹ thuật lập trình giúp cho các class không bị phụ thuộc vào nhau(giảm việc sử dụng new)
+- Là 1 kỹ thuật lập trình giúp cho các class không bị phụ thuộc vào nhau(giảm việc sử dụng new). Nó cho phép các class phụ thuộc vào các interface hoặc abstract class thay vì phụ thuộc vào các class cụ thể, từ đó làm tăng tính linh hoạt và khả năng tái sử dụng của mã.
 - Ví dụ cách sử dụng Constructor Injection:
   ```sh
   public class MyService {
