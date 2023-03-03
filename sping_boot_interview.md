@@ -73,7 +73,49 @@ Hiện nay có 2 cách xây dựng mô hình MVC:
   Khi đó, kết quả sẽ là in ra dòng chữ "Doing something else.". Trong trường hợp này, MyDependency được truyền vào qua constructor của MyService thay vì thông qua một phương thức setter
 
 # 6. IoC (Inversion of Control) là gì?
-- Inversion of Control có thể hiểu là một nguyên lý thiết kế trong công nghệ phần mềm dựa trên kỹ thuật lập trình DI (Dendency Injection).  Các kiến trúc phần mềm được được áp dụng thiết kế này sẽ được **đảo ngược quyền điều khiển so với kiểu lập trình hướng thủ tục**. Mục đích là để tránh việc khởi tạo new
+- Inversion of Control có thể hiểu là một nguyên lý thiết kế trong công nghệ phần mềm dựa trên kỹ thuật lập trình DI (Dendency Injection).  Các kiến trúc phần mềm được được áp dụng thiết kế này sẽ được **đảo ngược quyền điều khiển so với kiểu lập trình hướng thủ tục**. Mục đích là để tránh việc khởi tạo new.
+- Thay vì class A phải phụ thuộc chờ class B khởi tạo
+  ```sh
+  public class A {
+      private B b;
+      
+      public A (B b) {
+          this.b = b;
+      }
+      
+      public void doSomething(){
+         return b.hello();
+      }
+  }
+  
+  public class B {
+      private B b;
+      
+      public void hello(){
+         return "hello";
+      }
+  }
+  ```
+- Thay thì ta chỉ cần ném vào IOC container để quản lý. Sau khi chạy chương trình, tất cả khai báo Bean đều được khởi tạo 1 lần duy nhất. Khi class A gọi đến B, thì @Autowire sẽ chạy vào trong IOC container để tìm thằng bean nào tên là B. Như vậy class A sẽ không phải lo việc chờ khởi tạo B.
+```sh
+  public class A {
+      @Autowire
+      private B b;
+      
+      public void doSomething(){
+         return b.hello();
+      }
+  }
+  
+  @Component
+  public class B {
+      private B b;
+      
+      public void hello(){
+         return "hello";
+      }
+  }
+  ```
 
 - Ví dụ: Ta đăng ký đối tượng UserService với Spring Container
   ```sh
