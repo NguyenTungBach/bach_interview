@@ -207,8 +207,13 @@ Thread Thread-2-Send-Email exiting.
 - Cách 3: tải thư viện
 
 # 5. Thread và Process
-- Thread là 1 đơn vị xử lý nhỏ nhất của máy tính, hoạt động của cpu. Hiểu là 1 tiến trình con
-- Process là quá trình hoạt động của một ứng dụng. 1 process sẽ có nhiều luồng
+- Thread là 1 đơn vị xử lý nhỏ nhất của việc thực thi một chương trình. Hiểu là 1 tiến trình con
+- Tiến tình là một chương trình đang được thực thi trên hệ thống. 1 tiến trình sẽ có nhiều luồng
+- Mỗi tiến trình có một không gian địa chỉ riêng, một bộ đếm chương trình, một bộ đếm ngăn xếp, các tài nguyên hệ thống riêng và có thể có nhiều luồng
+- Không gian địa chỉ riêng: là nơi tiến trình lưu trữ dữ liệu và đảm bảo an toàn dữ liệu của tiến trình.
+- Bộ đếm chương trình: là con số dùng để xác định lệnh nào đang được thực thi trong chương trình.
+- Bộ đếm ngăn xếp: là con số dùng để xác định vị trí hiện tại trên ngăn xếp của tiến trình.
+- Các tài nguyên hệ thống riêng: bao gồm các tài nguyên mà tiến trình được cấp phát để sử dụng như bộ nhớ, bộ xử lý, các thiết bị I/O và các tài nguyên khác của hệ thống.
 
 # 6. Khi nào dùng thread
 
