@@ -96,7 +96,52 @@ Hiện nay có 2 cách xây dựng mô hình MVC:
   userService.setUserRepository(userRepository);
   List<User> users = userService.getAllUsers();
   ```
+  
+ - Ví dụ cách sử dụng Interface Injection: 
+  Giả sử chúng ta có interface MessageService và hai implementation của nó là EmailService và SMSService. Chúng ta sử dụng interface injection để thực hiện gửi tin nhắn trong NotificationService.
+  ```sh
+  public interface MessageService {
+    void sendMessage(String message);
+  }
 
+  public class EmailService implements MessageService {
+      public void sendMessage(String message) {
+          System.out.println("Sending email: " + message);
+      }
+  }
+
+  public class SMSService implements MessageService {
+      public void sendMessage(String message) {
+          System.out.println("Sending SMS: " + message);
+      }
+  }
+
+  public class NotificationService {
+      private MessageService messageService;
+
+      public NotificationService(MessageService messageService) {
+          this.messageService = messageService;
+      }
+
+      public void sendNotification(String message) {
+          messageService.sendMessage(message);
+      }
+  }
+  ```
+  Chúng ta có thể sử dụng NotificationService như sau:
+  ```sh
+  public static void main(String[] args) {
+    MessageService emailService = new EmailService();
+    NotificationService notificationService = new NotificationService(emailService);
+    notificationService.sendNotification("Hello from email!");
+
+    MessageService smsService = new SMSService();
+    notificationService = new NotificationService(smsService);
+    notificationService.sendNotification("Hello from SMS!");
+  }
+  ```
+  Ở đây, chúng ta không trực tiếp khởi tạo các implementation của MessageService trong NotificationService, mà chúng ta khởi tạo các implementation đó ngoài và truyền chúng vào NotificationService thông qua constructor. Điều này giúp chúng ta giảm sự phụ thuộc của NotificationService vào các implementation cụ thể của MessageService.
+  
 # 6. IoC (Inversion of Control) là gì?
 - Inversion of Control có thể hiểu là một nguyên lý thiết kế trong công nghệ phần mềm dựa trên kỹ thuật lập trình DI (Dendency Injection).  Các kiến trúc phần mềm được được áp dụng thiết kế này sẽ được **đảo ngược quyền điều khiển so với kiểu lập trình hướng thủ tục**. Mục đích là để tránh việc khởi tạo new.
 - Thay vì class A phải phụ thuộc chờ class B khởi tạo
