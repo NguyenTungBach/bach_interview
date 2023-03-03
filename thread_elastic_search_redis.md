@@ -40,6 +40,10 @@
 - Bất đồng bộ là 1 mình tôi làm nhưng nhiều công việc
 
 - Đa luồng là nhiều người làm nhiều công việc. Vấn đề là về xung đột tài nguyên như thằng rửa rau và rang thịt đều cần dùng chung cái bếp.
+////////////// Kết luận chung
+- Đồng bộ là các tác vụ theo 1 trình tự cụ thể, tiến trình tác vụ hiện tại xong thì mới đến tác vụ tiếp theo
+- Bất đồng bộ là các tác vụ chạy đồng thời tiến trình chạy song song giữa các tác vụ. Khi nói đến Bất đồng bộ, ta nói đến đa luồng
+- Đa luồng là một kỹ thuật lập trình cho phép các tiến trình chạy đồng thời cùng lúc. Mỗi tiến trình có thể chứa nhiều luồng giúp tăng tốc độ thực thi.
 
 # 4. Chu kỳ sống của thread trong java được kiểm soát bởi JVM
 - New: tạo lớp Thread
@@ -208,7 +212,7 @@ Thread Thread-2-Send-Email exiting.
 
 # 5. Thread và Process
 - Thread là 1 đơn vị xử lý nhỏ nhất của việc thực thi một chương trình. Hiểu là 1 tiến trình con
-- Tiến tình là một chương trình đang được thực thi trên hệ thống. 1 tiến trình sẽ có nhiều luồng
+- Tiến tình là một chương trình đang được chạy trên hệ thống. 1 tiến trình sẽ có nhiều luồng
 - Mỗi tiến trình có một không gian địa chỉ riêng, một bộ đếm chương trình, một bộ đếm ngăn xếp, các tài nguyên hệ thống riêng và có thể có nhiều luồng
   - Không gian địa chỉ riêng: là nơi tiến trình lưu trữ dữ liệu và đảm bảo an toàn dữ liệu của tiến trình.
   - Bộ đếm chương trình: là con số dùng để xác định lệnh nào đang được thực thi trong chương trình.
