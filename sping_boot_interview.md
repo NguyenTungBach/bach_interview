@@ -71,6 +71,31 @@ Hiện nay có 2 cách xây dựng mô hình MVC:
   myService.doSomething();
   ```
   Khi đó, kết quả sẽ là in ra dòng chữ "Doing something else.". Trong trường hợp này, MyDependency được truyền vào qua constructor của MyService thay vì thông qua một phương thức setter
+  
+- Ví dụ cách sử dụng Setter Injection: 
+  ```sh
+  public class UserService {
+    private UserRepository userRepository;
+
+    public void setUserRepository(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
+    public List<User> getAllUsers() {
+        return userRepository.getAllUsers();
+    }
+
+    // Other methods
+  }
+  ```
+  Trong ví dụ này, ta sử dụng Setter Injection để truyền đối tượng UserRepository vào UserService. Ta tạo một setter method để thiết lập đối tượng UserRepository cho UserService. Ta có thể sử dụng method này để thiết lập đối tượng UserRepository từ bên ngoài UserService. Như vậy, ta cũng đã giảm sự phụ thuộc của UserService vào UserRepository.
+  Để sử dụng UserService, ta có thể sử dụng code sau:
+  ```sh
+  UserRepository userRepository = new UserRepositoryImpl();
+  UserService userService = new UserService();
+  userService.setUserRepository(userRepository);
+  List<User> users = userService.getAllUsers();
+  ```
 
 # 6. IoC (Inversion of Control) là gì?
 - Inversion of Control có thể hiểu là một nguyên lý thiết kế trong công nghệ phần mềm dựa trên kỹ thuật lập trình DI (Dendency Injection).  Các kiến trúc phần mềm được được áp dụng thiết kế này sẽ được **đảo ngược quyền điều khiển so với kiểu lập trình hướng thủ tục**. Mục đích là để tránh việc khởi tạo new.
