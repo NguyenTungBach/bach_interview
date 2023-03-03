@@ -98,6 +98,7 @@ Hiện nay có 2 cách xây dựng mô hình MVC:
   ```
   
  - Ví dụ cách sử dụng Interface Injection: 
+  
   Giả sử chúng ta có interface MessageService và hai implementation của nó là EmailService và SMSService. Chúng ta sử dụng interface injection để thực hiện gửi tin nhắn trong NotificationService.
   ```sh
   public interface MessageService {
