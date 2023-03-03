@@ -38,8 +38,11 @@ Hiện nay có 2 cách xây dựng mô hình MVC:
  - loosely-coupled là cách ám chỉ việc làm giảm bớt sự phụ thuộc giữa các Class với nhau.
 
 # 5. DI (Dendency Injection) là gì?
-- Là 1 kỹ thuật lập trình giúp cho các class không bị phụ thuộc vào nhau(giảm việc sử dụng new). Nó cho phép các class phụ thuộc vào các interface hoặc abstract class thay vì phụ thuộc vào các class cụ thể, từ đó làm tăng tính linh hoạt và khả năng tái sử dụng của mã.
+- Là 1 kỹ thuật lập trình giúp cho các class không bị phụ thuộc vào nhau(giảm việc sử dụng new).
 - Ví dụ cách sử dụng Constructor Injection:
+
+***Giảm phụ thuộc bằng cách truyền thẳng class cần phụ thuộc đó vào constructor. Như vậy sẽ không phải class chứa sẽ không cần phải khởi tạo nữa***
+
   ```sh
   public class MyService {
     private MyDependency myDependency;
@@ -73,6 +76,9 @@ Hiện nay có 2 cách xây dựng mô hình MVC:
   Khi đó, kết quả sẽ là in ra dòng chữ "Doing something else.". Trong trường hợp này, MyDependency được truyền vào qua constructor của MyService thay vì thông qua một phương thức setter
   
 - Ví dụ cách sử dụng Setter Injection: 
+
+***Giảm phụ thuộc bằng cách truyền vào một phương thức setter.Cũng như Constructor Injection như vậy sẽ không phải class chứa sẽ không cần phải khởi tạo nữa***
+
   ```sh
   public class UserService {
     private UserRepository userRepository;
@@ -97,7 +103,9 @@ Hiện nay có 2 cách xây dựng mô hình MVC:
   List<User> users = userService.getAllUsers();
   ```
   
- - Ví dụ cách sử dụng Interface Injection: 
+ - Ví dụ cách sử dụng Interface Injection:
+
+***Giảm phu thuộc bằng việc phụ thuộc được phụ thuộc vào interface hoặc abtract class***
   
   Giả sử chúng ta có interface MessageService và hai implementation của nó là EmailService và SMSService. Chúng ta sử dụng interface injection để thực hiện gửi tin nhắn trong NotificationService.
   ```sh
@@ -144,7 +152,7 @@ Hiện nay có 2 cách xây dựng mô hình MVC:
   Ở đây, chúng ta không trực tiếp khởi tạo các implementation của MessageService trong NotificationService, mà chúng ta khởi tạo các implementation đó ngoài và truyền chúng vào NotificationService thông qua constructor. Điều này giúp chúng ta giảm sự phụ thuộc của NotificationService vào các implementation cụ thể của MessageService.
   
 # 6. IoC (Inversion of Control) là gì?
-- Inversion of Control có thể hiểu là một nguyên lý thiết kế trong công nghệ phần mềm dựa trên kỹ thuật lập trình DI (Dendency Injection).  Các kiến trúc phần mềm được được áp dụng thiết kế này sẽ được **đảo ngược quyền điều khiển so với kiểu lập trình hướng thủ tục**. Mục đích là để tránh việc khởi tạo new.
+- Inversion of Control có thể hiểu là một nguyên lý thiết kế. Các kiến trúc phần mềm được được áp dụng thiết kế này sẽ được **đảo ngược quyền điều khiển so với kiểu lập trình hướng thủ tục**. Mục đích là để tránh việc khởi tạo new.
 - Thay vì class A phải phụ thuộc chờ class B khởi tạo
   ```sh
   public class A {
