@@ -40,6 +40,7 @@
 - Bất đồng bộ là 1 mình tôi làm nhưng nhiều công việc
 
 - Đa luồng là nhiều người làm nhiều công việc. Vấn đề là về xung đột tài nguyên như thằng rửa rau và rang thịt đều cần dùng chung cái bếp.
+
 ////////////// Kết luận chung
 - Đồng bộ là các tác vụ theo 1 trình tự cụ thể, tiến trình tác vụ hiện tại xong thì mới đến tác vụ tiếp theo
 - Bất đồng bộ là các tác vụ chạy đồng thời tiến trình chạy song song giữa các tác vụ. Khi nói đến Bất đồng bộ, ta nói đến đa luồng
