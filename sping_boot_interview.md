@@ -368,11 +368,11 @@ application.setAttribute("hitCounter", hit)
 
 # 24. Nguyên lý solid?
 Là một tập hợp các nguyên tắc thiết kế phần mềm, mục đích là để giúp dễ bảo trì và tái sử dụng hơn gồm:
-- Single Responsibility Principle (SRP): Một class nên chỉ có một trách nhiệm duy nhất.
-- Open-Closed Principle (OCP): Các class, module và phần mềm nên được thiết kế để có thể mở rộng, nhưng không làm ảnh hưởng chức năng hiện tại.
-- Liskov Substitution Principle (LSP): Các object của một subclass nên có thể thay thế được object của superclass mà không làm thay đổi tính đúng đắn của chương trình.
-- Interface Segregation Principle (ISP): Các interface lớn tách thành các interface nhỏ hơn, nhằm giảm sự phụ thuộc và tăng tính linh hoạt của hệ thống.
-- Dependency Inversion Principle (DIP): Các class không phụ thuộc lẫn nhau. Nguyên tắc này khuyến khích việc sử dụng dependency injection để tách các phụ thuộc và giảm sự phụ thuộc của các class
+- Single Responsibility Principle (SRP): ***Một class*** nên chỉ có một trách nhiệm duy nhất.
+- Open-Closed Principle (OCP): ***Hệ thống*** nên mở rộng chức năng bằng cách thêm mới code, chứ không phải sửa đổi code hiện có để không làm ảnh hưởng chức năng hiện tại.
+- Liskov Substitution Principle (LSP): ***Các đối tượng của lớp con*** có thể thay thế được đối tượng của lớp cha mà không làm thay đổi tính năng của hệ thống.
+- Interface Segregation Principle (ISP): ***Interface lớn*** tách thành các interface nhỏ hơn, nhằm giảm sự phụ thuộc và tăng tính linh hoạt của hệ thống.
+- Dependency Inversion Principle (DIP): ***Các modul cấp cao (các class)*** không phụ thuộc vào modul cấp thấp. Nguyên tắc này khuyến khích việc sử dụng dependency injection để tách các phụ thuộc và giảm sự phụ thuộc của các class
 
 # 25. Các annotation chính trong Spring MVC bao gồm:
 
