@@ -75,3 +75,11 @@ Yêu cầu sử dụng:
 ### 11 .Kiến trúc database kiểu master slave
 - Node master: chỉ phục vụ cho việc thêm sửa xóa
 - Node slave: chỉ phục vụ cho việc search
+
+### 12 .Cách tối ưu hóa truy vấn database
+- Đánh index cho các cột sử dụng where, order by, group by
+- Tránh sử dụng câu truy vấn like với '%' phía trước vì nó sẽ làm mất index cho cột được đánh index đó
+- Chỉ lấy các trường cần thiết không lấy thừa.
+- Sử dụng cache trong trường hợp truy vấn nhiều trong database
+- Khi insert số lượng lớn, không insert lần lượt mà theo batch
+- Dùng Distinct và Union khi cần
