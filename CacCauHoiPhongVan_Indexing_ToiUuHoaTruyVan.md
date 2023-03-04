@@ -73,5 +73,5 @@ Yêu cầu sử dụng:
 	  - Union All: Trả về tất cả các kết quả kể cả trùng lặp
 
 ### 11 .Kiến trúc database kiểu master slave
-Node master: chỉ phục vụ cho việc thêm sửa xóa
-Node slave: chỉ phục vụ cho việc search
+- Node master: chỉ phục vụ cho việc thêm sửa xóa
+- Node slave: chỉ phục vụ cho việc search
