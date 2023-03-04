@@ -37,10 +37,53 @@ quản lý các Bean đó.
 - @Service: chú thích cho class xử lý logic
 - @Controller: chú thích class làm việc với Request
 
-## 6. Khác nhau giữa String và String Builder
+## 6. Khác nhau giữa String, String Builder và String Buffer
+- String khi khởi tạo mới sẽ dùng bộ nhớ mới
+- Builder và buffer khi khởi tạo không dùng bộ nhớ mới mà ghi đè vào bộ nhớ cũ
+- String builder và String buffer có trong mutable object (thay đổi được giá trị) còn string thì ở trong immutable object(không thay đổi được giá trị)
 
-- String Khi tạo ra 1 biến thì nó là không thay đổi, kể cả khi ta có gán cho nó 1 giá trị khác
-hay cộng chuỗi vào nó thì bản chất nó sẽ chỉ tạo ra giá trị khác với giá trị được cộng dồn vào.
+- String builder là bất đồng bộ nên khi append có thể sẽ nối không đúng thứ tự. VD:
+  ```sh
+  StringBuilder sb = new StringBuilder();
+  Thread thread1 = new Thread(() -> {
+      sb.append("Hello");
+  });
+
+  Thread thread2 = new Thread(() -> {
+      sb.append("World");
+  });
+
+  thread1.start();
+  thread2.start();
+
+  thread1.join();
+  thread2.join();
+
+  System.out.println(sb.toString());  
+  ```
+  Kết quả in ra có thể khác nhau mỗi lần chạy, ví dụ: "HelloWorld" hoặc "WorldHello". Để tránh vấn đề này, chúng ta có thể sử dụng các phương thức đồng bộ hóa trên StringBuilder để đảm bảo rằng các thao tác sẽ được thực hiện theo đúng thứ tự được mong đợi.
+
+- String buffer là đồng bộ (thread safe) nên khi append chạy đa luồng  sẽ theo trình thứ tự. VD:
+  ```sh
+  StringBuffer sb = new StringBuffer();
+
+  Thread thread1 = new Thread(() -> {
+      sb.append("Hello");
+  });
+
+  Thread thread2 = new Thread(() -> {
+      sb.append("World");
+  });
+
+  thread1.start();
+  thread2.start();
+
+  thread1.join();
+  thread2.join();
+
+  System.out.println(sb.toString());  
+  ```
+  Kết quả in ra sẽ luôn là "HelloWorld" bất kể thứ tự mà các luồng được thực thi, vì StringBuffer đảm bảo rằng các thao tác trên chuỗi sẽ được thực hiện tuần tự một cách đồng bộ.
 
 **Nên khi nối chuỗi sẽ dùng String Builder. Nhưng chi khi nào nối nhiều chuỗi**
 
