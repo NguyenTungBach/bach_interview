@@ -40,3 +40,12 @@ Kỹ thuật tracing giúp chúng ta xác định được vị trí của các 
 
 ![](https://blog.luyencode.net/wp-content/uploads/2018/07/thuat-toan-tim-kiem-nhi-phan-minh-hoa-code-su-dung-c-java.gif)
 - Thuật toán tìm kiếm B-tree: Sắp xếp thàng dạng cây phân nhánh (bao gồm node gốc và các node con). Khi đứng ở 1 node phân nhánh sẽ luôn biết được node tiếp theo là gì
+
+### 5 .Indexing
+- Sigle Column Index: Index cho 1 cột duy nhất
+- Index kiểu unique: Khóa chính của bảng không được trùng nhau, nhằm đảm bảo tính toàn vẹn dữ liệu
+- Composite Index: Là chỉ mục kết hợp cho 2 hoặc nhiều cột trong bảng
+
+### 6 .Các kiểu Index trong Database:
+- Hash Index: Lưu index dưới dạng key value. Chỉ phù hợp với truy vấn chính xác. Trước khi truy vấn thì ở mỗi phần tử sẽ có một giá trị hash, khi truy vấn theo đối tượng nào thì chỉ hash giá trị đó và tìm giá trị hash trong Hash Index
+- B - tree : mặc định khi tìm kiếm trong sql
