@@ -71,3 +71,7 @@ Yêu cầu sử dụng:
   - Khác nhau:
 	  - Union: Chỉ trả về những kết quả không trùng lặp.
 	  - Union All: Trả về tất cả các kết quả kể cả trùng lặp
+
+### 11 .Kiến trúc database kiểu master slave
+Node master: chỉ phục vụ cho việc thêm sửa xóa
+Node slave: chỉ phục vụ cho việc search
