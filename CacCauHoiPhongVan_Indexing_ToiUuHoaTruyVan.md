@@ -49,3 +49,25 @@ Kỹ thuật tracing giúp chúng ta xác định được vị trí của các 
 ### 6 .Các kiểu Index trong Database:
 - Hash Index: Lưu index dưới dạng key value. Chỉ phù hợp với truy vấn chính xác. Trước khi truy vấn thì ở mỗi phần tử sẽ có một giá trị hash, khi truy vấn theo đối tượng nào thì chỉ hash giá trị đó và tìm giá trị hash trong Hash Index
 - B - tree : mặc định khi tìm kiếm trong sql
+
+### 7 .Các lưu ý khi đánh index
+- Chỉ nên đánh index với những bảng có dữ liệu lớn (cỡ khoảng 100K trở lên) và thường xuyên phải truy vấn trên bảng đó.
+- Chỉ đánh index cho các column thường xuyên theo mệnh đề Where hay Order by
+- Không nên đánh index cho column có quá nhiều giá trị trùng lặp hoặc text dài
+- Trường sử dụng nhiều column index thì cần chú ý thứ tự các column
+
+### 8 .distinct 
+- Loại bỏ tất cả các bản ghi trùng lặp và chỉ lấy các bản ghi duy nhất 
+
+### 9 .UNION 
+Là câu lệnh SQL dùng để gom kết quả từ 2 bảng với nhau.
+Yêu cầu sử dụng:
+  - Kết quả 2 bên trả về số cột phải giống nhau
+  - Cùng kiểu dữ liệu
+
+### 10 .Union với Union All
+  - Giống nhau:
+	  - Là sự kết hợp kết quả của 2 hoặc nhiều câu lệnh select trong sql
+  - Khác nhau:
+	  - Union: Chỉ trả về những kết quả không trùng lặp.
+	  - Union All: Trả về tất cả các kết quả kể cả trùng lặp
