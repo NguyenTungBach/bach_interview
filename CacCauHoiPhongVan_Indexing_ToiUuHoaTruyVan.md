@@ -39,7 +39,7 @@ Kỹ thuật tracing giúp chúng ta xác định được vị trí của các 
 - Thuật toán tìm kiếm nhị phân (Binary Search): Thuật toán dựa vào thứ tự sắp xếp của tập hợp để chia nữa tập hợp, giảm số phần tử cần duyệt sau mỗi lần chia
 
 ![](https://blog.luyencode.net/wp-content/uploads/2018/07/thuat-toan-tim-kiem-nhi-phan-minh-hoa-code-su-dung-c-java.gif)
-- Thuật toán tìm kiếm B-tree: Sắp xếp thàng dạng cây phân nhánh (bao gồm node gốc và các node con). Khi đứng ở 1 node phân nhánh sẽ luôn biết được node tiếp theo là gì
+- Thuật toán tìm kiếm B-tree (hiện đang chưa rõ cách hoạt động thuật toán): Sắp xếp thàng dạng cây phân nhánh (bao gồm node gốc và các node con). Khi đứng ở 1 node phân nhánh sẽ luôn biết được node tiếp theo là gì
 
 ### 5 .Indexing
 - Sigle Column Index: Index cho 1 cột duy nhất
