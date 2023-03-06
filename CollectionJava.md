@@ -1,8 +1,8 @@
 ### 1. List?
 - Các phần tử được sắp xếp có thứ tự và có thể có giá trị giống nhau
-    - ### 1.1) ArrayList: Cứ mỗi lần thay đổi sẽ sắp sếp lại dữ liệu
+    - ### 1.1) ArrayList: 
     - ### 1.2) Vector:
-    - ### 1.3) LinkedList: Không quan tâm việc sắp xếp dữ liệu mà cứ mỗi lần thêm là chèn sau
+    - ### 1.3) LinkedList: Lưu dưới dạng danh sách liên kết để lưu nên việc thêm hoặc xóa nhanh vì chỉ 
 
 ### 2. Set?
 - Các phần tử là duy nhất, không chứa các phần tử chùng lặp
@@ -20,5 +20,9 @@
 - Các phần tử được sắp xếp và xử lý theo FIFO và LIFO (last in first out: vào cuối ra trước).
 
 ### 6. Phân biệt list và array ?
-- Array: cố định
-- List: có thể mở rộng 
+- Array: 
+    - cố định kích thước
+    - chỉ chứa các đối tượng cùng kiểu dữ liệu
+- List: 
+    - có thể mở rộng kích thước
+    - chứa được các đối tượng khác kiểu dữ liệu
