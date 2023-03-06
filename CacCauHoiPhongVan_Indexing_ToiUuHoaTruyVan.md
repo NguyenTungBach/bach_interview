@@ -28,6 +28,7 @@
 Kỹ thuật tracing giúp chúng ta xác định được vị trí của các lỗi trong phương thức ***add*** và giải quyết chúng
 
 - Để tracing thì ta cần phải biết nghiệp vụ của phần đó và ta sẽ check đường luồng từ đâu đến đâu. 
+- Đặc điểm nhận biết giữa tracing và debug là tracing thì ta không biết code ở vị trí nào nên phải tìm luồng code. Còn debug thì biết rồi nên debug chỉ kiểm tra dữ liệu đầu ra bị lỗi ở đâu trong hàm
 
 ### 3 .TPS Counter
 - TPS (Transactions Per Second) là một đơn vị đo lường tốc độ xử lý giao dịch của một hệ thống.
