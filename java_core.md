@@ -180,3 +180,9 @@ thì sẽ làm trên 1 dòng
 
     ```
     Như vậy, ta có hai đối tượng Person có cùng giá trị băm là 5, đó là John và Jane. Chúng được lưu trữ trong cùng một vị trí và được đánh dấu bằng dấu mũi tên trong bảng băm. Khi truy vấn giá trị của John, HashMap sẽ duyệt qua danh sách liên kết tại vị trí này và trả về giá trị của John. Tương tự, khi truy vấn giá trị của Jane, HashMap cũng sẽ tìm kiếm
+    
+### 23. Các thành phần chính trong OOP:
+- Kế thừa: Lớp con kế thừa thuộc tính và các hàm của lớp cha
+- Đóng gói: che giấu dữ liệu của một lớp
+- Đa hình: Một phương thức nhưng được thể hiện theo nhiều cách khác nhau
+- Trừu tượng: Là bước phác thảo đảm bảo các tính năng không bị thiếu
