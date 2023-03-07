@@ -6,7 +6,7 @@
 - Hibernate là framework của ORM. Dùng để ánh xạ dữ liệu đối tượng với database
 
 ### 3. Spring Data JPA là gì?
-- Spring Data JPA là modul của Spring boot giúp giảm thiểu các đoạn code.
+- Spring Data JPA là dependency ***(Dependency (phụ thuộc) là một thành phần hoặc thư viện mà ứng dụng của bạn cần để hoạt động đúng cách)*** của Spring boot giúp giảm thiểu các đoạn code.
   - Spring Data JPA sử dụng các phương thức truy vấn tạo tự động để truy vấn. Nhờ các phương thức tạo tự động nên nó có thể hỗ trợ đa nền tảng với database khác nhau
   - Spring Data JPA cung cấp một số phương thức có sẵn để thao tác với cơ sở dữ liệu. Như save(), findById(), findAll()
   
