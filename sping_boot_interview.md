@@ -105,7 +105,7 @@ Hiện nay có 2 cách xây dựng mô hình MVC:
   
  - Ví dụ cách sử dụng Interface Injection:
 
-***lớp phụ thuộc sẽ cung cấp một hàm injector để inject nó vào bất kì client nào đc truyền vào. Các client phải implement một interface mà có một setter method dành cho việc nhận lớp phụ thuộc***
+***dependency sẽ cung cấp một hàm injector để inject nó vào bất kì client nào đc truyền vào. Các client phải implement một interface mà có một setter method dành cho việc nhận dependency***
   
   Giả sử chúng ta có interface IService và hai implementation của nó là ClaimService và AdjudicationService.
   ```sh
