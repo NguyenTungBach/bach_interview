@@ -26,7 +26,7 @@
 
 ### 4. Queue?
 - Các phần tử được sắp xếp và xử lý theo FIFO (first in first out: vào trước ra trước)
-    - 
+
 
 ### 5. Deque?
 - Các phần tử được sắp xếp và xử lý theo FIFO và LIFO (last in first out: vào cuối ra trước).
