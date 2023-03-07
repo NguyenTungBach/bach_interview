@@ -136,10 +136,9 @@ Hiện nay có 2 cách xây dựng mô hình MVC:
   ```
   Chúng ta sử dụng như sau:
   ```sh
-  BusinessLogicImplementationInterfaceDI objInterfaceDI =
-  new BusinessLogicImplementationInterfaceDI();
-  objInterfaceDI= new ClaimService();
-  objInterfaceDI.setServiceRunService(serviceObj);
+  BusinessLogicImplementationInterfaceDI objInterfaceDI = new BusinessLogicImplementationInterfaceDI();
+  IService iService= new ClaimService();
+  objInterfaceDI.setServiceRunService(iService);
   ```
   
   
