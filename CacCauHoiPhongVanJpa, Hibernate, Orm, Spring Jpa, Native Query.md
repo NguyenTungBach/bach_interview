@@ -11,7 +11,7 @@
         - Có thể mapping với object để tạo bảng database
 
 ### 4 .Spring data Jpa là gi?
-- Là dependency của Spring boot, cung cấp các tính năng giảm thiểu code. Như
+- Là dependency ***(Dependency (phụ thuộc) là một thành phần (modul) hoặc thư viện cung cấp các tính năng cho chương trình hoặc ứng dụng đó)*** của Spring boot, cung cấp các tính năng giảm thiểu code. Như
     - Cung cấp các hàm truy vấn tự động giúp hỗ trợ đa nền tảng nhiều database khác nhau. Khi thay đổi database sẽ không phải lo việc thay đổi code
     - Cung cấp các hàm truy vấn có sẵn để làm việc với database như save(), findById(), findAll().
 
