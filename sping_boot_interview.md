@@ -38,7 +38,7 @@ Hiện nay có 2 cách xây dựng mô hình MVC:
  - loosely-coupled là cách ám chỉ việc làm giảm bớt sự phụ thuộc giữa các Class với nhau.
 
 # 5. DI (Dendency Injection) là gì?
-- Là 1 kỹ thuật lập trình giúp cho các class không bị phụ thuộc vào nhau(giảm việc sử dụng new). Dựa trên nguyên lý thiết kế IOC
+- Là 1 kỹ thuật lập trình giúp cho các class không bị phụ thuộc vào nhau(giảm việc sử dụng new) thông qua việc cho các class giao tiếp với nhau thông qua interface. Dựa trên nguyên lý thiết kế IOC.
 - Ví dụ cách sử dụng Constructor Injection:
 
 ***Giảm phụ thuộc bằng cách truyền thẳng class cần phụ thuộc đó vào constructor. Như vậy sẽ không phải class chứa sẽ không cần phải khởi tạo nữa***
@@ -105,51 +105,43 @@ Hiện nay có 2 cách xây dựng mô hình MVC:
   
  - Ví dụ cách sử dụng Interface Injection:
 
-***Giảm phu thuộc bằng việc phụ thuộc được phụ thuộc vào interface hoặc abtract class***
+***lớp phụ thuộc sẽ cung cấp một hàm injector để inject nó vào bất kì client nào đc truyền vào. Các client phải implement một interface mà có một setter method dành cho việc nhận lớp phụ thuộc***
   
-  Giả sử chúng ta có interface MessageService và hai implementation của nó là EmailService và SMSService. Chúng ta sử dụng interface injection để thực hiện gửi tin nhắn trong NotificationService.
+  Giả sử chúng ta có interface IService và hai implementation của nó là ClaimService và AdjudicationService.
   ```sh
-  public interface MessageService {
-    void sendMessage(String message);
+  public interface IService{
+   string ServiceMethod();
   }
-
-  public class EmailService implements MessageService {
-      public void sendMessage(String message) {
-          System.out.println("Sending email: " + message);
-      }
+  public class ClaimService implements IService{
+     public string ServiceMethod(){
+        return "ClaimService is running";
+     }
   }
-
-  public class SMSService implements MessageService {
-      public void sendMessage(String message) {
-          System.out.println("Sending SMS: " + message);
-      }
+  public class AdjudicationService implements IService{
+     public string ServiceMethod(){
+        return "AdjudicationService is running";
+     }
   }
-
-  public class NotificationService {
-      private MessageService messageService;
-
-      public NotificationService(MessageService messageService) {
-          this.messageService = messageService;
-      }
-
-      public void sendNotification(String message) {
-          messageService.sendMessage(message);
-      }
+  interface ISetService{
+     void setServiceRunService(IService client);
+  }
+  public class BusinessLogicImplementationInterfaceDI implements ISetService{
+     IService _client1;
+     public void setServiceRunService(IService client){
+        _client1 = client;
+        Console.WriteLine("Interface Injection ==>
+        Current Service : {0}", _client1.ServiceMethod());
+     }
   }
   ```
-  Chúng ta có thể sử dụng NotificationService như sau:
+  Chúng ta sử dụng như sau:
   ```sh
-  public static void main(String[] args) {
-    MessageService emailService = new EmailService();
-    NotificationService notificationService = new NotificationService(emailService);
-    notificationService.sendNotification("Hello from email!");
-
-    MessageService smsService = new SMSService();
-    notificationService = new NotificationService(smsService);
-    notificationService.sendNotification("Hello from SMS!");
-  }
+  BusinessLogicImplementationInterfaceDI objInterfaceDI =
+  new BusinessLogicImplementationInterfaceDI();
+  objInterfaceDI= new ClaimService();
+  objInterfaceDI.setServiceRunService(serviceObj);
   ```
-  Ở đây, chúng ta không trực tiếp khởi tạo các implementation của MessageService trong NotificationService, mà chúng ta khởi tạo các implementation đó ngoài và truyền chúng vào NotificationService thông qua constructor. Điều này giúp chúng ta giảm sự phụ thuộc của NotificationService vào các implementation cụ thể của MessageService.
+  
   
 # 6. IoC (Inversion of Control) là gì?
 - Inversion of Control có thể hiểu là một nguyên lý thiết kế. Các kiến trúc phần mềm được được áp dụng thiết kế này sẽ được **đảo ngược quyền điều khiển so với kiểu lập trình hướng thủ tục**. Mục đích là để tránh việc khởi tạo new.
