@@ -7,7 +7,7 @@
          - Giống ArrayList nhưng các phương thức của vector theo hướng thread đồng bộ. Khi chạy luồng sẽ đảm bảo các phần tử thêm vào theo trình tự
     - ### 1.3) LinkedList: 
         - Lưu dưới dạng danh sách liên kết để lưu nên việc thêm hoặc xóa nhanh đối với phần tử đầu và cuối
-        - Tốc độ truy cập các phần tử tương đối chậm hơn ArrayList và Vector do phải duyệt qua
+        - Tốc độ truy cập các phần tử tương đối chậm hơn ArrayList và Vector do phải duyệt qua từng phần tử
 
 ### 2. Set?
 - Các phần tử là duy nhất, không chứa các phần tử chùng lặp
