@@ -1,8 +1,14 @@
+### 0. Array
+- Là một mảng cố định với các phần tử cùng iểu cố định
+
 ### 1. List?
 - Các phần tử được sắp xếp có thứ tự và có thể có giá trị giống nhau
     - ### 1.1) ArrayList: 
+         - Là mảng động
+         - Chứa được các phần tử trùng lặp
          - Sử dụng một mảng (array) để lưu trữ các phần tử
          - Truy vấn bằng index
+         - Lý do thường dùng ArrayList bởi khi lấy dữ liệu từ database nhỏ và tốc độ sửa xóa không chênh quá nhiều
     - ### 1.2) Vector:
          - Giống ArrayList nhưng các phương thức của vector theo hướng thread đồng bộ. Khi chạy luồng sẽ đảm bảo các phần tử thêm vào theo trình tự
     - ### 1.3) LinkedList: 
