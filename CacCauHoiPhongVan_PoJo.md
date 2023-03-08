@@ -21,3 +21,46 @@
 - @Repository: chú thích cho class giúp truy vấn dữ liệu database
 - @Service: chú thích cho class xử lý logic
 - @Controller: chú thích class làm việc với Request
+
+# 6. Các scope trong spring?
+- Singleton: Các đối tượng trong bean chỉ được khởi tạo 1 lần duy nhất. Mặc định khi chạy bean là thằng này
+```sh
+VD:
+@Scope("singleton")
+public class Dress{
+}
+```
+
+- Prototype: Các đối tượng trong bean được khởi tạo mỗi lần khi được gọi đến.
+```sh
+VD:
+@Scope("prototype")
+public class Dress{
+}
+```
+
+- Request: giống với prototype scope, tuy nhiên nó dùng cho ứng dụng web, một thể hiện của bean sẽ được tạo cho mỗi HTTP request. Tức là mình truyền giá trị vào view nào thì view đó sẽ được truyền những giá trị đó
+
+```sh
+VD: request.setAttribute("username","Test")
+```
+
+- Session: Mỗi thể hiện của bean sẽ được tạo cho mỗi HTTP Session. Tức là các giá trị truyền vào view sẽ đc lưu vào session, nếu trong view đó ko có giá trị cần truyền thì nó sẽ kiểm tra xem trong session có ko
+
+```sh
+VD: 
+HttpSession session = request.getSession();
+session.setAttribute("username","Test")
+```
+
+- Application: Được sử dụng để tạo global sesion bean cho các ứng dụng Portlet. Tức là nếu mình tính toán trên view, mỗi lần refresh lại trang thì giá trị sẽ được thay đổi, đặc biệt thằng này có thể sử dụng trong bất cứ trang nào giông Session **(lưu ý là lấy giá trị, thực ra mình cũng có thể dùng tùy tình huống)**
+
+```sh
+VD: 
+HttpSession application = request.getServletContext();
+Integer hit = application.getAttribute("hitCounter")
+if(hit == null || hit == 0){
+ hit++;
+}
+application.setAttribute("hitCounter", hit)
+```
