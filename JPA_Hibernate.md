@@ -1,6 +1,6 @@
 ### 1. ORM là gì?
 - ORM là một framwork trong việc ánh xạ đối tượng với database
-- 
+ 
 ### 2. JPA là gì?
 - JPA là đặc tả của ORM trong việc ánh xạ dữ liệu đối tượng với database.
 - Sử dụng thư viện javax.persistence để định nghĩa ra các Annotation và API để làm việc với database. Đặc điểm nhận dạng là EntityManager
