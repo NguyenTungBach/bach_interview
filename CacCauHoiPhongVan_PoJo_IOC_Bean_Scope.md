@@ -10,6 +10,12 @@
 ### 3. Bean là gì?
 - Là một đối tượng được quản lý bởi IOC Container
 
+### 4. Vòng chạy Bean là gì?
+- B1: (Constructor) Khởi tạo
+- B2: (Post Construct) Hành động chạy sau khi khởi tạo
+- B3: (Pre Destroy) Trước khi hủy
+- B4: (Destroy) Hủy Bean
+
 ### 4. Các cách khởi tạo bean?
 - Anotation (thường dùng)
 - XML
@@ -64,3 +70,4 @@ if(hit == null || hit == 0){
 }
 application.setAttribute("hitCounter", hit)
 ```
+
