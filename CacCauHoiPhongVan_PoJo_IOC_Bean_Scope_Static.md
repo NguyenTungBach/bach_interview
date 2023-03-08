@@ -71,3 +71,30 @@ if(hit == null || hit == 0){
 application.setAttribute("hitCounter", hit)
 ```
 
+# 7. Biến static (biến cục bộ)?
+- Gọi được trực tiếp, không cần phải khởi tạo
+- Cấp phát bộ nhớ chỉ xảy ra một lần nên tiết kiệm bộ nhớ
+
+# 8. Hàm static ?
+- Gọi được trực tiếp, không cần phải khởi tạo
+- 1 phương thức static không gọi được this hay supper vì làm thế sẽ gọi đến instance của lớp
+- 1 phương thức static không thể ghi đè vì nó là nó được gọi trực tiếp thông qua lớp chứ không phải qua đối tượng
+
+# 9. static class (cho phép truy cập các thành viên dữ liệu tĩnh của lớp ngoài)
+VD:
+```sh
+class TestOuter1 {
+    static int data = 30;
+ 
+    static class Inner {
+        void msg() {
+            System.out.println("data is " + data);
+        }
+    }
+ 
+    public static void main(String args[]) {
+        TestOuter1.Inner obj = new TestOuter1.Inner();
+        obj.msg();
+    }
+}
+```
