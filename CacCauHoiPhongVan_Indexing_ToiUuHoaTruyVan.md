@@ -83,4 +83,5 @@ Yêu cầu sử dụng:
 - Chỉ lấy các trường cần thiết không lấy thừa.
 - Sử dụng cache trong trường hợp truy vấn nhiều trong database
 - Khi insert số lượng lớn, không insert lần lượt mà theo batch
+- Đánh partition
 - Dùng Distinct và Union khi cần
