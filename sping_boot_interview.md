@@ -90,9 +90,17 @@ Hiện nay có 2 cách xây dựng mô hình MVC:
     public List<User> getAllUsers() {
         return userRepository.getAllUsers();
     }
-
-    // Other methods
   }
+  
+  public interface UserRepository {
+    void getAllUsers();
+  }
+  
+  public class UserRepositoryImpl implements UserRepository {
+     public void getAllUsers() {
+         System.out.println("getAllUsers");
+     }
+ }
   ```
   Trong ví dụ này, ta sử dụng Setter Injection để truyền đối tượng UserRepository vào UserService. Ta tạo một setter method để thiết lập đối tượng UserRepository cho UserService. Ta có thể sử dụng method này để thiết lập đối tượng UserRepository từ bên ngoài UserService. Như vậy, ta cũng đã giảm sự phụ thuộc của UserService vào UserRepository.
   Để sử dụng UserService, ta có thể sử dụng code sau:
