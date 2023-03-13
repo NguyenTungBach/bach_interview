@@ -194,6 +194,6 @@ Thread Thread-2-Send-Email exiting.
 - Callablelà một interface trong java, nó định nghĩa một công việc và trả về một kết quả trong tương lai và có thể throw Exception
 - Future là kết quả trả về của Callable, nó thể hiện kết quả của một phép tính không đồng bộ, cho phép kiểm tra trạng thái của phép tính 
 (đã thực hiện xong chưa, kết quả trả về là gì…)
-- 
+- Executors là một class tiện ích trong Java, dùng để tạo thread pool, đối tượng Callable cho các xử lý bất đồng bộ.
 
 
