@@ -98,3 +98,7 @@ class TestOuter1 {
     }
 }
 ```
+
+# 10. Các loại exceptions:
+- Checked exceptions: là những exception báo lỗi ngay trong khi code
+- Unchecked exceptions: là những exception báo lỗi trong quá trình chạy
