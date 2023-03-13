@@ -44,7 +44,7 @@
 ////////////// Kết luận chung
 - Đồng bộ là các tác vụ theo 1 trình tự cụ thể, tiến trình tác vụ hiện tại xong thì mới đến tác vụ tiếp theo
 - Bất đồng bộ là các tác vụ chạy đồng thời tiến trình chạy song song giữa các tác vụ. Khi nói đến Bất đồng bộ, ta nói đến đa luồng
-- Đa luồng là một kỹ thuật lập trình cho phép các tiến trình chạy đồng thời cùng lúc. Mỗi tiến trình có thể chứa nhiều luồng giúp tăng tốc độ thực thi.
+- Đa luồng là một kỹ thuật lập trình cho phép các luồng chạy đồng thời cùng lúc.
 
 # 4. Chu kỳ sống của thread trong java được kiểm soát bởi JVM
 - New: tạo lớp Thread
