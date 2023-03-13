@@ -29,7 +29,7 @@ class TestOuter1 {
 ```
 
 # 4. biến final
-- Là biến không được thay đổi. Nếu thay đỏi sẽ báo lỗi
+- Là biến không được thay đổi. Nếu thay đổi sẽ báo lỗi
 
 # 5. hàm final
 - là hàm sẽ không bị ghi đè giống phương thức static
