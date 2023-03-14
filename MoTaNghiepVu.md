@@ -14,3 +14,14 @@
   - Bài viết sau khi được xét duyệt sẽ được tính nhuận bút
   - Số tiền nhuận bút tính thêm sẽ dựa vào lượt xem, lượt tương tác, lượt thích. Lượt nào lớn nhất sẽ được thêm tiền tùy theo cấp độ
   - Sau khi Quản trị viên chốt nhuận bút trong tháng thì sẽ không tính chấm nhuận bút nữa, mọi lượt xem, lượt thích hay lượt tương tác của bài viết đó sẽ không được tính nữa
+
+# 3. Web bán đèn
+BackEnd gồm các chức năng trị như:
+  - Admin quản lý sản phẩm, đơn hàng
+  - Thống kê các doanh thu trong tháng
+
+FrontEnd:
+  - Người dùng sau khi chọn được những sản phẩm mà mình muốn sẽ vào giỏ hàng để xác nhận
+  - Sau khi xác nhận xong đơn hàng sẽ chuyển sang tiến hành thanh toán
+  - Sau khi thanh toán thành công thì đơn hàng sẽ chuyển trạng thái đang chờ để đơn vị vận chuyển sản phẩm
+  - Sau khi vận chuyển đơn hàng thành công thì trạng thái đơn hàng sẽ chuyển thành hoàn thành
