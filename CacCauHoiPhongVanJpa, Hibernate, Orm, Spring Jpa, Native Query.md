@@ -1,5 +1,12 @@
 ### 1 .Spring là gi?
 - Spring là framework dựa trên ngôn ngữ java để xây dựng các ngôn ngữ phần mềm.
+- Có những ưu điểm nào
+    - Tạo sẵn server test. Thay vì mình phải tìm cách cài tomcat để chạy thử server thì spring đã cung cấp sẵn
+    - Hỗ trợ cấu hình tự động (file application.properties)
+    - Cung cấp nhiều framework có sẵn để làm việc như 
+        - Spring Data JPA: Hỗ trợ làm việc database
+        - Spring Sercurity: Hỗ trợ làm việc với xác thực và phân quyền
+        - Spring Boot: Cung cấp các cấu hình sẵn mặc đinh hay tích hợp các công nghệ của các ứng dụng Spring
 
 ### 2 . ORM là gì?
 ORM là một framework trong việc ánh xạ đối tượng với database
