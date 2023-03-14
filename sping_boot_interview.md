@@ -3,6 +3,13 @@
 Spring là một **framework** mã nguồn mở được phát triển dựa trên nền tảng là Java, giúp đơn giản hóa việc xây dựng và phát triển các ứng dụng java doanh nghiệp
  - ### Cách hiểu chung của mình
 Thông qua cách hiểu Framework **(thư viện)** thì ta có thể hiểu Spring Framework giúp lập trình viên Java phát triển web 1 cách dễ dàng, nhanh chóng và đơn giản hóa.
+- Có những ưu điểm:
+    - Tạo sẵn server test. Thay vì mình phải tìm cách cài tomcat để chạy thử server thì spring đã cung cấp sẵn
+    - Hỗ trợ cấu hình tự động (file application.properties)
+    - Cung cấp nhiều framework có sẵn để làm việc như 
+        - Spring Data JPA: Hỗ trợ làm việc database
+        - Spring Sercurity: Hỗ trợ làm việc với xác thực và phân quyền
+        - Spring Boot: Cung cấp các cấu hình sẵn mặc đinh hay tích hợp các công nghệ của các ứng dụng Spring
 >>![](https://images.viblo.asia/94b1b009-62b1-49e8-ae95-fccc0db1f9d3.png)
 
 # 2. Spring boot là gì?
