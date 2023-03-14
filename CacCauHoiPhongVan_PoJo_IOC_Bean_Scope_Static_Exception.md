@@ -1,5 +1,5 @@
 ### 1. Pojo là gì?
-- Là lớp được triển khai các đặc điểm cơ bản nhất trong java như  như các thuộc tính, getter/setter, constructor và các phương thức equals(), hashCode(), toString().
+- Là các lớp cơ bản của java. Chỉ có constructor với getter và setter
 
 ### 2. IOC và DI?
 - IOC dựa trên nguyên tắc ***(nguyên tắc là yêu cầu)*** solid. Trong nguyên tắc có nguyên lý ***(lý thuyết)*** DIP.
