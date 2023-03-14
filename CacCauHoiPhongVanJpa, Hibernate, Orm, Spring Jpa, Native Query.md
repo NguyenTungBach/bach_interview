@@ -1,6 +1,6 @@
 ### 1 .Spring là gi?
 - Spring là framework dựa trên ngôn ngữ java để xây dựng các ngôn ngữ phần mềm.
-- Có những ưu điểm nào
+- Có những ưu điểm:
     - Tạo sẵn server test. Thay vì mình phải tìm cách cài tomcat để chạy thử server thì spring đã cung cấp sẵn
     - Hỗ trợ cấu hình tự động (file application.properties)
     - Cung cấp nhiều framework có sẵn để làm việc như 
