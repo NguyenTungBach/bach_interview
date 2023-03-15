@@ -25,7 +25,7 @@ ORM là một framework trong việc ánh xạ đối tượng với database
     - Cung cấp các hàm truy vấn tự động giúp hỗ trợ đa nền tảng nhiều database khác nhau. Khi thay đổi database sẽ không phải lo việc thay đổi code
     - Cung cấp các hàm truy vấn có sẵn để làm việc với database như save(), findById(), findAll().
 
-### 6 .Native là gi?
+### 6 .Native query (một tính năng của JPA) là gi?
 - Native query là query thuần ko chỉ đến các object entities. Lý do viết thuần là vì có một số câu lệnh, một số hàm mà chỉ trên chính database đó mới có
 
 ### 7 .Authentication (xác thực) và Authorization (phân quyền) là gi?
