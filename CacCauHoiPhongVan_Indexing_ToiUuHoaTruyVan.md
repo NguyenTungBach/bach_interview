@@ -90,3 +90,6 @@ Yêu cầu sử dụng:
 - Khi thêm sửa xóa sẽ chậm vì có bảng sẽ phải sắp xếp lại
 - Tăng bộ nhớ
 - Chậm truy vấn vì hệ thống sẽ phải duyệt qua từng cột index theo điều kiện. Nếu where nhiều cột sẽ bị chậm
+
+### 14 .Vì sao dùng index lại nhanh
+- Vì index có thuật toán để tìm kiếm nhanh
