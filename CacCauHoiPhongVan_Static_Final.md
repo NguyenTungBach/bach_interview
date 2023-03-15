@@ -5,7 +5,7 @@
 # 2 .hàm static
 - Gọi được trực tiếp, không cần phải khởi tạo
 - 1 phương thức static không gọi được this hay supper vì làm thế sẽ gọi đến instance của lớp
-- 1 phương thức static không thể ghi đè vì nó là nó được gọi trực tiếp thông qua lớp chứ không phải qua đối tượng
+- 1 phương thức static không thể ghi đè vì nó là nó được gọi trực tiếp thông qua lớp chứ không phải qua đối tượng ***(Tức là nó tồn tại trong phạm vi của lớp chứ không phải trong phạm vi đối tượng cụ thể của lớp đ)***
 - chỉ gọi đến biến static
 
 # 3. class static
@@ -32,7 +32,7 @@ class TestOuter1 {
 - Là biến không được thay đổi. Nếu thay đổi sẽ báo lỗi
 
 # 5. hàm final
-- là hàm sẽ không bị ghi đè. Giống phương thức với static
+- là hàm sẽ không bị ghi đè ***(Giống phương thức với static)***. Điều này là để đảm bảo nó sẽ không bị thay đổi và giữ nguyên chức năng
 
 # 6. lớp final
 - là lớp không thể kế thừa từ lớp này hoặc ghi đè các phương thức trong lớp
