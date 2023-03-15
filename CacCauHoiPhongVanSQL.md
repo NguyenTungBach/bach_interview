@@ -10,6 +10,7 @@
 
 # 3. Distinct
 - Loại bỏ tất cả các bản ghi trùng lặp và chỉ lấy các bản ghi duy nhất
+
 VD:
 
 | id | name | class | score |
@@ -25,3 +26,9 @@ VD:
 SELECT DISTINCT department
 FROM employees;
 ```
+
+| class |
+| ------ |
+| A |
+| B |
+| C |
