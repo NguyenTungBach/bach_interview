@@ -32,7 +32,7 @@ class TestOuter1 {
 - Là biến không được thay đổi. Nếu thay đổi sẽ báo lỗi
 
 # 5. hàm final
-- là hàm sẽ không bị ghi đè giống phương thức static
+- là hàm sẽ không bị ghi đè. Giống phương thức với static
 
 # 6. lớp final
 - là lớp không thể kế thừa từ lớp này hoặc ghi đè các phương thức trong lớp
