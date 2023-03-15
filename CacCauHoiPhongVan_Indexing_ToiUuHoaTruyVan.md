@@ -85,3 +85,8 @@ Yêu cầu sử dụng:
 - Khi insert số lượng lớn, không insert lần lượt mà theo batch
 - Đánh partition
 - Dùng Distinct và Union khi cần
+
+### 13 .Vì sao không nên đánh index cho nhiều bảng
+- Khi thêm sửa xóa sẽ chậm vì có bảng sẽ phải sắp xếp lại
+- Tăng bộ nhớ
+- Chậm truy vấn vì hệ thống sẽ phải duyệt qua từng cột index theo điều kiện. Nếu where nhiều cột sẽ bị chậm
