@@ -8,7 +8,12 @@
 - Nếu dùng Left Join và Right Join thì phải chú ý cẩn thận với các phần tử NULL
 - Giả sử Left Join bảng có chính có 1 phần tử nào đó NULL mà tìm điều kiện với 1000 phần tử bảng phụ. Điều này sẽ dẫn đến 1 phần tử NULL sẽ phải so sánh với 1000 phần tử
 
-# 3. Distinct
+# 3. Các cách để nhóm các phần tử trùng lặp vào với nhau
+- Dùng Distinct hoặc GROUP BY
+- Distinct là để loại bỏ tất cả các bản ghi trùng lặp và chỉ lấy các bản ghi duy nhất
+- GROUP BY nhóm các phần tử theo điều kiện
+
+# 4. Distinct
 - Loại bỏ tất cả các bản ghi trùng lặp và chỉ lấy các bản ghi duy nhất
 
 VD:
@@ -32,3 +37,16 @@ FROM employees;
 | A |
 | B |
 | C |
+
+# 5. Having và Where
+- Where lấy các bản ghi theo điều kiện trước khi truy vấn
+- Having lấy các bản ghi theo điều kiện sau khi truy vấn
+- Having thay được Where
+- Vị Trí Having là đứng sau Group By rồi sau Where. VD:
+
+```sh
+SELECT department, COUNT(*) as num_employees 
+FROM employees 
+GROUP BY department 
+HAVING COUNT(*) < 3;
+```
