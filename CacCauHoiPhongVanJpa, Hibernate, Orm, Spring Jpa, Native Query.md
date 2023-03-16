@@ -28,9 +28,18 @@ ORM là một framework trong việc ánh xạ đối tượng với database
 ### 6 .Native query (một tính năng của JPA) là gi?
 - Native query là query thuần ko chỉ đến các object entities. Lý do viết thuần là vì có một số câu lệnh, một số hàm mà chỉ trên chính database đó mới có
 
-### 7 .Authentication (xác thực) và Authorization (phân quyền) là gi?
+### 7 . Spring data Jpa và Hibernate?
+- đều ko dùng đc các chức năng đặc trưng cảu db nên vẫn cần phải viết thuần cho một số trường hợp
+
+| | Spring data JPA | Hibernate |
+| ------ | ------ | ------ |
+| Định nghĩa  | là dependencies của spring | Là framework của ORM trong việc ánh xạ đối tượng với database |
+| Chứa  | chứa hibernate | là một tích hợp nằm trong Spring data Jpa |
+| Tính năng đặc trưng  | Cung cấp các hàm truy vấn tự động giúp hỗ trợ đa nền tảng nhiều database khác nhau và các hàm truy vấn có sẵn để làm việc với database như save(), findById(), findAll(). | Giúp thay vì làm việc với database thì làm việc với đối tượng và giúp ánh xạ đối tượng với database để tạo bảng |
+
+### 8 .Authentication (xác thực) và Authorization (phân quyền) là gi?
 - Xác thực là bạn là ai, phân quyền là bạn được quyền gì
 
-### 8 .Các bước xử lý bug?
+### 9 .Các bước xử lý bug?
 - B1 tái hiện bug
 - B2 debug từng break point (điểm chương trình)
