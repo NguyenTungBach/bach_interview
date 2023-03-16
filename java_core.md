@@ -64,6 +64,7 @@ interface để khai báo. Vì lúc cần mình có thể dễ dàng thay đổi
 ### 12.Reflection trong java
 
 - Giúp xem tất cả thông tin trong class. Vấn đề nằm ở chỗ ta có thể nhìn sâu vào trong class mà ko cần biết class đó có gì
+- Hỗ trợ cho ta có thể viết một đoạn code mà có thể dùng lại được cho các class khác nhau
 **VD: khi ta viết 1 class mà dành cho tất cả các thể loại class khác nhau**
 **VD điển hình là @Autowire**
 - (Ko còn vì dùng framework)(autowired)(nguy hiểm, gây những lỗi ko xác định)
