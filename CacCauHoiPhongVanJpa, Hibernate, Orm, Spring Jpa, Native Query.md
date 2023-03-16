@@ -37,6 +37,13 @@ ORM là một framework trong việc ánh xạ đối tượng với database
 | Chứa  | chứa hibernate | là một tích hợp nằm trong Spring data Jpa |
 | Tính năng đặc trưng  | Cung cấp các hàm truy vấn tự động giúp hỗ trợ đa nền tảng nhiều database khác nhau và các hàm truy vấn có sẵn để làm việc với database như save(), findById(), findAll(). | Giúp thay vì làm việc với database thì làm việc với đối tượng và giúp ánh xạ đối tượng với database để tạo bảng |
 
+### 8 . JDBC và Hibernate?
+| | JDBC | Hibernate |
+| ------ | ------ | ------ |
+| Định nghĩa  | là thư viện của java giúp làm việc với database | Là framework của ORM trong việc ánh xạ đối tượng với database |
+| Tạo bảng  | tạo bảng thủ công | tự động mapping object vs table |
+| truy vấn  | truy vấn qua database | truy vấn qua object |
+
 ### 8 .Authentication (xác thực) và Authorization (phân quyền) là gi?
 - Xác thực là bạn là ai, phân quyền là bạn được quyền gì
 
