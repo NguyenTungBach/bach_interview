@@ -44,6 +44,12 @@ ORM là một framework trong việc ánh xạ đối tượng với database
 | Tạo bảng  | tạo bảng thủ công | tự động mapping object vs table |
 | truy vấn  | truy vấn qua database | truy vấn qua object |
 
+- Lý do JDBC vẫn được ưa dùng hơn Hibernate với doanh nghiệp vì
+    - Doanh nghiệp hạn chế dùng Framework do khi dùng framework có thể có một số cấu hình sẵn tự động không cần thiết làm ảnh hưởng đến tốc độ truy vấn
+    - Vì Framework có nhiều tính năng mà người lập trình có thể chưa biết nên quay sang viết thuần là một lựa chọn tốt hơn
+    - Framework thì dù có tối ưu thì cũng chỉ tối ưu được một mức nào đó thôi
+    - Dùng JDBC thì có thể tự kiểm soát cấu hình.
+
 ### 8 .Authentication (xác thực) và Authorization (phân quyền) là gi?
 - Xác thực là bạn là ai, phân quyền là bạn được quyền gì
 
