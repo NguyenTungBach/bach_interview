@@ -192,6 +192,56 @@ thì sẽ làm trên 1 dòng
 - Equals so sánh giá trị của đối tượng
 - Contain kiểm tra chuỗi đó có chứa một chuỗi con hay không
 
-### 25. Vì sao String là một kiểu dữ liệu đối tượng nhưng so sanh equals vẫn là true còn nếu là đối tượng class thông thường sẽ thành false?
+### 25. Vì sao String là một kiểu dữ liệu đối tượng nhưng so sánh equals vẫn là true còn nếu là đối tượng class thông thường sẽ thành false?
 - Mặc định khi so sánh đối tượng trong equals sẽ là so sánh địa chỉ bộ nhớ nên cần phải ghi đè
 - Còn String bản thân nó đã có quy định với hàm equal nên sẽ so sanh theo giá trị
+
+## 26. Khác nhau giữa String, String Builder và String Buffer
+- String khi khởi tạo mới sẽ dùng bộ nhớ mới
+- Builder và buffer khi khởi tạo không dùng bộ nhớ mới mà ghi đè vào bộ nhớ cũ
+- String builder và String buffer có trong mutable object (thay đổi được giá trị) còn string thì ở trong immutable object(không thay đổi được giá trị)
+
+- String builder là bất đồng bộ nên khi append có thể sẽ nối không đúng thứ tự. VD:
+  ```sh
+  StringBuilder sb = new StringBuilder();
+  Thread thread1 = new Thread(() -> {
+      sb.append("Hello");
+  });
+
+  Thread thread2 = new Thread(() -> {
+      sb.append("World");
+  });
+
+  thread1.start();
+  thread2.start();
+
+  thread1.join();
+  thread2.join();
+
+  System.out.println(sb.toString());  
+  ```
+  Kết quả in ra có thể khác nhau mỗi lần chạy, ví dụ: "HelloWorld" hoặc "WorldHello". Để tránh vấn đề này, chúng ta có thể sử dụng các phương thức đồng bộ hóa trên StringBuilder để đảm bảo rằng các thao tác sẽ được thực hiện theo đúng thứ tự được mong đợi.
+
+- String buffer là đồng bộ (thread safe) nên khi append chạy đa luồng  sẽ theo trình thứ tự. VD:
+  ```sh
+  StringBuffer sb = new StringBuffer();
+
+  Thread thread1 = new Thread(() -> {
+      sb.append("Hello");
+  });
+
+  Thread thread2 = new Thread(() -> {
+      sb.append("World");
+  });
+
+  thread1.start();
+  thread2.start();
+
+  thread1.join();
+  thread2.join();
+
+  System.out.println(sb.toString());  
+  ```
+  Kết quả in ra sẽ luôn là "HelloWorld" bất kể thứ tự mà các luồng được thực thi, vì StringBuffer đảm bảo rằng các thao tác trên chuỗi sẽ được thực hiện tuần tự một cách đồng bộ.
+
+**Nên khi nối chuỗi sẽ dùng String Builder. Nhưng chi khi nào nối nhiều chuỗi**
