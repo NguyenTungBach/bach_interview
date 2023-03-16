@@ -186,3 +186,11 @@ thì sẽ làm trên 1 dòng
 - Đóng gói: che giấu dữ liệu của một lớp
 - Đa hình: Một phương thức nhưng được thể hiện theo nhiều cách khác nhau
 - Trừu tượng: Là bước phác thảo đảm bảo các tính năng không bị thiếu
+
+### 24. Equals và Contain:
+- Equals so sánh giá trị của đối tượng
+- Contain kiểm tra chuỗi đó có chứa một chuỗi con hay không
+
+### 25. Vì sao String là một kiểu dữ liệu đối tượng nhưng so sanh equals vẫn là true còn nếu là đối tượng class thông thường sẽ thành false?
+- Mặc định khi so sánh đối tượng trong equals sẽ là so sánh địa chỉ bộ nhớ nên cần phải ghi đè
+- Còn String bản thân nó đã có quy định với hàm equal nên sẽ so sanh theo giá trị
