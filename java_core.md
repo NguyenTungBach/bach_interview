@@ -245,3 +245,9 @@ thì sẽ làm trên 1 dòng
   Kết quả in ra sẽ luôn là "HelloWorld" bất kể thứ tự mà các luồng được thực thi, vì StringBuffer đảm bảo rằng các thao tác trên chuỗi sẽ được thực hiện tuần tự một cách đồng bộ.
 
 **Nên khi nối chuỗi sẽ dùng String Builder. Nhưng chi khi nào nối nhiều chuỗi**
+
+## 27. mutable (bất biến) và inmutable (không bất biến)
+- bất biến là không thể cập nhật ***VD: giá trị String là bất biến bởi vì khi tạo String thì giá trị không thể cập nhật mà chỉ có thể gán mới. Còn String Builder và String buffter là không bất biến bởi có thể thêm sửa dữ liệu trong quá trình viết code***
+- không bất biến là có thể cập nhật
+
+
