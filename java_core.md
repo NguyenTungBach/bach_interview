@@ -250,4 +250,11 @@ thì sẽ làm trên 1 dòng
 - bất biến là không thể cập nhật ***VD: giá trị String là bất biến bởi vì khi tạo String thì giá trị không thể cập nhật mà chỉ có thể gán mới. Còn String Builder và String buffter là không bất biến bởi có thể thêm sửa dữ liệu trong quá trình viết code***
 - không bất biến là có thể cập nhật
 
+## 28. Các loại Exception
+- checked :lỗi xảy trong quá trình viết code : class not found...
+- uncheck : xảy trong quá trình runtime (do lỗi logic của lập trình viên ): nullpoiterex
+- error : phần mở rộng của unchecked xuất hiện khi xảy ra lỗi liên qua đến phần cứng và ko thể xử lý đc:outofmemories
 
+## 29. cluster index và non cluster index
+- cluster index dùng cho khoá chính
+- non cluster index dùng cho các trường index không phải khoá chính
