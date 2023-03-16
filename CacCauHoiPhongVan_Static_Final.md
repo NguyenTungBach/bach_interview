@@ -43,13 +43,13 @@ public class Example {
 }
 ```
 
-# 4. biến final
+# 5. biến final
 - Là biến không được thay đổi. Nếu thay đổi sẽ báo lỗi
 
-# 5. hàm final
+# 6. hàm final
 - là hàm sẽ không bị ghi đè ***(Giống phương thức với static)***. Điều này là để đảm bảo nó sẽ không bị thay đổi và giữ nguyên chức năng
 
-# 6. lớp final
+# 7. lớp final
 - là lớp không thể kế thừa từ lớp này hoặc ghi đè các phương thức trong lớp
 - VD:
 ```sh
@@ -69,3 +69,6 @@ public final class Circle {
     }
 }
 ```
+
+# 8. list final: 
+- thay đổi đc nhưng khi new 1 collection mới có lỗi
