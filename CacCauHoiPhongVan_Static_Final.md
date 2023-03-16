@@ -28,6 +28,21 @@ class TestOuter1 {
 }
 ```
 
+# 4. Khối static
+- Được sử dụng để khởi tạo thành viên dữ liệu static,nó được thực thi trước lúc hàm main đc chạy
+- VD:
+```sh
+public class Example {
+    static {
+        System.out.println("Khối static được thực thi!");
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Phương thức main được thực thi!");
+    }
+}
+```
+
 # 4. biến final
 - Là biến không được thay đổi. Nếu thay đổi sẽ báo lỗi
 
