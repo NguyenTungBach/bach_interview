@@ -76,6 +76,7 @@ Vd: khi extend JpaRepos có thể truyền vào dù là cus, std
 
 - Là tham số hóa kiểu dữ liệu
 **VD: array list**
+- Tức là kiểu dữ liệu của mình nó sẽ trở thành một tham số đầu vào, mình có thể thay đổi kiểu dữ liệu
 
 ### 14.Spring profile
 - Được sử dụng để test
