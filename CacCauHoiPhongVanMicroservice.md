@@ -10,4 +10,9 @@
 | Đặc điểm | Có thể nắm bắt được toàn bộ nghiệp vụ vì tất cả viết trên 1 project | Không thể nắm được toàn bộ nghiệp vụ vì mỗi modul riêng lẻ |
 
 # 2. Nếu bị hỏi về nghiệp vụ microservice
-- Chỉ nó là làm ở từng service nhỏ
+- Chỉ nói là làm ở từng service nhỏ
+
+# 3. Các cách giao tiếp giữa các microservice
+- Call api: restfull webservice (body truyền đi là json) và soap(xml)
+- File: ví dụ gọi vào file để đọc ra các giao dịch cần đối soát trong ngày. Không lo cơ chế authen mà chỉ cần authen File server
+- Message queue: giao tiếp thông qua một thằng thứ 3 như rabbitMQ, redit, kapca  
