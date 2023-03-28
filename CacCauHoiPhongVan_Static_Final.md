@@ -7,6 +7,8 @@
 - 1 phương thức static không gọi được this hay supper vì làm thế sẽ gọi đến instance của lớp
 - 1 phương thức static không thể ghi đè vì nó là nó được gọi trực tiếp thông qua lớp chứ không phải qua đối tượng ***(Tức là nó tồn tại trong phạm vi của lớp chứ không phải trong phạm vi đối tượng cụ thể của lớp đ)***
 - chỉ gọi đến biến static
+- hàm thường có thể gọi đến hàm static
+- hàm static có thể gọi đến hàm thường
 
 # 3. class static
 - cho phép truy cập các thành viên dữ liệu tĩnh của lớp ngoài
