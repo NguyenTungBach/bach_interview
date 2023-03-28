@@ -42,3 +42,4 @@ Nếu consumer không được nhận thì tin nhắn sẽ lưu trữ ở một 
 - Kafka chuyên xử lý loại dữ liệu nặng
 - ActiveMQ hỗ trợ chia vùng dữ liệu nhưng config phức tạp
 - ZeroMq Gửi tin nhắn nhẹ và nhanh và không có tính bảo mật
+- AWS SQS hỗ trợ trên nền tảng cloud mới dùng được nên chi phí cao
