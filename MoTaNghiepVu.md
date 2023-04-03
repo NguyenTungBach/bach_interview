@@ -25,3 +25,13 @@ FrontEnd:
   - Sau khi xác nhận xong đơn hàng sẽ chuyển sang tiến hành thanh toán
   - Sau khi thanh toán thành công thì đơn hàng sẽ chuyển trạng thái đang chờ để đơn vị vận chuyển sản phẩm
   - Sau khi vận chuyển đơn hàng thành công thì trạng thái đơn hàng sẽ chuyển thành hoàn thành
+
+# 4. Quản lý chăm sóc khách hàng
+- Khách hàng sau khi mua bộ cài và tải về máy để có thể đăng nhập vào sẽ cần một mã key để xác nhận.
+- Sau khi key hết hạn hệ thống sẽ hiện những khách hàng hết hạn key.
+- Đội nhân viên tư vấn sẽ báo về cho khách hàng gia hạn để reset key.
+
+
+# 5. Quản lý hợp đồng
+- Tạo ra một hệ thống quản lý và phân loại các file hợp đồng gồm file doc, excel
+- Admin vào có thể vừa xem và vừa tải về
