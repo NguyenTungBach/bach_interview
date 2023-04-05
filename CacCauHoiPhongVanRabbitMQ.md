@@ -43,3 +43,8 @@ Nếu consumer không được nhận thì tin nhắn sẽ lưu trữ ở một 
 - ActiveMQ hỗ trợ chia vùng dữ liệu nhưng config phức tạp
 - ZeroMq Gửi tin nhắn nhẹ và nhanh và không có tính bảo mật
 - AWS SQS hỗ trợ trên nền tảng cloud mới dùng được nên chi phí cao
+
+# 6. Vì sao RabbitMQ được sử dụng?
+- Giả sử nếu các service giao tiếp nhau thông qua API:
+  - Nếu có một service chết thì các service gửi message đến nó sẽ bị mất hết. Vậy nên cần một message broker như RabbitMQ để tránh trường hợp mất message
+  - Tại một thời điểm serive nhận nhiều request sẽ xảy trường hợp quá tải. RabbitMQ sẽ tạo hàng đợi để xử lý từng request
