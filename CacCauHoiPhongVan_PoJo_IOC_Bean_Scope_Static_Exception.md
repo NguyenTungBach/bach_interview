@@ -12,9 +12,10 @@
 
 ### 4. Vòng chạy Bean là gì?
 - B1: (Constructor) Khởi tạo
-- B2: (Post Construct) Hành động chạy sau khi khởi tạo
-- B3: (Pre Destroy) Trước khi hủy
-- B4: (Destroy) Hủy Bean
+- B2: (Setter methods) inject các Bean
+- B3: (Post Construct) Hành động chạy sau khi khởi tạo
+- B4: (Pre Destroy) Trước khi hủy
+- B5: (Destroy) Hủy Bean
 
 ### 4. Các cách khởi tạo bean?
 - Anotation (thường dùng)
