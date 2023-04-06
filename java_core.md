@@ -54,8 +54,74 @@ interface để khai báo. Vì lúc cần mình có thể dễ dàng thay đổi
 
 ### 10.Tham chiếu và tham trị trong Java
 
-- Tham chiếu (pass by reference): truyền theo tham chiếu **(gọi đến địa chỉ của đối tượng, cụ thể ở đây là Reference Types (những biến có kiểu dữ liệu class, cứ new là sẽ tạo ra 1 vùng nhớ bên heap)**
+- Tham chiếu (pass by reference): truyền theo tham chiếu **(gọi đến địa chỉ của đối tượng, cụ thể ở đây là Reference Types (những biến có kiểu dữ liệu class, cứ new là sẽ tạo ra 1 vùng nhớ bên heap)**. 
 - Tham trị (pass by value): truyền theo giá trị **(xảy ra khi gọi đến 1 hàm và truyền giá trị cho hàm đó)**
+- Đặc điểm chung để nhìn nhận là Tham chiếu và tham trị đều xảy ra với hàm
+|  | Tham trị | Tham chiếu |
+|---|---|---|
+| Đặc điểm | Khi biến truyền giá trị vào hàm thì biến truyền vào đó không thay đổi | Khi truyền giá trị vào hàm thì biến đó thay đổi |
+
+Ví dụ về tham trị
+  ```sh
+  public class Example {
+    public static void main(String[] args) {
+        int x = 10;
+        increment(x);
+        System.out.println(x); // x = 10
+    }
+
+    public static void increment(int num) {
+        num++;
+    }
+  }
+  ```
+  
+  Ví dụ về tham chiếu
+  ```sh
+  public class Example {
+    public static void main(String[] args) {
+        int[] arr = {10}; // Khởi tạo một mảng có phần tử đầu tiên là 10
+        changeValue(arr); // Gọi phương thức changeValue và truyền mảng vào
+        System.out.println("Giá trị của phần tử đầu tiên trong mảng sau khi gọi phương thức changeValue: " + arr[0]); // Kết quả: 20
+    }
+
+    public static void changeValue(int[] arr) {
+        arr[0] = arr[0] + 10; // Thay đổi giá trị của phần tử đầu tiên trong mảng
+    }
+  }
+  ```
+  
+  ```sh
+  public class Person {
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String toString() {
+        return "Person [name=" + name + ", age=" + age + "]";
+    }
+}
+..........................
+
+Person person1 = new Person("Alice", 25);
+Person person2 = person1;
+
+System.out.println(person1.toString()); // Output: Person [name=Alice, age=25]
+System.out.println(person2.toString()); // Output: Person [name=Alice, age=25]
+
+person2.setAge(30);
+
+System.out.println(person1.toString()); // Output: Person [name=Alice, age=30]
+System.out.println(person2.toString()); // Output: Person [name=Alice, age=30]
+  ```
 
 ### 11.Kiểu dữ liệu Enum
 
