@@ -8,7 +8,7 @@
 - Còn DI và IOC về bản chất nó giống nhau là để giảm sự phụ thuộc. DI là một trong những triển khai của IOC
 
 ### 3. Đảo ngược quyền điều khiển ở đây là gì?
-- Thay vì mình tạo ra các lớp (khởi tạo new) để quản lý và dùng thì mình sẽ thông qua một thằng đảm nhận thay việc đó.
+- Thay vì mình tạo ra các lớp (khởi tạo new) để quản lý và dùng thì mình sẽ thông qua một thằng đảm nhận thay việc đó ***(cụ thể ở đây là IOC)***.
 
 ### 4. Bean là gì?
 - Là một đối tượng được quản lý bởi IOC Container
