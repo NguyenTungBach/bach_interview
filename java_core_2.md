@@ -5,7 +5,7 @@
 |---|---|---|
 | Khai báo | Interface phải dùng từ khóa impliment | Abstract class phải dùng từ khóa extend |
 | Số lượng kế thừa | Interface được nhiều | Abstract class extend được 1  |
-| Access modifile | Access modifile của Interface chỉ là public | Abstract class có thể lựa chọn public, private, default, protect  |
+| Access modifile | Access modifile của Interface chỉ là public | Abstract class có thể lựa chọn public, default, protect và nếu là private thì lớp con không thể kế thừa   |
 | Chứa bên trong | Interface chỉ chứa hàm | Abstract có chứa thuộc tính, function implementation **(function abtract)** , function chi tiết  |
 | Thường sử dụng | Interface thể hiện 100% tính trừu tượng nên hay dùng làm bản phác thảo giúp cho các tính năng ko bị thiếu | Abstract class thường dùng khi muốn các class con kế thừa nó có thể sử dụng chung hàm, ngoài ra cho phép chứa các thuộc tính giới hạn truy cập access modifile |
 
