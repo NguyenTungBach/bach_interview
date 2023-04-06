@@ -4,32 +4,35 @@
 ### 2. IOC và DI?
 - IOC dựa trên nguyên tắc ***(nguyên tắc là yêu cầu)*** solid. Trong nguyên tắc có nguyên lý ***(lý thuyết)*** DIP.
 - Nguyên lý DIP chỉ ra các class không giao tiếp với nhau thông qua lớp triển khai (lớp implement gì gì đó) mà thống qua lớp trừu tượng (các interface, abtract)
-- Dựa trên nguyên lý đó IOC tạo ra IOC Container để quản lý sự phụ thuộc.
+- Dựa trên nguyên lý đó IOC (Đảo ngược quyền điều khiển) tạo ra IOC Container để quản lý sự phụ thuộc.
 - Còn DI và IOC về bản chất nó giống nhau là để giảm sự phụ thuộc. DI là một trong những triển khai của IOC
 
-### 3. Bean là gì?
+### 3. Đảo ngược quyền điều khiển ở đây là gì?
+- Thay vì mình tạo ra các lớp (khởi tạo new) để quản lý và dùng thì mình sẽ thông qua một thằng đảm nhận thay việc đó.
+
+### 4. Bean là gì?
 - Là một đối tượng được quản lý bởi IOC Container
 
-### 4. Vòng chạy Bean là gì?
+### 5. Vòng chạy Bean là gì?
 - B1: (Constructor) Khởi tạo
 - B2: (Setter methods) inject các Bean
 - B3: (Post Construct) Hành động chạy sau khi khởi tạo
 - B4: (Pre Destroy) Trước khi hủy
 - B5: (Destroy) Hủy Bean
 
-### 4. Các cách khởi tạo bean?
+### 6. Các cách khởi tạo bean?
 - Anotation (thường dùng)
 - XML
 - JAVA BASE
 
-### 5. Các cách khởi tạo bean bằng anotaion?
+### 7. Các cách khởi tạo bean bằng anotaion?
 - @Bean: đặt trên hàm, kết quả của hàm này sẽ được IOC quản lý và trả về kết quả đó
 - @Component: chú thích trên class, là một khuôn mẫu chung cho bất kỳ thành phần nào do Spring quản lý
 - @Repository: chú thích cho class giúp truy vấn dữ liệu database
 - @Service: chú thích cho class xử lý logic
 - @Controller: chú thích class làm việc với Request
 
-# 6. Các scope trong spring?
+# 8. Các scope trong spring?
 - Singleton: Các đối tượng trong bean chỉ được khởi tạo 1 lần duy nhất. Mặc định khi chạy bean là thằng này
 ```sh
 VD:
@@ -72,16 +75,16 @@ if(hit == null || hit == 0){
 application.setAttribute("hitCounter", hit)
 ```
 
-# 7. Biến static (biến cục bộ)?
+# 8. Biến static (biến cục bộ)?
 - Gọi được trực tiếp, không cần phải khởi tạo
 - Cấp phát bộ nhớ chỉ xảy ra một lần nên tiết kiệm bộ nhớ
 
-# 8. Hàm static ?
+# 9. Hàm static ?
 - Gọi được trực tiếp, không cần phải khởi tạo
 - 1 phương thức static không gọi được this hay supper vì làm thế sẽ gọi đến instance của lớp
 - 1 phương thức static không thể ghi đè vì nó là nó được gọi trực tiếp thông qua lớp chứ không phải qua đối tượng
 
-# 9. static class (cho phép truy cập các thành viên dữ liệu tĩnh của lớp ngoài)
+# 10. static class (cho phép truy cập các thành viên dữ liệu tĩnh của lớp ngoài)
 VD:
 ```sh
 class TestOuter1 {
@@ -100,6 +103,7 @@ class TestOuter1 {
 }
 ```
 
-# 10. Các loại exceptions:
+# 11. Các loại exceptions:
 - Checked exceptions: là những exception báo lỗi ngay trong khi code
 - Unchecked exceptions: là những exception báo lỗi trong quá trình chạy
+- Error: là một phần trong Unchecked exceptions, liên quan đến việc phần cứng không thể xử lý được
