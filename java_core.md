@@ -58,9 +58,11 @@ interface để khai báo. Vì lúc cần mình có thể dễ dàng thay đổi
 - Tham trị (pass by value): truyền theo giá trị **(xảy ra khi gọi đến 1 hàm và truyền giá trị cho hàm đó)**
 - Đặc điểm chung để nhìn nhận là Tham chiếu và tham trị đều xảy ra với hàm
 
+
 |  | Tham trị | Tham chiếu |
 |---|---|---|
 | Đặc điểm | Khi biến truyền giá trị vào hàm thì biến truyền vào đó không thay đổi | Khi truyền giá trị vào hàm thì biến đó thay đổi |
+
 
 Ví dụ về tham trị
   ```sh
