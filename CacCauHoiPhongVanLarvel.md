@@ -1,2 +1,6 @@
-# bach_interview
-Các câu hỏi phỏng vấn
+# Event và Listen
+- Event và Listen là 
+# Queue
+- zxc
+# CFRF Token
+- Trong form
