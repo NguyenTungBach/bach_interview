@@ -57,6 +57,7 @@ interface để khai báo. Vì lúc cần mình có thể dễ dàng thay đổi
 - Tham chiếu (pass by reference): truyền theo tham chiếu **(gọi đến địa chỉ của đối tượng, cụ thể ở đây là Reference Types (những biến có kiểu dữ liệu class, cứ new là sẽ tạo ra 1 vùng nhớ bên heap)**. 
 - Tham trị (pass by value): truyền theo giá trị **(xảy ra khi gọi đến 1 hàm và truyền giá trị cho hàm đó)**
 - Đặc điểm chung để nhìn nhận là Tham chiếu và tham trị đều xảy ra với hàm
+
 |  | Tham trị | Tham chiếu |
 |---|---|---|
 | Đặc điểm | Khi biến truyền giá trị vào hàm thì biến truyền vào đó không thay đổi | Khi truyền giá trị vào hàm thì biến đó thay đổi |
