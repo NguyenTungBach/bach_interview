@@ -22,6 +22,7 @@
 - List:
   - Key
   - Value: Danh sách liên kết
+
 ***Thường dùng để làm queue vào trước ra trước và có thể xử lý theo kiểu ***
 
 # 3. Redis bài toán thực tế lưu danh sách đơn hàng trong cache, làm sao để lấy ra nhanh nhất
