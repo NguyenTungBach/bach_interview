@@ -16,7 +16,7 @@
 
 - Hash:
   - Key
-  - Value: Key-Value
+  - Value: danh sách Key-Value
 
 
 - List:
