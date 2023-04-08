@@ -7,3 +7,18 @@
 - Cache server
 - Thường để lưu dữ liệu dụng JSON
 - Enqueue (Ghi) và Dequeue (Đọc) ***(Kiểu list)*** 
+
+# 2. Redis một số kiểu dữ liệu
+- String:
+  - Key
+  - Value: Dạng String
+
+
+- Hash:
+  - Key
+  - Value: Key-Value
+
+- List:
+  - Key
+  - Value: Danh sách liên kết
+***Thường dùng để làm queue vào trước ra trước và có thể xử lý theo kiểu ***
