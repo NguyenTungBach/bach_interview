@@ -40,3 +40,6 @@
   - lưu key gốc  : xxxxxxxxxx::idkhachhang
   - bên trong lưu nhiều cặp key-value khác nhau ->lưu ít key và không phải 
 
+# 4. Cấu trúc redis
+- stand alone: gồm master (cho phép sửa data), slave (đọc data)
+- cluster: cũng có master và slave nhưng có thể phân ra thành nhiều vùng
