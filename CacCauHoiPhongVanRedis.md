@@ -25,13 +25,17 @@
 ***Thường dùng để làm queue vào trước ra trước và có thể xử lý theo kiểu ***
 
 # 3. Redis bài toán thực tế lưu danh sách đơn hàng trong cache, làm sao để lấy ra nhanh nhất
+***3 cách dưới đây đều có thể giúp việc dễ quản lý và truy vấn nhanh***
+
 - Cách 1 lưu kiểu String: lưu nhiều key value
   - lưu 1 key xxxxxxxxxx::idkhachhang  -> muốn lấy đơn hàng cụ thể , thì phải parse 1 object to -> lấy dc cái cần tìm
 
 - Cách 2 lưu kiểu String: lưu nhiều 1 key value nhưng trong value là 1 list sub json
   - lưu 1 key xxxxxxxxxx::idkhachhang::iddonhang -> lấy dc luôn , lưu quá nhiều key
 
-***2 cách trên sẽ có nhược điểm chung là nhiều key value nếu dùng key* với hệ thông dữ liệu lớn có thể query chậm hoặc không load được
+***2 cách trên sẽ có nhược điểm chung là nhiều key value nếu dùng key* với hệ thông dữ liệu lớn có thể query chậm hoặc không load được***
 
 - Cách 3 lưu kiểu Hash: Đây là cách để khắc phục nhược điểm 2 cách trên
-  - lưu 1 key xxxxxxxxxx::idkhachhang::iddonhang -> lấy dc luôn , lưu quá nhiều key
+  - lưu key gốc  : xxxxxxxxxx::idkhachhang
+  - bên trong lưu nhiều cặp key-value khác nhau
+
