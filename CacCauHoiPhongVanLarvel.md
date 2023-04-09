@@ -35,3 +35,6 @@ $users = DB::table('users')->where('status', 1)->get();
 ```sh
 $users = User::where('status', 1)->get();
 ```
+
+## 6. Middleware  trong Laravel
+- Là cơ chế lọc request. Thường dùng để kiểm tra đăng nhập
