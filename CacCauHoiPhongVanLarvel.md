@@ -12,7 +12,16 @@
 ## 4. Localstorage, Sessionstorage và Cookie
 - Localstorage lưu trữ vô thời hạn
 - Sessionstorage được hủy sau khi đóng tab hoặc thoát trình duyệt
-- Cookie được hủy sau khi hết hạn hoặc xóa bằng java script
+- Cookie được hủy sau khi hết hạn hoặc xóa bằng java script, php bằng hàm unset
+
+## 5. Request lifecycle trong laravel
+- Route Dispatch: Tìm đến route 
+- Middleware: Lọc request
+- Controller: Xử lý request và các logic. Có thể trả về view hoặc Response luôn
+- View: Nếu controller trả về view thì laravel sẽ render view đó trả về cho client
+- Response: trả về kết quả response về cho client
+
+
 
 ## 3. Queue
 - zxc
