@@ -9,6 +9,11 @@
 - Cookie lưu trữ thông tin phía người dùng -> dễ sửa đổi do lưu phía trình duyệt ***(Clean sau khi hết thời gian)***
 - Session lưu trữ thông tin phía server -> Khó sửa đổi do lưu trên server ***(Clean sau khi đóng trình duyệt)***
 
+## 4. Localstorage, Sessionstorage và Cookie
+- Localstorage lưu trữ vô thời hạn
+- Sessionstorage được hủy sau khi đóng tab hoặc thoát trình duyệt
+- Cookie được hủy sau khi hết hạn hoặc xóa bằng java script
+
 ## 3. Queue
 - zxc
 
