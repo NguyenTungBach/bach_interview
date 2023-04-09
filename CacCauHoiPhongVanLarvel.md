@@ -1,9 +1,15 @@
 # Event và Listen
-- Event và Listen là 
+- Event và Listen là
+
 # Queue
 - zxc
+
+# CSRF (Giả dạng request từ webside khác)
+- Là
+
 # CSRF Token
 - Dùng để định danh
+
 # Cách query trong Laravel
 - Query builder tương tác với DB
 ```sh
