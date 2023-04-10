@@ -40,7 +40,7 @@
 ### 6. Phân biệt list và array ?
 - Array: 
     - cố định kích thước
-    - chỉ chứa các đối tượng cùng kiểu dữ liệu
+    - Chứa được cả 2 dữ liệu đối tượng và nguyên thủy
 - List: 
     - có thể mở rộng kích thước
-    - chứa được các kiểu dữ liệu đối tượng
+    - Chỉ chứa được các kiểu dữ liệu đối tượng, không chứa được kiểu dữ liệu nguyên thủy
