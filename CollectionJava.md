@@ -43,4 +43,4 @@
     - chỉ chứa các đối tượng cùng kiểu dữ liệu
 - List: 
     - có thể mở rộng kích thước
-    - chứa được các đối tượng khác kiểu dữ liệu
+    - chứa được các kiểu dữ liệu đối tượng
