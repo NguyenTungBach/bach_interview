@@ -75,6 +75,7 @@ Là giao thức định nghĩa ra các chuẩn giao thức viết API
 # 7. $$ trong PHP
 - ví dụ 
 ```sh
-$$a = "hello";
+$a = "hello";
+$$a = 200;
 ```
-Tương đương với = $hello
+Tương đương với việc tạo ra $hello = 200
