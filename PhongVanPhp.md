@@ -71,3 +71,10 @@ Là giao thức định nghĩa ra các chuẩn giao thức viết API
 # 6. & và && trong PHP
 - & trả về 0 hoặc 1
 - && trả về True và False
+
+# 7. $$ trong PHP
+- ví dụ 
+```sh
+$$a = "hello";
+```
+Tương đương với = $hello
