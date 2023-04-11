@@ -23,3 +23,32 @@ Nếu 1 hằng được định nghĩa 2 lần thì chương trình vẫn chạy
 
 ## 3. Mảng là gì?
 - Là một biến chứa nhiều phần tử
+- Mảng tuần tự: là mảng có key tự động tạo là chữ số tăng dần bắt đầu từ 0.
+```sh
+$phims = array(0 => "One Piece",
+               1 => "Dragon Ball",
+               2 => "Doremon",
+               3 => "One-Punch Man",
+               4 => "Naruto" );
+```
+
+- Mảng không tuần tự(mảng đa chiều): là mảng có key mà bạn phải tự định nghĩa bằng các ký tự chữ hoặc số, và key không được sắp xếp bất kỳ thứ tự nào.
+
+```sh
+$sinhVien = array("Hải" => "Nam", "Doanh" => "Nam", "Nhung" => "Nữ");
+print_r($sinhVien);
+
+
+Array ( [Hải] => Nam [Doanh] => Nam [Nhung] => Nữ )
+```
+
+- Mảng đa chiều: là mảng có chứa ít nhất một mảng khác trong nó.
+
+```sh
+$phims =array(
+  "Hành động" => array("Jonh Wick", "Người vận chuyển", "Nhiệm vụ bất khả thi"),
+  "Viễn tưởng" => array("Endgame", "Infinity War"),
+  "Lãng mạn" => array("La La land"),
+  "Kịch tính" => array("Tên trộm và cô chủ nhà")
+);
+```
