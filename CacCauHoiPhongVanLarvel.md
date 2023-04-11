@@ -23,15 +23,15 @@
 - View: Nếu controller trả về view thì laravel sẽ render view đó trả về cho client
 - Response: trả về kết quả response về cho client
 
-## 4. CSRF (Giả dạng request từ webside khác)
+## 6. CSRF (Giả dạng request từ webside khác)
 - Là cách thức tấn công bằng cách giả dạng request từ webside khác
 - VD: Hacker tạo 1 trang web với form có link POST của mình. Người dùng vô tình click vào đường link của trang web đó (kèm theo Cookie của người dùng) -> Hacker có thể truy cập vào đường link không mong muốn trên trang web mà vẫn trên danh nghĩa người dùng
 
-## 5. CSRF Token
+## 7. CSRF Token
 - Dùng để định danh
 - Mỗi form đều chứa 1 token ẩn phía server gắn vào. Server sẽ so sánh 2 token đó có giống với token server gừi không
 
-## 6. Cách query trong Laravel
+## 8. Cách query trong Laravel
 - Query builder tương tác với DB
 ```sh
 $users = DB::table('users')->where('status', 1)->get();
@@ -42,5 +42,5 @@ $users = DB::table('users')->where('status', 1)->get();
 $users = User::where('status', 1)->get();
 ```
 
-## 6. Middleware  trong Laravel
+## 9. Middleware  trong Laravel
 - Là cơ chế lọc request. Thường dùng để kiểm tra đăng nhập
