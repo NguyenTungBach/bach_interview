@@ -23,11 +23,6 @@
 - View: Nếu controller trả về view thì laravel sẽ render view đó trả về cho client
 - Response: trả về kết quả response về cho client
 
-
-
-## 3. Queue
-- zxc
-
 ## 4. CSRF (Giả dạng request từ webside khác)
 - Là cách thức tấn công bằng cách giả dạng request từ webside khác
 - VD: Hacker tạo 1 trang web với form có link POST của mình. Người dùng vô tình click vào đường link của trang web đó (kèm theo Cookie của người dùng) -> Hacker có thể truy cập vào đường link không mong muốn trên trang web mà vẫn trên danh nghĩa người dùng
