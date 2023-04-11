@@ -1,0 +1,25 @@
+## 1. GET và POST
+- GET là phương thức truyền tham số thông qua url. (Việc truyền dữ liệu bằng url sẽ bị giới hạn nên thường dùng để lấy dữ liệu về)
+- POST là phương thức truyền tham số thông qua HTTP request body (Không giới hạn việc truyền dữ liệu nên thường dùng để gửi dữ liệu lên)
+
+## 2. Cookie và Session
+- Cookie lưu trữ thông tin phía người dùng -> dễ sửa đổi do lưu phía trình duyệt ***(Clean sau khi hết thời gian)***
+- Session lưu trữ thông tin phía server -> Khó sửa đổi do lưu trên server ***(Clean sau khi đóng trình duyệt)***
+
+## 3. Localstorage, Sessionstorage và Cookie
+- Localstorage lưu trữ vô thời hạn
+- Sessionstorage được hủy sau khi đóng tab hoặc thoát trình duyệt
+- Cookie được hủy sau khi hết hạn hoặc xóa bằng java script, php bằng hàm unset
+
+## 3. Hằng trong PHP khác gì so với biến
+- Biến thì chỉ cần dùng ký tự $ để gắn hoặc lấy giá trị.
+- Hằng dùng hàm define() gắn giá trị và dùng constant() để lấy giá trị.
+
+```sh
+Cú pháp: define('Tên hằng', value);
+```
+
+Nếu 1 hằng được định nghĩa 2 lần thì chương trình vẫn chạy được bình thường tuy nhiên hằng chỉ có giá trị của lần định nghĩa đầu tiên
+
+## 3. Mảng là gì?
+- Là một biến chứa nhiều phần tử
