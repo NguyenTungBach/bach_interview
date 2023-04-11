@@ -1,5 +1,7 @@
-## 1. Event và Listen
-- Event và Listen là
+## 1. Event và Listen và Queue
+- Event là thằng tạo sự kiện. Với các tham số truyền vào
+- Listen là thằng lắng nghe sự kiện, nhận các tham số truyền vào để thực hiện một hành động nào đó
+- Vì trong laravel không có khái niệm về đa luồng nên Queue được tạo ra để thay thế
 
 ## 2. GET và POST
 - GET là phương thức truyền tham số thông qua url. (Việc truyền dữ liệu bằng url sẽ bị giới hạn nên thường dùng để lấy dữ liệu về)
