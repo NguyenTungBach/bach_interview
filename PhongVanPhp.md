@@ -79,3 +79,32 @@ $a = "hello";
 $$a = 200;
 ```
 Tương đương với việc tạo ra $hello = 200
+
+# 7. Trait trong PHP
+-  Hỗ trợ đa kế thừa
+
+```sh
+class Database
+{
+    public function listUsers()
+    {
+        return "List users!";
+    }
+}
+
+class Report extends Database
+{
+    public function reportUsers()
+    {
+        $this->listUsers();
+    }
+}
+
+class Users extends Database
+{
+    public function index()
+    {
+        $this->listUsers();
+    }
+}
+```
