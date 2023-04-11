@@ -84,7 +84,7 @@ Tương đương với việc tạo ra $hello = 200
 -  Hỗ trợ đa kế thừa
 
 ```sh
-class Database
+trait Database
 {
     public function listUsers()
     {
@@ -92,16 +92,23 @@ class Database
     }
 }
 
-class Report extends Database
+trait Authenticate
 {
-    public function reportUsers()
+    public function authorize()
     {
-        $this->listUsers();
+        return "Authorized!";
     }
 }
 
-class Users extends Database
+class Users
 {
+    use Database, Authenticate;
+
+    public function __construct()
+    {
+        $this->authorize();
+    }
+
     public function index()
     {
         $this->listUsers();
