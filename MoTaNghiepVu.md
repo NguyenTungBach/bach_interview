@@ -35,3 +35,11 @@ FrontEnd:
 # 5. Quản lý hợp đồng
 - Tạo ra một hệ thống quản lý và phân loại các file hợp đồng gồm file doc, excel
 - Admin vào có thể vừa xem và vừa tải về
+
+# 6. Xác thực thông tin
+- SAP là một phần mềm ứng dụng hệ thống để quản lý doanh nghiệp
+- SAP sẽ gửi thông tin về mua bán bên kinh doanh, nhập xuất bên sản xuất và tổng doanh thu
+- Nhiệm vụ của mình là đối soát với các thông tin với kinh doanh và sản xuất với nhau
+- Một đội lấy dữ liệu service kinh doanh
+- Một đội lấy dữ liệu sản xuất
+- Một đội lo cấu hình và đối soát thông qua dữ liệu bên kinh doanh và sản xuất
