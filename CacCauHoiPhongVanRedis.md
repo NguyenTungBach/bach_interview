@@ -34,7 +34,7 @@
 - Cách 2 lưu kiểu String: lưu nhiều 1 key value nhưng trong value là 1 list thông tin json -> phải paser 1 cái object lớn để tìm
   - lưu 1 key xxxxxxxxxx::idkhachhang::iddonhang -> lấy dc luôn , lưu quá nhiều key
 
-***2 cách trên sẽ có nhược điểm chung là nhiều key value đến mức bị quá tải nếu dùng key* với hệ thông dữ liệu lớn có thể query chậm hoặc không load được***
+***2 cách trên sẽ có nhược điểm chung là nhiều key value đến mức bị quá tải nếu dùng key * với hệ thông dữ liệu lớn có thể query chậm hoặc không load được***
 
 - Cách 3 lưu kiểu Hash: Đây là cách để khắc phục nhược điểm 2 cách trên, thường dùng để lưu value phức tạp nhưng vẫn có thể lấy được value bên trong nó bằng 1 câu lệnh VD hget TÊNKEY TÊNTRƯỜNG
   - lưu key gốc  : xxxxxxxxxx::idkhachhang
