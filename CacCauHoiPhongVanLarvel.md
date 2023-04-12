@@ -47,3 +47,6 @@ $users = User::where('status', 1)->get();
 
 ## 10. Service Provider  trong Laravel
 - Là trung tâm của việc khởi tạo tất cả ứng dụng trong laravel. Các package nào mà cài đặt qua composer cũng đều phải khai báo trong Service Provider
+
+## 10. Service Provider  trong Laravel
+- Dùng để quản lý sự phụ thuộc như IOC Container trong Spring boot
