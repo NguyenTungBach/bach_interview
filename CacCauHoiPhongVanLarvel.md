@@ -48,5 +48,10 @@ $users = User::where('status', 1)->get();
 ## 10. Service Provider  trong Laravel
 - Là trung tâm của việc khởi tạo tất cả ứng dụng trong laravel. Các package nào mà cài đặt qua composer cũng đều phải khai báo trong Service Provider
 
-## 10. Service Provider  trong Laravel
+## 11. Service Provider  trong Laravel
 - Dùng để quản lý sự phụ thuộc như IOC Container trong Spring boot
+
+## 12. Binding và Singleton trong Laravel
+Cả 2 đều sử dụng để đăng ký và quản lý đối tượng
+- Binding: được sử dụng để đăng ký các đối tượng và cung cấp chúng cho ứng dụng khi cần thiết. Khởi tạo mỗi lần gọi đến
+- Singleton: được sử dụng để đăng ký các đối tượng và cung cấp chúng cho ứng dụng khi cần thiết. Chỉ khởi tạo một lần
