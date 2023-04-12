@@ -50,7 +50,7 @@ $users = User::where('status', 1)->get();
 - Là trung tâm của việc khởi tạo tất cả ứng dụng trong laravel. Các package nào mà cài đặt qua composer cũng đều phải khai báo trong Service Provider
 
 ## 11. Service Container trong Laravel
-- Dùng để quản lý sự phụ thuộc như IOC Container trong Spring boot
+- Dùng để quản lý các đối tượng và phụ thuộc (như IOC Container trong Spring boot)
 
 ## 12. Binding và Singleton trong Laravel
 Cả 2 đều sử dụng để đăng ký và quản lý đối tượng
