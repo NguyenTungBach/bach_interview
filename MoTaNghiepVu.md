@@ -15,6 +15,17 @@
   - Số tiền nhuận bút tính thêm sẽ dựa vào lượt xem, lượt tương tác, lượt thích. Lượt nào lớn nhất sẽ được thêm tiền tùy theo cấp độ
   - Sau khi Quản trị viên chốt nhuận bút trong tháng thì sẽ không tính chấm nhuận bút nữa, mọi lượt xem, lượt thích hay lượt tương tác của bài viết đó sẽ không được tính nữa
 
+## Một số nghiệp vụ quản lý: quản lý video, audio, ảnh, silde, danh mục,...
+
+## Tổng bài viết, số bài viết trong 7 ngày gần đây, tổng số bài viết chưa được duyệt, tổng số bài viết được xuất bản, tổng số bài viết đã bị từ chối
+
+## Các trạng thái bài viết
+  - Đang soạn thảo
+  - Chờ duyệt
+  - Chờ xuất bản
+  - Từ chối phê duyệ
+  - Đã xuất bản
+
 # 3. Web bán đèn
 BackEnd gồm các chức năng trị như:
   - Admin quản lý sản phẩm, đơn hàng
