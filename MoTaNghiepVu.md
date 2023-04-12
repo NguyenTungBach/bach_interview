@@ -23,7 +23,7 @@
   - Đang soạn thảo
   - Chờ duyệt
   - Chờ xuất bản
-  - Từ chối phê duyệ
+  - Từ chối phê duyệt
   - Đã xuất bản
 
 # 3. Web bán đèn
@@ -46,6 +46,11 @@ FrontEnd:
 # 5. Quản lý hợp đồng
 - Tạo ra một hệ thống quản lý và phân loại các file hợp đồng gồm file doc, excel
 - Admin vào có thể vừa xem và vừa tải về
+- Trong quản lý hợp đồng sẽ có 
+  - Thông tin hợp đồng: Tên, loại hợp đồng, Chuyên viên soạn thảo (người viết hợp đồng), Công chứng viên, nơi công chứng, tình trạng, giá trị hợp đồng, số hợp đồng, số tờ, số bản công chứng
+  - Thông tin đương sự: CMT/Hộ chiếu,Ngày cấp CMT
+  - Thông tin ngân hàng: Tên, Cán bộ tín dụng (cho vay và huy động), tình trạng, chiết khấu
+  - Loại tài sản: nhà đất, xe 
 
 # 6. Đối soát thông tin
 - SAP là một phần mềm ứng dụng hệ thống để quản lý doanh nghiệp
