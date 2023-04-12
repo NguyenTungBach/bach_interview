@@ -115,3 +115,14 @@ class Users
     }
 }
 ```
+
+# 7. ++ i Và i ++
+-  ++i tính luôn trên giá trị ban đầu
+-  i++ tạo ra bản copy của giá trị ban đầu. nên nếu in ra luôn thì hiện nó vẫn thế
+
+```sh
+// Nếu in ra luôn
+++i = 1
+// Nếu in ra luôn
+i++ = 0 
+```
