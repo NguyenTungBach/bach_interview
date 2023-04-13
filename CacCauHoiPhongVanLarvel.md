@@ -56,3 +56,5 @@ $users = User::where('status', 1)->get();
 Cả 2 đều sử dụng để đăng ký và quản lý đối tượng
 - Binding: được sử dụng để đăng ký các đối tượng và cung cấp chúng cho ứng dụng khi cần thiết. Khởi tạo mỗi lần gọi đến
 - Singleton: được sử dụng để đăng ký các đối tượng và cung cấp chúng cho ứng dụng khi cần thiết. Chỉ khởi tạo một lần
+
+## 13. Các design pattern trong Laravel
