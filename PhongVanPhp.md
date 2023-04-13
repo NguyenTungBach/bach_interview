@@ -116,7 +116,7 @@ class Users
 }
 ```
 
-# 7. ++ i Và i ++
+# 8. ++ i Và i ++
 -  ++i tính luôn trên giá trị ban đầu
 -  i++ tạo ra bản copy của giá trị ban đầu. nên nếu in ra luôn thì hiện nó vẫn thế
 
@@ -126,3 +126,6 @@ class Users
 // Nếu in ra luôn
 i++ = 0 
 ```
+
+# 9. PHP là đơn luồng hay đa luồng
+- PHP là đơn luồng, nghĩa là chỉ thực hiện một tác vụ một thời điểm (vì khồng có tính năng đa luồng). Khác Java là ngôn ngữ lâp trình đa luồng vì Java hỗ trợ thực thi nhiều luồng
