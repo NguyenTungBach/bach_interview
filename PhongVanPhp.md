@@ -130,7 +130,10 @@ i++ = 0
 # 9. PHP là đơn luồng hay đa luồng
 - PHP là đơn luồng, nghĩa là chỉ thực hiện một tác vụ một thời điểm (vì khồng có tính năng đa luồng). Khác Java là ngôn ngữ lâp trình đa luồng vì Java hỗ trợ thực thi nhiều luồng
 
-# 10. include và requied
+# 10. PHP là thừa kế đơn hay thừa kế đa
+- PHP là thừa kế đơn do chỉ extend được từ 1 lớp khác
+
+# 11. include và requied
 Cả 2 đều dùng để import một file PHP vào file hiện tại. Mục đích để phân tách trang, thuận lợi cho việc chỉnh sửa nhiều trang (giồng laravel chia tách file @include và @yield)
 - include: code sẽ tiếp tục được thục thi, cho dù file đó có tồn tại hay không
 - requied: code sẽ không được thục thi, nếu file đó không tồn tại
