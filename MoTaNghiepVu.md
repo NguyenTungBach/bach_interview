@@ -26,6 +26,10 @@
   - Từ chối phê duyệt
   - Đã xuất bản
 
+## Đếm số lượng người xem trong quản lý bài viết
+- Mỗi khi một người dùng xem một bài viết, ta tăng giá trị của của bài viết đó lên một
+- Để đảm bảo rằng một người dùng chỉ được tính là một lượt xem duy nhất, ta có thể sử dụng cookie hoặc session để lưu trữ thông tin về người dùng đã xem bài viết đó hay chưa.
+
 # 3. Web bán đèn
 BackEnd gồm các chức năng trị như:
   - Admin quản lý sản phẩm, đơn hàng
