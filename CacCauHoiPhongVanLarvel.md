@@ -62,4 +62,4 @@ Cả 2 đều sử dụng để đăng ký và quản lý đối tượng
 - DI(Dependency Injection): là kỹ thuật lập trình dùng để tiêm vào các phụ thuộc. Các class không giao tiếp với nhau bằng lớp triển khai mà bằng lớp trừu tượng
 - Repository Pattern: giảm việc lặp code truy vấn với các cơ sở dữ liệu
 - Observer Pattern: Lắng nghe sự kiện thêm sửa xóa của 1 model để thực hiện 1 hành động nào đó
-- Strategy Pattern:
+- Strategy Pattern: Giải thích cho việc mình sẽ sử dụng tính năng nào. Cái này DI cũng đã thể hiện rõ. Ngày hôm nay tôi dùng tính năng nhà việt nam, ngày hôm kia tôi dùng dùng tính năng nhà nhật
