@@ -58,3 +58,8 @@ Cả 2 đều sử dụng để đăng ký và quản lý đối tượng
 - Singleton: được sử dụng để đăng ký các đối tượng và cung cấp chúng cho ứng dụng khi cần thiết. Chỉ khởi tạo một lần
 
 ## 13. Các design pattern trong Laravel
+- Service Container: quản lý và khỏi tạo các đối tượng và các phụ thuộc
+- DI(Dependency Injection): là kỹ thuật lập trình dùng để tiêm vào các phụ thuộc. Các class không giao tiếp với nhau bằng lớp triển khai mà bằng lớp trừu tượng
+- Repository Pattern: giảm việc lặp code truy vấn với các cơ sở dữ liệu
+- Observer Pattern: Lắng nghe sự kiện thêm sửa xóa của 1 model để thực hiện 1 hành động nào đó
+- Strategy Pattern:
