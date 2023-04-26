@@ -4,7 +4,7 @@
 ### 2. IOC và DI?
 - IOC dựa trên nguyên tắc ***(nguyên tắc là yêu cầu)*** solid. Trong nguyên tắc có nguyên lý ***(lý thuyết)*** DIP.
 - Nguyên lý DIP chỉ ra các class không giao tiếp với nhau thông qua lớp triển khai (lớp implement gì gì đó) mà thống qua lớp trừu tượng (các interface, abtract)
-- Dựa trên nguyên lý đó IOC (Đảo ngược quyền điều khiển) tạo ra IOC Container để quản lý sự phụ thuộc.
+- Dựa trên nguyên lý đó IOC (Đảo ngược quyền điều khiển) tạo ra IOC Container để khởi tạo quản lý các đối tượng và các phụ thuộc. (Thay vì mình phải khởi tạo và quản lý thì mình chỉ cần thông qua  một thằng làm việc đó cho mình)
 - Còn DI và IOC về bản chất nó giống nhau là để giảm sự phụ thuộc. DI là một trong những triển khai của IOC
 
 ### 3. Đảo ngược quyền điều khiển ở đây là gì?
