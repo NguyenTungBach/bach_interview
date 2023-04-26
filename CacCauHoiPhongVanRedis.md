@@ -43,3 +43,6 @@
 # 4. Cấu trúc redis
 - stand alone: gồm master (cho phép sửa data), slave (đọc data)
 - cluster: cũng có master và slave nhưng có thể phân ra thành nhiều vùng
+
+# 5. Caching
+- Là một kỹ thuật giúp hệ thống tăng tốc độ truy vấn dữ liệu và giảm tải truy vấn. Bằng cách lưu trữ và dùng lại các dữ liệu đã được truy vấn từ trước, giúp cho hệ thống không phải truy vấn lại.
