@@ -5,6 +5,7 @@
 - Em có câu hỏi gì cho anh không?
 
 ### 2. Xử lý hệ thống bị chậm truy vấn lâu hay bị Timeout (Tracing)
+- Tracing khác với debug ở chỗ. Debug biết vị trí code còn tracing thì không biết
 - Sử dụng Tracing để tìm ra điểm nghẽn của nó. Tracing là kỹ thuật để theo dõi và ghi lại hoạt động xảy ra của chương trình. VD:
   ```sh
   public class Calculator {
