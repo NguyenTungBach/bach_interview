@@ -30,6 +30,19 @@
 - Mỗi khi một người dùng xem một bài viết, ta tăng giá trị của của bài viết đó lên một
 - Để đảm bảo rằng một người dùng chỉ được tính là một lượt xem duy nhất, ta có thể sử dụng cookie hoặc session để lưu trữ thông tin về người dùng đã xem bài viết đó hay chưa.
 
+## Truy vấn nhuận bút
+***Tìm bài viết đã được chấm nhuận bút nối theo tác giả, tên thành viên, user admin(về phần thành viên và user admin thì sẽ chung 1 id vì vấn đề trong quá trình tìm hiểu nghiệp vụ chưa rõ ràng. Đến khi hiểu thì mới thấy bảng member là dành cho phía máy khách, còn bảng user là dành cho phía quản lý)***
+```sh
+select posts.*, users.email as u_email, users.fullname as u_fullname, members.email as m_email, royalties.status as royalties_status, royalties.interactive_royalties_notes, royalties.interactive_royalties, posts.id as total_like, posts.id as total_comment, posts.id as total_views, members.name as m_fullname 
+from posts left join users on users.id = posts.user_id 
+left join members on members.id = posts.author_id 
+left join royalties on royalties.post_id = posts.id 
+where posts.status = ? 
+and (DATE_FORMAT(published_time, "%Y-%m-%d %H:%i:%s") <= NOW()) and year(posts.published_time) = ? and month(posts.published_time) = ? 
+group by posts.id 
+order by posts.published_time desc
+```
+
 # 3. Web bán đèn
 BackEnd gồm các chức năng trị như:
   - Admin quản lý sản phẩm, đơn hàng
