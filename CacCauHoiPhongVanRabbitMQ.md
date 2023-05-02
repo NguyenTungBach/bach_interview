@@ -3,7 +3,7 @@
 - Broker: trung gian, phân phối message
 - Exchange: quyết định message vào queue nào( bộ định tuyến) bằng binding và routing key
 - Binding: vận chuyển đến queue. Là liên kết giữa Exchange và Queue thông qua routing key
-- Routing key: quyết định tin nhắn đến queue nào
+- Routing key: Là địa chỉ của queue, quyết định tin nhắn đến queue nào
 - Queue: hàng đợi
 - Consumer: nhận
 
