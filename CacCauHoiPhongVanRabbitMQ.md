@@ -50,3 +50,7 @@ Nếu consumer không được nhận thì tin nhắn sẽ lưu trữ ở một 
 - Giả sử nếu các service giao tiếp nhau thông qua API:
   - Nếu có một service chết thì các service gửi message đến nó sẽ bị mất hết. Vậy nên cần một message broker như RabbitMQ để tránh trường hợp mất message
   - Tại một thời điểm serive nhận nhiều request sẽ xảy trường hợp quá tải. RabbitMQ sẽ tạo hàng đợi để xử lý từng request
+
+# 7. So sánh RabbitMQ và Kafka?
+- RabbitMQ thường dùng cho các số lượng tin nhắn ở mức trung bình. Theo kiểu point to point(producer gửi đến consumer duy nhất)
+- Kafka (kiểu pub-sub) thường dùng cho các số lượng tin nhắn lớn và yêu cầu độ trễ thấp
