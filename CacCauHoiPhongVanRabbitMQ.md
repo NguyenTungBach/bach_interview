@@ -2,10 +2,12 @@
 - Producer gửi
 - Broker: trung gian, phân phối message
 - Exchange: quyết định message vào queue nào( bộ định tuyến) bằng binding và routing key
-- Binding: vận chuyển đến queue
-- Routing key: đảm bảo tin tính toàn vẹn của tin nhắn
+- Binding: vận chuyển đến queue. Là liên kết giữa Exchange và Queue thông qua routing key
+- Routing key: quyết định tin nhắn đến queue nào
 - Queue: hàng đợi
 - Consumer: nhận
+
+![](https://jstobigdata.com/wp-content/uploads/2020/03/direct-exchange-rmq-min.png)
 
 # 2. Bất đồng bộ trong queue
 - Phía bên gửi có thể gửi mà không phải chờ bên nhận xác nhận
