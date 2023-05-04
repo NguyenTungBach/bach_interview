@@ -55,6 +55,7 @@ FrontEnd:
   - Sau khi vận chuyển đơn hàng thành công thì trạng thái đơn hàng sẽ chuyển thành hoàn thành
 
 # 4. Quản lý chăm sóc khách hàng
+- Quản lý chi tiết các vấn đề khách gặp phải
 - Khách hàng sau khi mua bộ cài và tải về máy để có thể đăng nhập vào sẽ cần một mã key để xác nhận.
 - Sau khi key hết hạn hệ thống sẽ hiện những khách hàng hết hạn key.
 - Đội nhân viên tư vấn sẽ báo về cho khách hàng gia hạn để reset key.
