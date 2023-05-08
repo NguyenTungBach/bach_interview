@@ -7,7 +7,7 @@
 # 2. Quản lý bài viết
 ## Tổng quan nghiệp vụ
   - Phóng viên sẽ là người đăng bài
-  - Quản trị viên sẽ là người xét duyệt bài viết
+  - Biên tập viên sẽ là người xét duyệt bài viết
   - Admin làm nhiệm vụ phân quyền
 
 ## Nghiệp vụ nhuận bút
