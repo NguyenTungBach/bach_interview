@@ -30,7 +30,8 @@
 - @Component: chú thích trên class, là một khuôn mẫu chung cho bất kỳ thành phần nào do Spring quản lý
 - @Repository: chú thích cho class giúp truy vấn dữ liệu database
 - @Service: chú thích cho class xử lý logic
-- @Controller: chú thích class làm việc với Request
+- @Controller: chú thích class làm việc với Request làm việc với web
+- @RestController: chú thích class xây dựng API (Là kết hợp của @Controller và @ResponseBody)
 
 # 8. Các scope trong spring?
 - Singleton: Các đối tượng trong bean chỉ được khởi tạo 1 lần duy nhất. Mặc định khi chạy bean là thằng này
