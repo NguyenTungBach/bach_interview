@@ -6,7 +6,21 @@
     - Cung cấp nhiều framework có sẵn để làm việc như 
         - Spring Data JPA: Hỗ trợ làm việc database
         - Spring Sercurity: Hỗ trợ làm việc với xác thực và phân quyền
-        - Spring Boot: Cung cấp các cấu hình sẵn mặc đinh hay tích hợp các công nghệ của các ứng dụng Spring
+        - Spring Boot: Cung cấp các cấu hình sẵn mặc đinh hay giúp tích hợp các công nghệ của các ứng dụng Spring
+
+### 1.1 .Spring boot là gi?
+- Là một thành phần trong Spring Framework giúp phát triển các ứng dụng Spring cụ thể ở đây là tích hợp các công nghệ của Spring như Spring MVC, Spring Sercurity, Spring data JPA,...
+
+### 1.2 .Spring MVC là gì?
+- Là một thành phần trong Spring Framework cung cấp các tính năng, các annotation để phát triển ứng dụng web
+
+### 1.3 .Cấu trúc của Spring boot?
+- 1.src/main/java: chứa các code của ứng dụng
+- 2.src/main/resources: chứa tài nguyên của ứng dụng như file cấu hình (application.properties), file ảnh, css
+- 3.src/test/java: viết unit test
+- 4.pom.xml: chứa các thư viện của ứng dụng
+- 5.application.properties: chứa các cấu hình
+- 6.Main class: Để chạy ứng dụng
 
 ### 2 . ORM là gì?
 ORM là một framework trong việc ánh xạ đối tượng với database
