@@ -43,14 +43,14 @@ group by posts.id
 order by posts.published_time desc
 ```
 
-## Truy vấn thống kê danh sách bài viết của tác giả theo danh mục
+## Truy vấn thống kê danh sách bài viết của tác giả theo danh mục, có sắp xếp
 ```sh
 SELECT t.TenTacGia, d.TenDanhMuc, COUNT(b.Id) as SoBaiViet
 FROM TacGia t
 INNER JOIN BaiViet b ON t.Id = b.IdTacGia
 INNER JOIN DanhMuc d ON b.IdDanhMuc = d.Id
 GROUP BY t.TenTacGia, d.TenDanhMuc
-ORDER BY t.TenTacGia, d.TenDanhMu
+ORDER BY t.TenTacGia, d.TenDanhMuc
 ```
 
 
