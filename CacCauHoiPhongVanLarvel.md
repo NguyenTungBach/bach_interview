@@ -63,3 +63,21 @@ Cả 2 đều sử dụng để đăng ký và quản lý đối tượng
 - Repository Pattern: giảm việc lặp code truy vấn với các cơ sở dữ liệu
 - Observer Pattern: Lắng nghe sự kiện thêm sửa xóa của 1 model để thực hiện 1 hành động nào đó
 - Strategy Pattern: Giải thích cho việc mình sẽ sử dụng tính năng nào. Cái này DI cũng đã thể hiện rõ. Ngày hôm nay tôi dùng tính năng nhà việt nam, ngày hôm kia tôi dùng dùng tính năng nhà nhật
+
+## 14. Constructor trong laravel
+- Thường dùng để tiêm sự phụ thuộc. Tức là thay vì mình phải tạo ra một đối tượng và quản lý chúng thì sẽ thông qua 1 thằng khởi tạo và quản lý hộ mình, cụ thể ở đây là Service Provide. Mục đích ở đây là để mình dùng lại nhiều lần và có thể thay đổi đối tượng mà không ảnh hưởng đến các tính năng
+  - B1: Tạo một interface để định nghĩa ra các tính năng cần có
+  - B2: Tạo một lớp Service hoặc Repository implement từ interface đó
+  - B3: Tạo một Service Provide để đăng ký ràng buộc giữa các Interface và Class 
+  - B4: Khi một class sử dụng thì nó không còn cần tương tác với class triển khai (Service hoặc Repository) mà thông qua các lớp trừu tượng là Service Provide
+
+## 15. Model - View - Controler trong laravel
+- Model: Tương tác dữ liệu với database để lấy dữ liệu về cho controller
+- View: Hiển thị dữ liệu
+- Controller: Lấy yêu cầu từ người dùng và gửi qua model để lấy dữ liệu và show ra view
+
+Còn đúng hơn sẽ phải làm thêm cái này để tránh controller phải xử lý logic
+- Model: Định nghĩa ra các thuộc tính trong database
+- Service hoặc Repository: Để xử lý các logic nghiệp vụ từ model như các lệnh truy vấn phức tạp như đăng nhập đăng ký, thanh toán, tính toán
+- Controller: Nhận yêu cầu từ Request người dùng rồi gửi cho Service hoặc Repository để xử lý logic và show ra view
+- View: Hiển thị dữ liệu
