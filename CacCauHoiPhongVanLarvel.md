@@ -79,6 +79,6 @@ Cả 2 đều sử dụng để đăng ký và quản lý đối tượng
 
 Còn đúng hơn sẽ phải làm thêm cái này để tránh controller phải xử lý logic
 - Model: Định nghĩa ra các thuộc tính trong database
-- Service hoặc Repository: Để xử lý các logic nghiệp vụ từ model như các lệnh truy vấn phức tạp như đăng nhập đăng ký, thanh toán, tính toán **(với Service)** và lọc sửa thêm xóa với **(với Repository)**
+- Service hoặc Repository: Để xử lý các logic nghiệp vụ từ model như các lệnh truy vấn phức tạp như đăng nhập đăng ký, thanh toán, tính toán, thống kê, mảng dữ liệu truy vấn về thông qua Repository **(với Service)** và lọc sửa thêm xóa với **(với Repository)**
 - Controller: Nhận yêu cầu từ Request người dùng rồi gửi cho Service hoặc Repository để xử lý logic và show ra view
 - View: Hiển thị dữ liệu
