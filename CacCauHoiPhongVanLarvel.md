@@ -67,7 +67,7 @@ Cả 2 đều sử dụng để đăng ký và quản lý đối tượng
 ## 14. Constructor trong laravel
 - Thường dùng để tiêm sự phụ thuộc. Tức là thay vì mình phải tạo ra một đối tượng và quản lý chúng thì sẽ thông qua 1 thằng khởi tạo và quản lý hộ mình, cụ thể ở đây là đăng ký chúng trong Service Provide. Mục đích ở đây là để mình dùng lại nhiều lần và có thể thay đổi đối tượng mà không ảnh hưởng đến các tính năng
   - B1: Tạo một interface để định nghĩa ra các tính năng cần có
-  - B2: Tạo một lớp Service hoặc Repository implement từ interface đó
+  - B2: Tạo một lớp Service hoặc Repository implement từ interface đó **(tại đây sẽ tiêm phụ thuộc vào constructor với Repository thì mình sẽ tiêm phụ thuộc với lớp model cần tương tác Datasbe, với Service thì mình sẽ tiêm phụ thuộc với Repository với Controller là service)**
   - B3: Tạo một Service Provide để đăng ký ràng buộc giữa các Interface và Class 
   - B4: Khi một class sử dụng thì nó không còn cần tương tác với class triển khai (Service hoặc Repository) mà thông qua các lớp trừu tượng là Service Provide
 
