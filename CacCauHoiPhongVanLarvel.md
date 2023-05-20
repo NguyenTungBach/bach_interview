@@ -85,7 +85,7 @@ Còn đúng hơn sẽ phải làm thêm cái này để tránh controller phải
 ***Trong cách trên có thể tạo thêm các lớp Helper dùng để tạo ra các hàm logic dùng chung (ví dụ: hàm xử lý định dạng ngày tháng, xử lý chuỗi, mã hóa, tạo chuỗi ngãu nhiên,...)***
 
 ## 16. Quan hệ trong laravel
-- $this->belongsTo(Tên lớp bảng phụ, khóa phụ của bảng chính, khóa chính của bảng phụ): thuộc về một bảng nào;
+- $this->belongsTo(Tên lớp bảng phụ, khóa ngoại của bảng chính, khóa chính của bảng phụ): thuộc về một bảng nào;
 ```sh
 class BlogFarm extends Model{
   protected $fillable = ['title','farm_id','url','thumbnail','description'];
@@ -98,7 +98,7 @@ class BlogFarm extends Model{
 ```
 ***(Hiểu trên như câu lệnh SQL sau From BlogFarm JOIN Farm ON BlogFarm.farm_id = Farm.id )***
 
-- $this->hasMany(Tên lớp bảng phụ, khóa phụ của bảng phụ, khóa chính của bảng chính): Sở hữu nhiều với bảng nào;
+- $this->hasMany(Tên lớp bảng phụ, khóa ngoại của bảng phụ, khóa chính của bảng chính): Sở hữu nhiều với bảng nào;
 ```sh
 class Farm extends Model{
   use HasFactory;
@@ -111,3 +111,19 @@ class Farm extends Model{
 }
 ```
 ***(Hiểu trên như câu lệnh SQL sau From Farm JOIN Prodcuct ON Prodcut.farm_id = Farm.id )***
+
+- $this->belongsToMany(Tên lớp bảng phụ, tên bảng trung gian, khóa ngoại của bảng chính trong bảng trung gian, khóa ngoại bảng phụ trong bảng trung gian): quan hệ nhiều nhiều giữa hai bảng;
+```sh
+class Order extends Model
+{
+    public $timestamps = false;
+    use HasFactory;
+
+    // 1 order thuộc về nhiều product, (n - 1)
+    public function products() : BelongsToMany
+    {
+
+        // sử dụng bảng OrderDetail làm trung gian để tìm kiếm product
+        return $this->belongsToMany(Product::class,'order_details', 'order_id', 'product_id');
+    }
+```
