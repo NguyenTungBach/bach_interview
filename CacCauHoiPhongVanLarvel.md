@@ -83,3 +83,31 @@ Còn đúng hơn sẽ phải làm thêm cái này để tránh controller phải
 - View: Hiển thị dữ liệu
 
 ***Trong cách trên có thể tạo thêm các lớp Helper dùng để tạo ra các hàm logic dùng chung (ví dụ: hàm xử lý định dạng ngày tháng, xử lý chuỗi, mã hóa, tạo chuỗi ngãu nhiên,...)***
+
+## 16. Quan hệ trong laravel
+- $this->belongsTo(Tên lớp bảng phụ, khóa phụ của bảng chính, khóa chính của bảng phụ): thuộc về một bảng nào;
+```sh
+class BlogFarm extends Model{
+  protected $fillable = ['title','farm_id','url','thumbnail','description'];
+    use HasFactory;
+    public function farm():BelongsTo
+    {
+        return $this->belongsTo(Farm::class,'farm_id','id');
+    }
+}
+```
+***(Hiểu trên như câu lệnh SQL sau From BlogFarm JOIN Farm ON BlogFarm.farm_id = Farm.id )***
+
+- $this->hasMany(Tên lớp bảng phụ, khóa phụ của bảng phụ, khóa chính của bảng chính): Sở hữu nhiều với bảng nào;
+```sh
+class Farm extends Model{
+  use HasFactory;
+  protected $fillable = ['name', 'address', 'email', 'address', 'phone','thumbnail','description','created_at','updated_at','deleted_at'];
+
+  public function products(): HasMany
+  {
+      return $this->hasMany(Product::class,'farm_id','id');
+  }
+}
+```
+***(Hiểu trên như câu lệnh SQL sau From Farm JOIN Prodcuct ON Prodcut.farm_id = Farm.id )***
