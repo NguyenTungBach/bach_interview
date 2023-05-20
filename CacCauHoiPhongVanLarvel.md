@@ -70,6 +70,7 @@ Cả 2 đều sử dụng để đăng ký và quản lý đối tượng
   - B2: Tạo một lớp Service hoặc Repository implement từ interface đó
   - B3: Tạo một Service Provide để đăng ký ràng buộc giữa các Interface và Class 
   - B4: Khi một class sử dụng thì nó không còn cần tương tác với class triển khai (Service hoặc Repository) mà thông qua các lớp trừu tượng là Service Provide
+- Trong cách trên có thể tạo thêm các lớp Helper dùng để tạo ra các hàm logic dùng chung (ví dụ: hàm xử lý định dạng ngày tháng, xử lý chuỗi, mã hóa, tạo chuỗi ngãu nhiên,...)
 
 ## 15. Model - View - Controler trong laravel
 - Model: Tương tác dữ liệu với database để lấy dữ liệu về cho controller
@@ -78,6 +79,6 @@ Cả 2 đều sử dụng để đăng ký và quản lý đối tượng
 
 Còn đúng hơn sẽ phải làm thêm cái này để tránh controller phải xử lý logic
 - Model: Định nghĩa ra các thuộc tính trong database
-- Service hoặc Repository: Để xử lý các logic nghiệp vụ từ model như các lệnh truy vấn phức tạp như đăng nhập đăng ký, thanh toán, tính toán
+- Service hoặc Repository: Để xử lý các logic nghiệp vụ từ model như các lệnh truy vấn phức tạp như đăng nhập đăng ký, thanh toán, tính toán **(với Service)** và lọc sửa thêm xóa với **(với Repository)**
 - Controller: Nhận yêu cầu từ Request người dùng rồi gửi cho Service hoặc Repository để xử lý logic và show ra view
 - View: Hiển thị dữ liệu
