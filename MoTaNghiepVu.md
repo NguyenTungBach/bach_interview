@@ -109,3 +109,18 @@ FrontEnd:
 
 - Quá trình vận chuyển 
   - Tất cả quá trình vận chuyển phải được xác nhận bởi lái xe
+
+- Một số tính năng như:
+  - Đặt giá
+  - Hướng dẫn giao hàng
+  - Bảng tóm tắt hàng ngày 
+  - Bảng tóm tắt hàng tuần
+  - Bảng tóm tắt hàng tháng
+  - Ghi lại quá trình giao hàng
+  - Thông tin giao hàng
+  - Bảng phí giao hàng hàng ngày
+  - Doanh số bán hàng theo xe
+  - Báo cáo vận chuyển hằng ngày
+  - Bảng lương
+  - Hóa đơn cửa hàng
+  - Hóa đơn (trung tâm vận chuyển)
