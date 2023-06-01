@@ -89,3 +89,23 @@ FrontEnd:
 - Một đội lấy dữ liệu sản xuất
 - Một đội lo cấu hình và đối soát thông qua dữ liệu bên kinh doanh và sản xuất
 - Các service giao tiếp với nhau thông qua rabbitMQ
+
+# 7. Quản lý giao hàng
+- Admin
+  - Công ty
+  - Chi nhánh
+  
+  1) Chọn được nhiều chi nhánh (cửa hàng hoặc cơ sở) thuộc đơn vị vận chuyển được xác định từ trước
+  2) Một công ty vận chuyển kết nối với chi nhánh
+
+- Chi nhánh 
+    - Chọn nhiều
+    - Chọn một
+
+- Cơ sở
+  - Chọn nhiều
+  - Chọn một
+  - Một công ty vận chuyển kết nối với chi nhánh sẽ được phái đi
+
+- Quá trình vận chuyển 
+  - Tất cả quá trình vận chuyển phải được xác nhận bởi lái xe
