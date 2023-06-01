@@ -17,9 +17,10 @@
 - Cookie được hủy sau khi hết hạn hoặc xóa bằng java script, php bằng hàm unset
 
 ## 5. Request lifecycle trong laravel
-- Service Provider: để cấu hình và đăng ký các thành phần của ứng dụng (Cái này chỉ là đầu tiên)
-- Route Dispatch: Tìm đến route 
-- Middleware: Lọc request
+- Configuration: cấu hình các framework trong laravel, các Service Providers
+- Service Provider: để cấu hình và đăng ký khởi tạo các thành phần của ứng dụng, **(khởi tạo thông qua hàm register() để truyền vào service container, sau khi khởi tạo xong sẽ đến boot() để thực hiện việc gì đó như Observe partten lắng nghe sau khi sự kiện thêm sửa xóa thực hiện)**
+- Route Dispatch: Tìm đến route
+- Middleware: Lọc request **(trong này có Handle exception)**
 - Controller: Xử lý request và các logic. Có thể trả về view hoặc Response luôn
 - View: Nếu controller trả về view thì laravel sẽ render view đó trả về cho client
 - Response: trả về kết quả response về cho client
