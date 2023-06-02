@@ -110,9 +110,20 @@ FrontEnd:
 - Quá trình vận chuyển 
   - Tất cả quá trình vận chuyển phải được xác nhận bởi lái xe
 
-- Một số tính năng như:
+- Một số tính năng trong quản lý như
+  - Quản lý các cơ sở
+  - Quản lý công ty
+  - Quản lý các loại xe
+  - Quản lý xe
+  - Quản lý tài khoản
+  - Quản lý lái xe
+  - Quản lý quá trình vận chuyển đến địa điểm
+  - Quản lý địa điểm
+  - Thời gian
+
+- Một số tính năng trong báo cáo như:
   - Đặt giá
-  - Hướng dẫn giao hàng
+  - Quá trình hoạt đông vận chuyển
   - Bảng tóm tắt hàng ngày 
   - Bảng tóm tắt hàng tuần
   - Bảng tóm tắt hàng tháng
