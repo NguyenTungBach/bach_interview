@@ -119,7 +119,7 @@ FrontEnd:
   - Quản lý lái xe
   - Quản lý quá trình vận chuyển đến địa điểm
   - Quản lý địa điểm
-  - Thời gian
+  - Thời gian hoạt động trong ngày
 
 - Một số tính năng trong báo cáo như:
   - Đặt giá
