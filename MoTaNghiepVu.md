@@ -103,8 +103,8 @@ FrontEnd:
   - B1: Thông tin giao hàng sẽ được import vào hệ thống
   - B2: Kiểm tra ngày xem có phù hợp không, nếu không sẽ xóa dữ liệu đó khỏi database VD bị quá hạn
   - B3: Thông tin kiểm tra sẽ được lưu vào database, dựa theo cột code
-    -  cột code nào kiểm tra bị lỗi sẽ được đưa vào bảng error để add lại vào về sau
-    -  cột code thỏa mãn sẽ lưu vào bảng chuyến đi store_direct
+    -  cột delivery_route nào kiểm tra bị lỗi sẽ được đưa vào bảng error để add lại vào về sau
+    -  cột delivery_route thỏa mãn sẽ lưu vào bảng chuyến đi store_direct
   - B4: Check quyền tài khoản này xem sẽ được xem department nào (nghiệp vụ 5 Department phía trên: Arata, Branch office, Branch store, Base, Delivery Company)
   - B5: Kiểm tra và cập nhật các địa điểm giao hàng
   - B6: Tổng hợp và cập nhật lại nhóm lại các địa điểm giao hàng trùng lại với nhau 
