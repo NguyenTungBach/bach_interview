@@ -101,7 +101,7 @@ FrontEnd:
   
 - Nghiệp vụ kiểm tra giao chuyến giao hàng: 
   - B1: Thông tin giao hàng sẽ được import vào hệ thống
-  - B2: AI sẽ kiểm tra ngày xem có phù hợp không, nếu không sẽ xóa dữ liệu đó khỏi database VD bị quá hạn
+  - B2: Kiểm tra ngày xem có phù hợp không, nếu không sẽ xóa dữ liệu đó khỏi database VD bị quá hạn
   - B3: Thông tin kiểm tra sẽ được lưu vào database, dựa theo cột code
     -  cột code nào kiểm tra bị lỗi sẽ được đưa vào bảng error để add lại vào về sau
     -  cột code thỏa mãn sẽ lưu vào bảng chuyến đi store_direct
