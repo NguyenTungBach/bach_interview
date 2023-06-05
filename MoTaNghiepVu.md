@@ -91,6 +91,23 @@ FrontEnd:
 - Các service giao tiếp với nhau thông qua rabbitMQ
 
 # 7. Quản lý giao hàng
+- Một công ty đang gặp muốn quản lý các địa điểm đầu cuối giao hàng cho các lái xe. Bằng cách import file thông tin chuyến giao hàng vào, các lái xe sẽ biết được thông tin và đăng ký chuyến giao hàng phù hợp với mình
+- Một công ty có các mối quan hệ sau, từng thằng lần lượt là cha của các thằng còn lại **(VD: Branch store có thể gọi đến Base và Delivery Company nhưng không gọi được đến Arata Branch office)**
+  - Arata
+  - Branch office
+  - Branch store
+  - Base
+  - Delivery Company 
+  
+- Nghiệp vụ kiểm tra giao chuyến giao hàng: 
+  - B1: Thông tin giao hàng sẽ được import vào hệ thống
+  - B2: AI sẽ kiểm tra ngày xem có phù hợp không, nếu không sẽ xóa dữ liệu đó khỏi database VD bị quá hạn
+  - B3: Thông tin kiểm tra sẽ được lưu vào database, dựa theo cột code
+    -  cột code nào kiểm tra bị lỗi sẽ được đưa vào bảng error để add lại vào về sau
+    -  cột code thỏa mãn sẽ lưu vào bảng chuyến đi store_direct
+  - B4: Check quyền tài khoản này xem sẽ được xem department nào (nghiệp vụ 5 Department phía trên: Arata, Branch office, Branch store, Base, Delivery Company)
+  - B5: Kiểm tra và cập nhật các địa điểm giao hàng
+  - B6: Tổng hợp và cập nhật lại nhóm lại các địa điểm giao hàng trùng lại với nhau 
 - Admin
   - Công ty
   - Chi nhánh
