@@ -99,7 +99,7 @@ FrontEnd:
   - Base
   - Delivery Company 
   
-- Nghiệp vụ kiểm tra giao chuyến giao hàng: 
+- Nghiệp vụ đối soát thông tin chuyến giao hàng: 
   - B1 ***(các bảng liên quan: delivery_datas, delivery_data_files)***: Thông tin giao hàng sẽ được import vào hệ thống
   - B2 ***(các bảng liên quan: delivery_datas, delivery_data_errors)***: Kiểm tra ngày xem có phù hợp không, nếu không sẽ xóa dữ liệu đó khỏi database VD bị quá hạn
   - B3 ***(các bảng liên quan: delivery_datas, delivery_data_direction_errors, delivery_data_between_centers, delivery_data_store_directs)***: Thông tin kiểm tra sẽ được lưu vào database, dựa theo cột code
