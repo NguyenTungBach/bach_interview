@@ -105,8 +105,8 @@ FrontEnd:
   - B3 ***(các bảng liên quan: delivery_datas, delivery_data_direction_errors, delivery_data_between_centers, delivery_data_store_directs)***: Thông tin kiểm tra sẽ được lưu vào database, dựa theo cột code
     -  cột delivery_route nào kiểm tra bị lỗi sẽ được đưa vào bảng delivery_data_direction_errors để add lại vào về sau
     -  cột delivery_route thỏa mãn sẽ lưu vào bảng chuyến đi store_direct
-  - B4 ***(các bảng liên quan: delivery_datas, delivery_data_base_errors, delivery_data_between_centers, delivery_data_store_directs)***: Check quyền tài khoản này xem sẽ được xem department nào (nghiệp vụ 5 Department phía trên: Arata, Branch office, Branch store, Base, Delivery Company)
-  - B5 ***(các bảng liên quan: delivery_datas, delivery_data_base_errors, delivery_data_between_centers, delivery_data_store_directs, delivery_data_destination_errors)***: Kiểm tra và cập nhật các địa điểm giao hàng từ bảng delivery_destination **(bảng delivery_data_destination_errors)** vào bảng delivery_data_store_directs hoặc delivery_data_between_centers
+  - B4 ***(các bảng liên quan: delivery_datas, delivery_data_between_centers, delivery_data_store_directs)***: Check quyền tài khoản này xem sẽ được xem department nào (nghiệp vụ 5 Department phía trên: Arata, Branch office, Branch store, Base, Delivery Company)
+  - B5 ***(các bảng liên quan: delivery_datas, delivery_data_between_centers, delivery_data_store_directs, delivery_data_destination_errors)***: Kiểm tra và cập nhật các địa điểm giao hàng từ bảng delivery_destination **(bảng delivery_data_destination_errors)** vào bảng delivery_data_store_directs hoặc delivery_data_between_centers
   - B6 ***(các bảng liên quan: delivery_data_between_centers, delivery_data_store_directs, delivery_between_center_aggregations)***: Tổng hợp và cập nhật lại nhóm lại các địa điểm giao hàng trùng lại với nhau 
   
 - Admin
