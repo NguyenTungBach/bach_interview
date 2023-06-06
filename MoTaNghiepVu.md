@@ -91,7 +91,7 @@ FrontEnd:
 - Các service giao tiếp với nhau thông qua rabbitMQ
 
 # 7. Quản lý giao hàng
-- Một công ty đang gặp muốn quản lý các địa điểm đầu cuối giao hàng cho các lái xe. Bằng cách import file thông tin chuyến giao hàng vào, các lái xe sẽ biết được thông tin và đăng ký chuyến giao hàng phù hợp với mình
+- Một công ty đang gặp muốn quản lý các địa điểm đầu cuối giao hàng cho các lái xe. Bằng cách import file thông tin chuyến giao hàng vào và có thể chuyển hướng chuyến hàng vào nhóm chuyến đi khác (cụ thể một chuyến giao hàng không giao đi từng chuyến mà thành một nhóm để giao) (trên web), các lái xe sẽ biết được thông tin về các địa điểm giao hàng và đăng ký chuyến giao hàng phù hợp với mình (trên mobie)
 - Một công ty có các mối quan hệ sau, từng thằng lần lượt là cha của các thằng còn lại **(VD: Branch store có thể gọi đến Base và Delivery Company nhưng không gọi được đến Arata Branch office)**
   - Arata
   - Branch office
