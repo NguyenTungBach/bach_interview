@@ -54,3 +54,4 @@ RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
 - cd .. : lùi thư mục
 - cd <tên> : chạy đến một thư mục
 - cd ../ : chạy ra hẳn ngoài
+- npm run prod: lệnh load lại code cho project front end
