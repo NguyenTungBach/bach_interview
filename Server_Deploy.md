@@ -55,3 +55,4 @@ RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
 - cd <tên> : chạy đến một thư mục
 - cd ../ : chạy ra hẳn ngoài
 - npm run prod: lệnh load lại code cho project front end
+- php artisan config:clear : lệnh clear cache nếu dữ liệu env không nhận
