@@ -63,5 +63,6 @@ RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
   - yarn run android: chạy code android
   - yarn start: chạy code môi trường android
   - expo prebuild: chạy code generate file android và file ios
+  - expo eject: build lại môi trường generate file android và file ios (lưu ý nhớ xóa file android)
   - yarn install: cài file node_module cho project
   - npx react-native start: run và xoá cache từ cd android
