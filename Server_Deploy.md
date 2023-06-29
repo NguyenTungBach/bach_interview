@@ -61,6 +61,7 @@ RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
 ## Một chạy code trong project
 - react native:
   - yarn run android: chạy code android
+  - yarn start: chạy code môi trường android
   - expo prebuild: chạy code generate file android và file ios
   - yarn install: cài file node_module cho project
   - npx react-native start: run và xoá cache từ cd android
