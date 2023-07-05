@@ -68,3 +68,6 @@ RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
   - expo eject: build lại môi trường generate file android và file ios (lưu ý nhớ xóa file android)
   - yarn install: cài file node_module cho project
   - npx react-native start: run và xoá cache từ cd android
+
+## Trường hợp git yêu cầu đăng nhập lại
+- lệnh: git remote set-url origin https://nguyentungbach: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@github.com/VehoWorks/v-face.git
