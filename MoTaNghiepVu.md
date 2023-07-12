@@ -207,5 +207,5 @@ FrontEnd:
  - Số tiền còn lại sau khi thanh toán (tiền còn dư ra sau khi thanh toán cho bên công ty vận chuyển liên kết)
  - Số tài khoản
  - Tên tài xế
-- Quản lý chi phí giao hàng công ty liên kết vận chuyển:
+ 
 ### Các quản lý nhỏ như (Data manager): Lái xe, tài khoản admin, khách hàng(tên công ty)
