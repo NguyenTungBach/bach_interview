@@ -153,3 +153,33 @@ FrontEnd:
   - Bảng lương
   - Hóa đơn cửa hàng
   - Hóa đơn (trung tâm vận chuyển)
+
+# 8. Quản lý giao hàng và thu chi giao hàng:
+- Hệ thống quản lý tạo ra các chuyến giao hàng trong tháng, trong tuần cho người giao hàng hoặc các công ty vận chuyển. Các tính toán về chi phí đều đã được tính từ trước
+
+- Trong chuyến giao hàng gồm có:
+ - Tên tài xế
+ - Giá vận chuyển hàng
+ - Số tiền thanh toán cho công ty hợp tác(Nếu có)
+ - Tiền cho các trạm thu phí (Đã được tính)
+ - Thời gian bắt đầu kết thúc
+ - Giờ nghỉ trưa
+ - Tiền trợ cấp ăn
+ - Khu vực vận chuyển (Điểm đến và đi)
+
+- Quản lý chi phí giao hàng lái xe:
+ - Số tiền khách trả tháng này (tiền nhận)
+ - Số tiền khách còn nợ (tiền chưa nhận)
+ - Số tổng tiền nhận được giao hàng trong tháng (tổng tiền sẽ được nhận)
+ - Số tài khoản
+ - Tên tài xế
+
+- Quản lý chi phí giao hàng công ty vận chuyển:
+ - Số tổng tiền nhận được giao hàng trong tháng từ công ty vận chuyển (tổng tiền được nhận)
+ - Số tiền đã trả công ty vận chuyển nhận tháng này (tiền đã trả bên)
+ - Số tiền còn nợ công ty vận chuyển (tiền còn phải trả cho công ty vận chuyển)
+ - Số tiền còn lại sau khi thanh toán (tiền còn dư ra sau khi thanh toán cho bên công ty vận chuyển liên kết)
+ - Số tài khoản
+ - Tên tài xế
+- Quản lý chi phí giao hàng công ty liên kết vận chuyển:
+- Các quản lý nhỏ như (Datamanager): Lái xe, tài khoản admin, khách hàng
