@@ -160,12 +160,13 @@ FrontEnd:
 ### Thống kê giao hàng theo từng ngày trong tháng (Mỗi một ô sẽ tương ứng một mã, click vào sẽ ra thông tin chi tiết):
  - Bảng lịch trình
    - Ca làm (ngày lễ, ngày nghỉ yêu cầu)
-   - Tên nhân viên hoặc công ty vận chuyển liên kết
-   - Tên công ty khách
+   - Mã nhân viên
+   - Loại nhân viên (Leader, full time, part-time, nhân viên của công ty liên kết Associate company)
+   - Tên nhân viên
    - Chi tiết thời gian vận chuyển khi nhấn vào mã (Khi click vào sẽ show ra lịch trình địa điểm, thời gian đi và đến, thời gian giải lao)
  - Bảng chi phí ở các trạm thu phí (show ra từng ngày ngày trong tháng):
-   - Mã giao hàng
-   - Tên nhân viên
+   - Mã khách
+   - Ngày đóng sổ (mọi chi phí của tháng này sẽ chuyển hết sang tháng sau, ví dụ 15/7 thì mọi chi phí sẽ xảy ra trong ngày 16/6 đến 15/7)
    - Số tiền cho các trạm thu phí mỗi ngày
  - Bảng doanh thu (show ra từng ngày ngày trong tháng):
    - Mã giao hàng
