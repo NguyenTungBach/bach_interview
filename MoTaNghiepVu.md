@@ -176,7 +176,7 @@ FrontEnd:
  - Bảng số tiền thanh toán cho bên công ty vận chuyển liên kết (show ra từng ngày ngày trong tháng):
    - Số tiền phải trả theo ngày
    - Ngày đóng sổ (mọi chi phí của tháng này sẽ chuyển hết sang tháng sau, ví dụ 15/7 thì mọi chi phí sẽ xảy ra trong ngày 16/6 đến 15/7)
-   - Mã vận chuyển
+   - Mã nhân viên vận chuyển (Lọc theo nhân viên của công ty liên kết Associate company )
    - Tên công ty vận chuyển
 
 ### Danh sách khu vực giao hàng:
