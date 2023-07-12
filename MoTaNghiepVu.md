@@ -164,17 +164,17 @@ FrontEnd:
    - Tên công ty khách
    - Chi tiết thời gian vận chuyển khi nhấn vào mã (Khi click vào sẽ show ra lịch trình địa điểm, thời gian đi và đến, thời gian giải lao)
  - Bảng chi phí ở các trạm thu phí (show ra từng ngày ngày trong tháng):
-  - Mã giao hàng
-  - Tên nhân viên
-  - Số tiền cho các trạm thu phí mỗi ngày
+   - Mã giao hàng
+   - Tên nhân viên
+   - Số tiền cho các trạm thu phí mỗi ngày
  - Bảng doanh thu (show ra từng ngày ngày trong tháng):
-  - Mã giao hàng
-  - Tên nhân viên và công ty vận chuyển
-  - Số tiền nhận mỗi ngày
+   - Mã giao hàng
+   - Tên nhân viên và công ty vận chuyển
+   - Số tiền nhận mỗi ngày
  - Bảng số tiền thanh toán cho bên công ty vận chuyển liên kết (show ra từng ngày ngày trong tháng):
-  - Số tiền phải trả theo ngày
-  - Mã vận chuyển
-  - Tên công ty vận chuyển
+   - Số tiền phải trả theo ngày
+   - Mã vận chuyển
+   - Tên công ty vận chuyển
 
 ### Danh sách khu vực giao hàng:
  - Tên khách
