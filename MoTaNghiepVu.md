@@ -169,8 +169,9 @@ FrontEnd:
    - Ngày đóng sổ (mọi chi phí của tháng này sẽ chuyển hết sang tháng sau, ví dụ 15/7 thì mọi chi phí sẽ xảy ra trong ngày 16/6 đến 15/7)
    - Số tiền cho các trạm thu phí mỗi ngày
  - Bảng doanh thu (show ra từng ngày ngày trong tháng):
-   - Mã giao hàng
-   - Tên nhân viên và công ty vận chuyển
+   - Mã khách
+   - Ngày đóng sổ (mọi chi phí của tháng này sẽ chuyển hết sang tháng sau, ví dụ 15/7 thì mọi chi phí sẽ xảy ra trong ngày 16/6 đến 15/7)
+   - Tên khách
    - Số tiền nhận mỗi ngày
  - Bảng số tiền thanh toán cho bên công ty vận chuyển liên kết (show ra từng ngày ngày trong tháng):
    - Số tiền phải trả theo ngày
