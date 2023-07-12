@@ -203,7 +203,7 @@ FrontEnd:
 - Số tài khoản
 - Tên tài xế
 
-### Quản lý chi phí giao hàng công ty vận chuyển trong tháng:
+### Quản lý doanh thu giao hàng công ty vận chuyển trong tháng:
  - Số tổng doanh thu tiền nhận được giao hàng trong tháng từ công ty vận chuyển (tổng tiền được nhận)
  - Số tiền đã trả công ty vận chuyển nhận tháng này (tiền đã trả bên)
  - Số tiền còn nợ công ty vận chuyển (tiền còn phải trả cho công ty vận chuyển)
