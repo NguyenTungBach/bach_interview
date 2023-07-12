@@ -155,13 +155,26 @@ FrontEnd:
   - Hóa đơn (trung tâm vận chuyển)
 
 # 8. Quản lý giao hàng và thu chi giao hàng:
-#### Hệ thống quản lý tạo ra các chuyến giao hàng trong tháng, trong tuần cho người giao hàng hoặc các công ty vận chuyển. Các tính toán về chi phí đều đã được tính từ trước
+#### Hệ thống quản lý phân công tạo ra các chuyến giao hàng cho trong tháng, trong tuần cho lái xe giao hàng hoặc các công ty vận chuyển. Các tính toán về chi phí đều đã được tính từ trước
 
-### Thống kê giao hàng:
- - Bảng lịch trính
- - Bảng chi phí ở các trạm thu phí
- - Bảng số tiền bán hàng
- - Bảng số tiền thanh toán cho bên công ty vận chuyển liên kết
+### Thống kê giao hàng theo từng ngày trong tháng (Mỗi một ô sẽ tương ứng một mã, click vào sẽ ra thông tin chi tiết):
+ - Bảng lịch trình
+   - Ca làm (ngày lễ, ngày nghỉ yêu cầu)
+   - Tên nhân viên hoặc công ty vận chuyển liên kết
+   - Tên công ty khách
+   - Chi tiết thời gian vận chuyển khi nhấn vào mã (Khi click vào sẽ show ra lịch trình địa điểm, thời gian đi và đến, thời gian giải lao)
+ - Bảng chi phí ở các trạm thu phí (show ra từng ngày ngày trong tháng):
+  - Mã giao hàng
+  - Tên nhân viên
+  - Số tiền cho các trạm thu phí mỗi ngày
+ - Bảng doanh thu (show ra từng ngày ngày trong tháng):
+  - Mã giao hàng
+  - Tên nhân viên và công ty vận chuyển
+  - Số tiền nhận mỗi ngày
+ - Bảng số tiền thanh toán cho bên công ty vận chuyển liên kết (show ra từng ngày ngày trong tháng):
+  - Số tiền phải trả theo ngày
+  - Mã vận chuyển
+  - Tên công ty vận chuyển
 
 ### Danh sách khu vực giao hàng:
  - Tên khách
@@ -180,15 +193,15 @@ FrontEnd:
 - Tiền trợ cấp ăn
 - Khu vực vận chuyển (Điểm đến và đi)
 
-### Quản lý chi phí giao hàng lái xe:
-- Số tiền khách trả tháng này (tiền nhận)
+### Quản lý chi phí giao hàng lái xe trong tháng:
+- Số tiền doanh thu khách trả tháng này (tiền nhận)
 - Số tiền khách còn nợ (tiền chưa nhận)
 - Số tổng tiền nhận được giao hàng trong tháng (tổng tiền sẽ được nhận)
 - Số tài khoản
 - Tên tài xế
 
-### Quản lý chi phí giao hàng công ty vận chuyển:
- - Số tổng tiền nhận được giao hàng trong tháng từ công ty vận chuyển (tổng tiền được nhận)
+### Quản lý chi phí giao hàng công ty vận chuyển trong tháng:
+ - Số tổng doanh thu tiền nhận được giao hàng trong tháng từ công ty vận chuyển (tổng tiền được nhận)
  - Số tiền đã trả công ty vận chuyển nhận tháng này (tiền đã trả bên)
  - Số tiền còn nợ công ty vận chuyển (tiền còn phải trả cho công ty vận chuyển)
  - Số tiền còn lại sau khi thanh toán (tiền còn dư ra sau khi thanh toán cho bên công ty vận chuyển liên kết)
