@@ -8,7 +8,7 @@
 - cd /var/www/
 - git clone https://github.com/VehoWorks/new-web.git new-web
  - Trường hợp đăng nhập lỗi thì hãy lấy token và làm giống như sau: https://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@github.com/VehoWorks/v-face.git
- - trường hợp muốn xem remote của git này: git remote -m
+ - trường hợp muốn xem remote của git này: git remote -v
 ### cài đặt các bước cần thiết cho web theo file README.md nếu có.
 
 ## B2: tạo file config apache mới cho web mới 
