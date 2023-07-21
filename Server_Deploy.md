@@ -73,3 +73,8 @@ RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
   
 ## Trường hợp git yêu cầu đăng nhập lại
 - lệnh: git remote set-url origin https://nguyentungbach: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@github.com/VehoWorks/v-face.git
+
+//////////////////////////
+## chạy unit test
+- test file: php artisan test tests/Feature/tên_file.php
+- test hàm trong file: php artisan test tests/Feature/tên_file.php --filter=tên_hàm
