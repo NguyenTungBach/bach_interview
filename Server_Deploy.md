@@ -58,6 +58,7 @@ RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
 - cd ../ : chạy ra hẳn ngoài
 - npm run prod: lệnh load lại code cho project front end
 - php artisan config:clear : lệnh clear cache nếu dữ liệu env không nhận
+- gặp lỗi này thì tạo 3 thư mục **cache,sessionsviews** Script @php artisan package:discover --ansi handling the post-autoload-dump event returned with error code 1
 
 //////////////////////////
 ## Một chạy code trong project
