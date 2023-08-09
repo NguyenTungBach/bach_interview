@@ -51,6 +51,7 @@ RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
   - :q : thoát
 
 - mkdir <forder> : thêm thư mục
+- rmdir <forder> : xóa thư mục
 - ls : xem thông tin thư mục
 - ls -a : xem thông tin tất cả bao gồm thư mục ẩn
 - cd .. : lùi thư mục
