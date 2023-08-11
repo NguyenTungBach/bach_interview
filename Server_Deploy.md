@@ -73,6 +73,7 @@ RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
   - npx react-native start: run và xoá cache từ cd android
   - pod install: kiểm tra các gói ios đã đủ chưa
   - npm install --legacy-peer-deps: trường hợp chạy yarn install không khớp với các phiên bản đã cài đặt hiện tại
+  - npm run test TênFile -- -t 'TênTest': chạy một test và skip các test còn lại trên fornt end
   
 ## Trường hợp git yêu cầu đăng nhập lại
 - lệnh: git remote set-url origin https://nguyentungbach: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@github.com/VehoWorks/v-face.git
