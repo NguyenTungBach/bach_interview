@@ -73,6 +73,7 @@ RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
   - npx react-native start: run và xoá cache từ cd android
   - pod install: kiểm tra các gói ios đã đủ chưa
   - npm install --legacy-peer-deps: trường hợp chạy yarn install không khớp với các phiên bản đã cài đặt hiện tại
+  - php artisan dusk tests/Browser/TênFolderHoặcKhông --filter=TênFile: chạy file IT test
   - npm run test TênFile -- -t 'TênTest': chạy một test và skip các test còn lại trên fornt end
   
 ## Trường hợp git yêu cầu đăng nhập lại
