@@ -35,9 +35,10 @@ VD cột lỗi:
 
 ### 1.1 Fix lỗi trên
 VD từng cột th: (chú ý thẻ [div, span], class: [th-sort, icon-sorts, th-col]) thứ tự dưới đây
- - div
-   - span 
-   - div (class boostrap: icon-sorts, text-right)
+- th-sort (class th-sort)
+    - div (class: th-col)
+       - span 
+       - div (class boostrap: icon-sorts, text-right)
 ```sh
 <b-th
     class="th-sort th-id th-course-id"
