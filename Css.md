@@ -1,5 +1,35 @@
 # 1. Cột trong bảng muốn để nằm ngang, không dọc
 VD cột lỗi:
+- VD đoạn code lỗi
+```sh
+<b-th
+    class="th-sort th-name th-course-name"
+    :colspan="3"
+    @click="onSortTable('total_payable')"
+>
+    <b-row>
+        <b-col>
+            {{ $t('LIST_CASH.TABLE_CASH_DISBURSEMENT_TOTAL_ACCOUNTS_RECEIVABLE') }}
+        </b-col>
+        <b-col class="icon-sorts">
+            <div class="text-right">
+                <i
+                    v-if="sortTable.sortBy === 'total_payable' && sortTable.sortType === true"
+                    class="fad fa-sort-up icon-sort"
+                />
+                <i
+                    v-else-if="sortTable.sortBy === 'total_payable' && sortTable.sortType === false"
+                    class="fad fa-sort-down icon-sort"
+                />
+                <i
+                    v-else
+                    class="fa-solid fa-sort icon-sort-default"
+                />
+            </div>
+        </b-col>
+    </b-row>
+</b-th>
+```
 
 ![](https://res.cloudinary.com/dark-faith/image/upload/v1692862955/css-veho/col_need_fix.png)
 
