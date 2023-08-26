@@ -59,7 +59,7 @@ RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
 - cd ../ : chạy ra hẳn ngoài
 - npm run prod: lệnh load lại code cho project front end
 - php artisan config:clear : lệnh clear cache nếu dữ liệu env không nhận
-- gặp lỗi này thì tạo 3 thư mục **framework và bên trong có 3 thư mục cache,sessions,views:** Script @php artisan package:discover --ansi handling the post-autoload-dump event returned with error code 1
+- gặp lỗi này thì ở storage tạo thư mục **framework và bên trong framework có 3 thư mục cache,sessions,views:** Script @php artisan package:discover --ansi handling the post-autoload-dump event returned with error code 1
 - Cấp quyền toàn bộ: sudo chmod -R 777 storage
 
 //////////////////////////
