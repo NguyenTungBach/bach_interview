@@ -61,6 +61,7 @@ RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
 - php artisan config:clear : lệnh clear cache nếu dữ liệu env không nhận
 - gặp lỗi này thì ở storage tạo thư mục **framework và bên trong framework có 3 thư mục cache,sessions,views:** Script @php artisan package:discover --ansi handling the post-autoload-dump event returned with error code 1
 - Cấp quyền toàn bộ: sudo chmod -R 777 storage
+
 //////////////////////////
 ## tương tấc với server bằng php storm 2021.2
 - vào php storm: **Tools -> Deployment -> Browser** remote host
@@ -75,6 +76,23 @@ RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
   - Root path: nhập đường dẫn trên server giúp mình không cần phải click chuột chạy đến mất thời gian
 
 - Sau khi kết nối xong nếu muốn sử dụng terminal luôn thì có thể gọi theo **Tools -> Start SSH Session -> SERVER cấu hình mình muốn chọn**
+![](https://res.cloudinary.com/dark-faith/image/upload/v1693204639/veho%20tutorial/cau_hinh_quan_ly_server1.png)
+![](https://res.cloudinary.com/dark-faith/image/upload/v1693204639/veho%20tutorial/cau_hinh_quan_ly_server2.png)
+
+//////////////////////////
+## Trường hợp đặc biệt về lỗi cấu hình npm sau khi đã lỡ tải node js và nvm
+- yêu cầu ban đầu **nên tải node js trước rồi nvm sau** 
+- lỗi nvm đổi phiên bản nhưng không được:
+  - xóa nodejs -> cho nvm tải một phiên bản nào đó
+  - chạy npm -v và node -v kiểm tra xem đã đổi chưa
+ - lỗi not found khi chạy nvm install
+   - chạy npm config list
+   
+   ![](https://res.cloudinary.com/dark-faith/image/upload/v1693205263/veho%20tutorial/npm_config_list_right_qysi2a.png)
+
+   - Nếu không đúng dạng như trên thì phải vào C:\Users\USER_NAME/.npmrc kiểm tra xem có đùng như dưới đây không nếu không thì sửa lại cho đúng
+
+    ![](https://res.cloudinary.com/dark-faith/image/upload/v1693205496/veho%20tutorial/file_npmrc_rv44oo.png)
 
 //////////////////////////
 ## Một chạy code trong project
@@ -92,7 +110,7 @@ RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
   - php artisan test tests/Feature/TênĐườngDẫnFile --filter=TênHàmTest: chạy unit test back end
   - php artisan dusk tests/Browser/TênFolderHoặcKhông --filter=TênFile: chạy file IT test
   - npm run test TênFile -- -t 'TênTest': chạy một test và skip các test còn lại trên fornt end
-  
+
 ## Trường hợp git yêu cầu đăng nhập lại
 - lệnh: git remote set-url origin https://nguyentungbach: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@github.com/VehoWorks/v-face.git
 
