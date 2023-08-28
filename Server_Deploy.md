@@ -61,6 +61,20 @@ RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
 - php artisan config:clear : lệnh clear cache nếu dữ liệu env không nhận
 - gặp lỗi này thì ở storage tạo thư mục **framework và bên trong framework có 3 thư mục cache,sessions,views:** Script @php artisan package:discover --ansi handling the post-autoload-dump event returned with error code 1
 - Cấp quyền toàn bộ: sudo chmod -R 777 storage
+//////////////////////////
+## tương tấc với server bằng php storm 2021.2
+- vào php storm: **Tools -> Deployment -> Browser** remote host
+  - Đặt tên server
+  - Type: SFTP
+  - SSH config
+    - Nhập địa chỉ Host
+    - Tên của con server đó
+    - Authentication type = Key pair
+    - Private key file là đường dẫn ở trong máy
+    - Sau khi nhập xong hãy nhấn vào nút Test Connection để kiểm tra kết nối
+  - Root path: nhập đường dẫn trên server giúp mình không cần phải click chuột chạy đến mất thời gian
+
+- Sau khi kết nối xong nếu muốn sử dụng terminal luôn thì có thể gọi theo **Tools -> Start SSH Session -> SERVER cấu hình mình muốn chọn**
 
 //////////////////////////
 ## Một chạy code trong project
