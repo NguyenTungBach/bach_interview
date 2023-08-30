@@ -95,7 +95,7 @@ RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
     ![](https://res.cloudinary.com/dark-faith/image/upload/v1693205496/veho%20tutorial/file_npmrc_rv44oo.png)
 
 //////////////////////////
-## Một chạy code trong project
+## Một số chạy code trong project
 - react native:
   - yarn run android: chạy code android
   - yarn start: chạy code môi trường android
@@ -108,6 +108,9 @@ RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
   - npx react-native start: run và xoá cache từ cd android
   - pod install: kiểm tra các gói ios đã đủ chưa
   - npm install --legacy-peer-deps: trường hợp chạy yarn install không khớp với các phiên bản đã cài đặt hiện tại
+  - npm run test TênFile -- -t 'TênTest': chạy một test và skip các test còn lại trên fornt end
+  - php artisan serve --env=testing: chạy database test
+  - php artisan migrate:fresh --seed --env=testing: tạo bảng và seed dữ liệu mẫu file test (trước khi chạy nhớ config:clear)
   - php artisan test tests/Feature/TênĐườngDẫnFile --filter=TênHàmTest: chạy unit test back end
   - php artisan dusk tests/Browser/TênFolderHoặcKhông --filter=TênFile: chạy file IT test
   - npm run test TênFile -- -t 'TênTest': chạy một test và skip các test còn lại trên fornt end
