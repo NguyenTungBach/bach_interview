@@ -1,3 +1,5 @@
+//////////////
+CPU
 # 1 SPPT:
 - Điện áp định mức khi máy chạy bình thường (30/80W)
 
