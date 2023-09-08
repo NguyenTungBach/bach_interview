@@ -212,3 +212,12 @@ FrontEnd:
  - Tên tài xế
  
 ### Các quản lý nhỏ như (Data manager): Lái xe, tài khoản admin, khách hàng(tên công ty)
+
+# 9. Quản lý giao hàng atmtc:
+- Lái xe đăng nhập và chọn giao hàng. Dữ liệu giao hàng sau khi thông qua moblie sẽ được hiện vào web
+### Moblie:
+- Tính năng chọn giao hàng
+    - Lái xe đăng nhập
+    - Chọn khu vực 
+    - Chọn Course giao hàng (trong course có thể chứa nhiều địa điểm cần giao)
+- Tính năng comment giao hàng: để cho các lái xe ở địa điểm này rồi sẽ để thông báo lại cho các lái xe đi sau. VD: Đến nơi này thì hãy chuyển hàng lên tầng 8
