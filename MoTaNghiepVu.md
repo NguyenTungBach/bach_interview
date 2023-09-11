@@ -229,3 +229,5 @@ FrontEnd:
             - Chọn địa điểm giao (nhấn trên bản đồ hoặc, course có sẵn)
         - Có thể đổi lại xe (Đổi xe thì sẽ cần nhập lại công tơ met) (Dành cho trường hợp xe đi có vấn đề như xịt lốp cần đổi lại)
 - Tính năng comment giao hàng: để cho các lái xe ở địa điểm này rồi sẽ để thông báo lại cho các lái xe đi sau. VD: Đến nơi này thì hãy chuyển hàng lên tầng 8
+### Web:
+- Chưa check
