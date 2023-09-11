@@ -225,5 +225,7 @@ FrontEnd:
     - Bắt đầu giao hàng:
         - Mỗi hàng gửi sẽ có 2 trạng thái: giao hàng và đã gửi hàng
         - Sau khi gửi hàng thì sẽ phải nhập công tơ met để tính tiền xăng sau này
-        - Trong quá trình giao hàng đột xuất thì sẽ có thể đổi course nhưng course đã giao rồi thì vẫn giữ lại 
+        - Trong quá trình giao hàng đột xuất thì sẽ có thể đổi course nhưng course đã giao rồi thì vẫn giữ lại
+            - Chọn địa điểm giao (nhấn trên bản đồ hoặc, course có sẵn)
+        - Có thể đổi lại xe (Đổi xe thì sẽ cần nhập lại công tơ met) (Dành cho trường hợp xe đi có vấn đề như xịt lốp cần đổi lại)
 - Tính năng comment giao hàng: để cho các lái xe ở địa điểm này rồi sẽ để thông báo lại cho các lái xe đi sau. VD: Đến nơi này thì hãy chuyển hàng lên tầng 8
