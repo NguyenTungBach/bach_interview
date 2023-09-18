@@ -21,3 +21,4 @@
   - File apk sau khi tạo xong sẽ hay được để ở **TÊN_PROJECT\android\app\release**
   ![](https://res.cloudinary.com/dark-faith/image/upload/v1694401109/veho%20tutorial/build_change_api_server_7_vlkwhl.png)
   
+# 2. build ios (test flight)
