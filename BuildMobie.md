@@ -22,3 +22,11 @@
   ![](https://res.cloudinary.com/dark-faith/image/upload/v1694401109/veho%20tutorial/build_change_api_server_7_vlkwhl.png)
   
 # 2. build ios (test flight)
+- tạo new folder
+- git clone project
+- sửa lại tên project nếu cần
+- yarn install
+- cd ios
+- pod install: build ios
+- Mở x code (để deploye lên test flight)
+  - Tìm file ios/TÊN_FILE.xcworkspace 
