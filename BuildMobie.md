@@ -24,6 +24,13 @@
 # 2. build ios (test flight)
 - tạo new folder
 - git clone project
+- (Nếu có) sửa link api vào các file có **https://**
+  - until/appConfig.ts: sửa API_SERVER (lưu ý nhớ chữ /api)
+   ![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1695022885/server_deploy/build_change_api_server_1_x6z65h_rsjnxz.png)
+
+  - src/constants/config.ts:
+  ![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1695022938/server_deploy/build_change_api_server_2_rdvp5p_v3qam3.png)
+
 - sửa lại tên project nếu cần (Lưu ý trường hợp này cần người giúp vì sửa tên toàn bộ file rất dễ lỗi)
   ![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1695022744/server_deploy/change%20all%20file%20ios%20and%20android%20%28warning%29.png)
   
@@ -47,7 +54,33 @@
 - Mở x code (để deploye lên test flight)
   - Tìm file ios/TÊN_FILE.xcworkspace 
   ![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1695020743/server_deploy/file%20build%20ios.png)
-  - Vào browser với đường dẫn
+  - Các bước ví dụ như sau:
+    - Chọn deploye cho IOS  
+  ![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1695023746/server_deploy/x_code_build_1.png)
+  ![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1695023891/server_deploy/x_code_build_2.png)
+  ![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1695023966/server_deploy/x_code_build_3.png)
+    - Chọn deploye cho các loại máy (lưu ý với ipad thì về phần chọn xoay phải chọn toàn bộ)
+  ![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1695024062/server_deploy/x_code_build_4.png)
+    - Chọn team đã đăng ký trên testflight và nhập bunlde id
+  ![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1695024125/server_deploy/x_code_build_5.png)
+  ![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1695024235/server_deploy/x_code_build_6.png)
+    - Kiểm tra các thông số đã đúng chưa, đây là các thông tin cho phép app có được sử dụng tính năng camera, face id, microphone,... trên iso
+  ![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1695024937/server_deploy/x_code_build_info_7.png)
+    - Sửa thành release hoặc không cần
+  ![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1695025023/server_deploy/x_code_build_setting_debug_or_release_8.png)
+    - Sau khi hoàn thành thì tiền hành build
+  ![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1695025181/server_deploy/x_code_build_archive_9.png)
+  ![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1695025287/server_deploy/x_code_build_distribute_10.png)
+  ![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1695025385/server_deploy/x_code_build_testflight_11.png)
+  ![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1695025454/server_deploy/x_code_build_testflight_12.png)
+  ![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1695025520/server_deploy/x_code_build_testflight_13.png)
+  ![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1695025612/server_deploy/x_code_build_testflight_14.png)
+  ![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1695025893/server_deploy/x_code_build_testflight_15.png)
+
+- Ở trên sẽ done.
+- Trường hợp đẩy lên testflight có vấn đề nhấn vào manager -> chọn none -> save
+  ![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1695026085/server_deploy/test_flight_fix_after_build_1.png)
+  ![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1695026227/server_deploy/test_flight_fix_after_build_2.png)
 
 - Sau khi tạo xong có thể add thành viên vào để đăng ký dùng thử app test flight
   ![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1695022528/server_deploy/create%20group%20test%20flight%205.1.png)
