@@ -5,11 +5,11 @@
 | API Key Android | AIzaSyDM0laxVej2ddrkinsVmrB247WqIjQ5dgk | AIzaSyCV0zP51vYEtndrYN_68UlybxcYTLBAMZ8 | AIzaSyAEB8bdWh1wE14jD2rBPw49y1rvw46yOeE | NONE |
 | Project git  | https://github.com/VehoWorks/Arata-Mobile/blob/staging_v3/src/utils/appConfig.ts | https://github.com/VehoWorks/gac-mobile/blob/product/src/utils/appConfig.ts | https://github.com/thubkit/ATMTC-Yamapan-Mobile/blob/product/src/utils/appConfig.ts |
 | Product  | ![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1695092761/error_api_google/arata/Moblie/Api_key_product_ios_android_arata.png) | ![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1695095472/error_api_google/GLA/Mobie/Api_key_product_ios_android_gla.png) | ![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1695099051/error_api_google/Yamapan/Moblie/Api_key_product_ios_android_yamapan.png) |
-| Status IOS  | AIzaSyBG-WluVmGFGgi78Tim5E6ioIB3C8BMZ9U (OK) | AIzaSyAlWfiOYIbs9V02ZbZxcDlS5KNBv_TqA9U (OK) | `AIzaSyAlWfiOYIbs9V02ZbZxcDlS5KNBv_TqA9U` (False) |
-| Status Android  | AIzaSyDM0laxVej2ddrkinsVmrB247WqIjQ5dgk (OK) | AIzaSyCV0zP51vYEtndrYN_68UlybxcYTLBAMZ8 (OK) | `AIzaSyCV0zP51vYEtndrYN_68UlybxcYTLBAMZ8`(False) |
+| Status IOS  | AIzaSyBG-WluVmGFGgi78Tim5E6ioIB3C8BMZ9U (OK) | AIzaSyAlWfiOYIbs9V02ZbZxcDlS5KNBv_TqA9U (OK) | `AIzaSyAlWfiOYIbs9V02ZbZxcDlS5KNBv_TqA9U` (False) (Fixed) |
+| Status Android  | AIzaSyDM0laxVej2ddrkinsVmrB247WqIjQ5dgk (OK) | AIzaSyCV0zP51vYEtndrYN_68UlybxcYTLBAMZ8 (OK) | `AIzaSyCV0zP51vYEtndrYN_68UlybxcYTLBAMZ8`(False) (Fixed) |
 | Stage  | ![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1695092280/error_api_google/arata/Moblie/Api_key_stage_ios_android_arata.png) | ![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1695095678/error_api_google/GLA/Mobie/Api_key_stage_ios_android_gla.png) | ![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1695099229/error_api_google/Yamapan/Moblie/Api_key_stage_ios_android_yamapan.png) |
-| Status IOS  | AIzaSyBG-WluVmGFGgi78Tim5E6ioIB3C8BMZ9U (OK) | AIzaSyAlWfiOYIbs9V02ZbZxcDlS5KNBv_TqA9U (OK) | `AIzaSyAlWfiOYIbs9V02ZbZxcDlS5KNBv_TqA9U` (False) |
-| Status Android  | AIzaSyDM0laxVej2ddrkinsVmrB247WqIjQ5dgk (OK) | AIzaSyCV0zP51vYEtndrYN_68UlybxcYTLBAMZ8 (OK) |`AIzaSyCV0zP51vYEtndrYN_68UlybxcYTLBAMZ8`(False) |
+| Status IOS  | AIzaSyBG-WluVmGFGgi78Tim5E6ioIB3C8BMZ9U (OK) | AIzaSyAlWfiOYIbs9V02ZbZxcDlS5KNBv_TqA9U (OK) | `AIzaSyAlWfiOYIbs9V02ZbZxcDlS5KNBv_TqA9U` (False) (Fixed) |
+| Status Android  | AIzaSyDM0laxVej2ddrkinsVmrB247WqIjQ5dgk (OK) | AIzaSyCV0zP51vYEtndrYN_68UlybxcYTLBAMZ8 (OK) |`AIzaSyCV0zP51vYEtndrYN_68UlybxcYTLBAMZ8`(False) (Fixed) |
 
 ### 2. Error google api web
 | | ATMTC for Arata | ATMTC for GLA | ATMTC for Yamapan | ATMTC demo(2/9/2022) |
