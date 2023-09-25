@@ -218,8 +218,9 @@ FrontEnd:
 ### Moblie:
 - Tính năng chọn giao hàng
     - Lái xe đăng nhập
-    - Chọn khu vực
+    - Chọn ngày
     - Chọn xe
+    - Chọn khu vực
     - Nhập công tơ met để về sau tính tiền xăng. Phải nhập công tơ met thì mới được chọn course giao hàng
     - Chọn Course giao hàng (trong course có thể chứa nhiều địa điểm cần giao)
     - Bắt đầu giao hàng:
