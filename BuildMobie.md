@@ -7,6 +7,8 @@
   - src/constants/config.ts:
   ![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1695022938/server_deploy/build_change_api_server_2_rdvp5p_v3qam3.png)
 
+  - cd android
+  - ./gradlew assembleRelease (build lại file android)
 - vào android studio (lưu ý chọn thư mục app)
   - Nhấn Buld/Generate Signed Bundle or APK -> Chọn APK 
   ![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1695022975/server_deploy/build_change_api_server_4_d3ojjc_lcpgow.png)
