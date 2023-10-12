@@ -105,6 +105,8 @@ RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
   - yarn install: cài file node_module cho project
   - yarn run watch: chạy font end
   - yarn run prod: load lại font end
+  - yarn run build: load lại font end (Tùy trường hợp, Yêu cầu đi cùng yarn run generate)
+  - yarn run generate: load lại font end (Tùy trường hợp)
   - yarn run lintfix: sửa lỗi khi yarn install báo lỗi (do bị trùng file), lỗi eslint
   - npx react-native start: run và xoá cache từ cd android
   - pod install: kiểm tra các gói ios đã đủ chưa
