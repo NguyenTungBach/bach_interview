@@ -64,7 +64,7 @@
     - Chọn deploye cho các loại máy (lưu ý với ipad thì về phần chọn xoay phải chọn toàn bộ)
   ![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1695024062/server_deploy/x_code_build_4.png)
     - Chọn team đã đăng ký trên testflight và nhập bunlde id
-  ![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1695024125/server_deploy/x_code_build_5.png)
+  ![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1698115140/server_deploy/x_code_build_5_rwlnkj.png)
   ![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1695024235/server_deploy/x_code_build_6.png)
     - Kiểm tra các thông số đã đúng chưa, đây là các thông tin cho phép app có được sử dụng tính năng camera, face id, microphone,... trên iso
   ![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1695024937/server_deploy/x_code_build_info_7.png)
