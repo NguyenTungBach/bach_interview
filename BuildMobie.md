@@ -8,7 +8,8 @@
   ![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1695022938/server_deploy/build_change_api_server_2_rdvp5p_v3qam3.png)
 
   - Trường hợp đặc biệt cần đổi phiên bản android thì hãy thay versionCode và versionName trên toàn bộ project
-   ![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1698294399/server_deploy/change_version_ios.png)
+   ![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1698294399/server_deploy/change_version_android.png)
+
   - cd android
   - ./gradlew assembleRelease (build lại file android)
 - vào android studio (lưu ý chọn thư mục app)
@@ -37,7 +38,10 @@
 
 - sửa lại tên project nếu cần (Lưu ý trường hợp này cần người giúp vì sửa tên toàn bộ file rất dễ lỗi)
   ![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1695022744/server_deploy/change%20all%20file%20ios%20and%20android%20%28warning%29.png)
-  
+
+- Trường hợp đặc biệt cần đổi phiên bản ios thì hãy thay CFBundleShortVersionString trong file ios/TeenMoblie/Info.plist
+   ![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1698294802/server_deploy/change_version_ios.png)
+
 - yarn install
 - cd ios
 - pod install: build ios
