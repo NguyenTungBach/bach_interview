@@ -35,6 +35,9 @@
 
 - sửa lại tên project nếu cần (Lưu ý trường hợp này cần người giúp vì sửa tên toàn bộ file rất dễ lỗi)
   ![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1695022744/server_deploy/change%20all%20file%20ios%20and%20android%20%28warning%29.png)
+
+- Trường hợp đặc biệt cần đổi phiên bản ios thì hãy thay versionCode và versionName trên toàn bộ project
+ ![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1698294399/server_deploy/change_version_ios.png)
   
 - yarn install
 - cd ios
