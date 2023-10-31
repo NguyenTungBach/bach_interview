@@ -118,6 +118,8 @@ RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
   - php artisan dusk tests/Browser/TênFolderHoặcKhông --filter=TênFile: chạy file IT test
   - npm run test TênFile -- -t 'TênTest': chạy một test và skip các test còn lại trên fornt end
   - DB::connection()->getDatabaseName(): kiểm tra xem đang chạy db nào (Dùng để check UT và IT)
+  - php artisan config:clear (reset lại cấu hình)
+  - php artisan reload:cache (reset lại cache)
 
 ## Trường hợp git yêu cầu đăng nhập lại
 - lệnh: git remote set-url origin https://nguyentungbach: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@github.com/VehoWorks/v-face.git
