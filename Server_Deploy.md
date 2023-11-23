@@ -130,6 +130,16 @@ RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
    
 ![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1700714718/git_command/git_reset_back_after_git_pull.png)
 
+## Share link local host
+- ipconfig lấy địa chỉ ipV4
+![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1700735812/share_link_local/download_kdfvp9.png)
+
+- chạy php artisan serve --host=Tênipv4
+![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1700735912/share_link_local/download_xr0rbd.png)
+
+- link (nhớ kiểm tra port sử dụng): Tênipv4:8000 
+![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1700736017/share_link_local/download_sgugz4.png)
+
 //////////////////////////
 ## chạy unit test
 - test file: php artisan test tests/Feature/tên_file.php
