@@ -124,6 +124,12 @@ RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
 ## Trường hợp git yêu cầu đăng nhập lại
 - lệnh: git remote set-url origin https://nguyentungbach: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@github.com/VehoWorks/v-face.git
 
+## Trưởng hợp vừa git pull về xong nhưng muốn quay lại 
+- git reflog: xem lịch sử vùa pull git
+- git reset --hard MÃ: quay lại về lịch sử code 
+   
+![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1700714718/git_command/git_reset_back_after_git_pull.png)
+
 //////////////////////////
 ## chạy unit test
 - test file: php artisan test tests/Feature/tên_file.php
