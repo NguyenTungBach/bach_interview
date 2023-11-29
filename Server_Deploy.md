@@ -120,6 +120,8 @@ RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
   - DB::connection()->getDatabaseName(): kiểm tra xem đang chạy db nào (Dùng để check UT và IT)
   - php artisan config:clear (reset lại cấu hình)
   - php artisan reload:cache (reset lại cache)
+  - crontab -l: kiểm tra danh sách schedule
+  - crontab -e: xem hoặc thay đổi danh sách schedule
 
 ## Trường hợp git yêu cầu đăng nhập lại
 - lệnh: git remote set-url origin https://nguyentungbach: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@github.com/VehoWorks/v-face.git
