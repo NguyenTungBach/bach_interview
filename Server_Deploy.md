@@ -122,6 +122,7 @@ RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
   - php artisan reload:cache (reset lại cache)
   - crontab -l: kiểm tra danh sách schedule
   - crontab -e: xem hoặc thay đổi danh sách schedule
+  - sudo ln -s $14 /usr/local/bin/node: fix lỗi xcode không tìm được đường dẫn trên ios (chạy yarn run ios không chạy được)
 
 ## Trường hợp git yêu cầu đăng nhập lại
 - lệnh: git remote set-url origin https://nguyentungbach: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@github.com/VehoWorks/v-face.git
