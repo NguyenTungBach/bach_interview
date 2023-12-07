@@ -79,28 +79,44 @@ Route::get('/bach/event', function (Request $request) {
 });
 ```
 
-- Đoạn này là đoạn lấy thông tin slack command trả về mỗi khi nhập lệnh
+- Đoạn này là đoạn lấy thông tin slack command trả về mỗi khi nhập lệnh slack
 
 ```sh
-Route::get('/bach/event', function (Request $request) {
-//    $response = Http::withHeaders([
-//        'Content-Type' => 'application/json',
-//        'Authorization' => 'Bearer xoxp-6314543714097-6287373635079-6304522049988-5fa6233ae1694c78d2c0cd08188fb0a4',
-//    ])->post("https://slack.com/api/chat.postMessage", [
-//        'channel' => "C068VPUB2LT",
-//        'text' => "Bách gửi thử tin nhắn slack 2",
-//    ]);
-
-    $response = Http::withHeaders([
-        'Content-Type' => 'application/json',
-        'Authorization' => 'Bearer xoxp-6314543714097-6287373635079-6304522049988-5fa6233ae1694c78d2c0cd08188fb0a4',
-    ])->get("https://slack.com/api/conversations.history", [
-        'channel' => "C068VPUB2LT",
-
+Route::post('/bach/slack', function (Request $request){
+    Log::info($request->all());
+    $input = 'aaaa';
+    Log::info($input);
+    return response()->json([
+        'response_type' => 'in_channel',
+        'text' => "test slack bot ok! information",
     ]);
-
-    $responseData = $response->json();
-
-    return response()->json($responseData);
 });
 ```
+- Thông tin xem Log trong storage/logs/laravel.log
+
+![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1701941093/slack_bot/laravel_log_7.1.png)
+
+- Để slack có thể truyền dữ liệu vào localhost ta cần có một server ảo như đã nói. Mục đích là để kết nối giữa localhost với internet. Chi tiết sang B3
+
+# B3: Tạo server ảo Ngrok giúp kết nối giữa localhost và internet
+- Vào link Ngrok. Tạo tài khoản như bình thường (Đăng nhập và tạo bằng google cho nhanh)
+- Tải về và chạy bởi vì nó chỉ có 1 file
+
+![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1701941451/slack_bot/Ngrok_setup_8.1.png)
+
+- Nhập cấu hình key để đăng nhập
+
+![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1701941451/slack_bot/Ngrok_setup_8.2.png)
+
+- Sau khi nhập xong thì chỉ cần chạy lệnh ngrok http 8000. Vì mặc định port của laravel là 8000 **(Nhớ chạy php artisan serve thì mới có chạy localhost:8000)**
+
+![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1701941451/slack_bot/Ngrok_setup_8.3.png)
+
+- Quay về đề điền lại thông tin Slack Command
+
+![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1701939587/slack_bot/slack_command_6.2.png)
+
+
+- Ta hoàn toàn có thể chạy thử. **(Nhớ chạy php artisan serve thì mới có chạy localhost:8000 rồi mới gán lệnh ngrok http 8000)**
+
+![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1701941451/slack_bot/Ngrok_setup_8.4.png)
