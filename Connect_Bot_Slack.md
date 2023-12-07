@@ -79,7 +79,7 @@ Route::get('/bach/event', function (Request $request) {
 });
 ```
 
-- Đoạn này là đoạn lấy thông tin slack command trả về mỗi khi nhập lệnh slack
+- Đoạn này là đoạn lấy thông tin slack command trả về mỗi khi nhập lệnh slack và slack sẽ phản hồi lại
 
 ```sh
 Route::post('/bach/slack', function (Request $request){
@@ -95,6 +95,9 @@ Route::post('/bach/slack', function (Request $request){
 - Thông tin xem Log trong storage/logs/laravel.log
 
 ![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1701941093/slack_bot/laravel_log_7.1.png)
+
+- Đây là thông tin phản hồi
+![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1701941451/slack_bot/Ngrok_setup_8.5.png)
 
 - Để slack có thể truyền dữ liệu vào localhost ta cần có một server ảo như đã nói. Mục đích là để kết nối giữa localhost với internet. Chi tiết sang B3
 
