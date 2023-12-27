@@ -98,6 +98,7 @@ RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
 ## Một số chạy code trong project
 - react native:
   - yarn run android: chạy code android
+  - ./gradlew clean: (cd ./android) xóa lại cấu hình android **dành cho trường hợp thay đổi đường dẫn file. Nhớ xóa ứng dụng trước khi chạy**
   - ./gradlew assembleRelease: (cd ./android) tự động build lại file android. **Lưu ý chỉ dành cho project không có expo**
   - yarn start: chạy code môi trường android
   - expo prebuild: chạy code generate file android và file ios
