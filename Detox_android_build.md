@@ -161,8 +161,45 @@ project(':detox').projectDir = new File(rootProject.projectDir, '../node_modules
 ...
 ```
 
-![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1703652974/detox/download_kelegn.png)
+![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1703652974/detox/detox_android_setting.gradle.png)
 
-# 3. Chạy hai lệnh để build
-- npx detox build -c android.emu.debug: cấu hình detox (tìm android.emu.debug ở trong file detoxrc.js)
-- npx detox test -c android.emu.debug TênFile.test.ts: chạy 1 IT cụ cụ thể
+# 3. Chạy lệnh test detox
+- Sau khi cấu hình xong thì hãy chạy **react-native run-android** để xem có vấn đề gì không trước rồi mới chạy 2 lệnh này để test detox
+   - npx detox build -c android.emu.debug: cấu hình detox (tìm android.emu.debug ở trong file detoxrc.js)
+   - npx detox test -c android.emu.debug TênFile.test.ts: chạy 1 IT cụ cụ thể
+   - Ví dụ chạy file test: e2e/starter.test.ts (npx detox test -c android.emu.debug starter.test.ts)
+
+```sh
+import {by, device, expect, element} from 'detox';
+import {sleep} from "src/utils/async";
+
+describe('Example', () => {
+  beforeAll(async () => {
+    await device.launchApp();
+  });
+
+  beforeEach(async () => {
+    await device.reloadReactNative();
+  });
+
+  it('should have welcome screen', async () => {
+    // Check search driver
+    await expect(element(by.id('driver-input-search'))).toBeVisible();
+    await sleep(3000);
+    const keySearchDriver: string = '上田義弘';
+    await element(by.id('driver-input-search')).longPress();
+    await sleep(3000);
+    await element(by.id('driver-input-search')).replaceText(keySearchDriver);
+    await sleep(3000);
+    // Chờ đến khi element hiển thị
+    await waitFor(element(by.id('clear-search-driver')))
+      .toBeVisible()
+      .withTimeout(5000);
+    await element(by.id('clear-search-driver')).longPress();
+    await sleep(3000);
+  });
+});
+```
+
+![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1703659469/detox/detox_android_app_e2e_starter.test.ts%20%281%29.png)
+![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1703659669/detox/detox_android_app_e2e_starter.test.ts%20%282%29.png)
