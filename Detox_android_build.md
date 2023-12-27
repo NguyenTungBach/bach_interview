@@ -154,7 +154,7 @@ public class DetoxTest {
 ### 2.2.5: setting.gradle
 - android/setting.gradle
 
-`` sh
+```sh
 ...
 include ':detox'
 project(':detox').projectDir = new File(rootProject.projectDir, '../node_modules/detox/android/detox')
@@ -162,3 +162,7 @@ project(':detox').projectDir = new File(rootProject.projectDir, '../node_modules
 ```
 
 ![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1703652974/detox/download_kelegn.png)
+
+# 3. Chạy hai lệnh để build
+- npx detox build -c android.emu.debug: cấu hình detox (tìm android.emu.debug ở trong file detoxrc.js)
+- npx detox test -c android.emu.debug TênFile.test.ts: chạy 1 IT cụ cụ thể
