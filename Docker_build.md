@@ -1,4 +1,4 @@
-<img width="350" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/28ab9dc6-042f-400e-b1d5-2ee674dfc7f9">### 1. Tải docker
+### 1. Tải docker
 ### 2. Tạo file docker
 - Tạo folder (tên tự đặt)
   - tạo folder data (yêu cầu vị trí đặt như mình đã để trong vd đoạn **volumes** file docker dưới đây)
