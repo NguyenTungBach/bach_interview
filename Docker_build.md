@@ -31,3 +31,7 @@
       ```
 
 ![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1705476930/docker/docker_sql.png)
+
+### 3. Chạy CMD trong thư mục này
+
+![](https://res.cloudinary.com/do5mcnq9w/image/upload/v1705477313/docker/image_pk0wdh.png)
