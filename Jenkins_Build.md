@@ -44,7 +44,7 @@
 
 - Ở đây ta chạy với port của Jenkins
 
-### 3. Thêm link server ảo Ngrok của Jenkins vào Webhook Git để mỗi khi đẩy code lên git, git sẽ tự động truyền request vào linkn này
+### 3. Thêm link server ảo Ngrok của Jenkins vào Webhook Git để mỗi khi đẩy code lên git hay git thay đổi, git sẽ tự động truyền request vào linkn này
 
 <img width="1124" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/92340d05-90d8-4265-99d5-937d9e2a1a5b">
 <img width="1033" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/52c1c931-d29f-49ff-90fc-6343a130d84c">
@@ -53,4 +53,15 @@
 <img width="1076" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/8e6dc10d-8bf2-4f9d-bb66-cb0bb560fab3">
 
 ### 5. Cấu hình để Jenkins kết nối với dự án git
+- Trong General chọn GitHub hook trigger for GITScm polling
+<img width="1103" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/1175fff6-8284-4ee3-89fa-6eb5241d5def">
+
+
+- Trong Pipeline
+  - Definition (chọn chạy lệnh bằng script của Jenkins): Pipeline script from SCM
+  - SCM: Git
+    - Repository URL: <Tên git cần được kết nối>
+    - Branch Specifier (blank for 'any'): <Tên nhánh git cần kết nối>
+    - Script Path: <Tên file code Jenkins trong Project git cụ thể là ở đây là file tên Jenkinsfile>
+ 
 <img width="1156" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/6e366739-41da-4b8a-9782-3d920051a960">
