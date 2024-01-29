@@ -152,3 +152,17 @@ RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
 //////////////////////////
 ## cập nhật lên server php 8.2
 - php82 -f /usr/local/bin/composer update: Cập nhật lên 8.2
+
+//////////////////////////
+## Lưu ý pull hay commit code
+- git rebase: pull code về để check conflic mà không update thêm 1 commit. Mục đích là để cho commit sạch
+- git rebase --continue (trong khi đang git rebase): kiểm tra xem nhánh hiện tại tiếp nhận cập nhật nhánh chính ok chưa (Nếu OK thì git add + push lên là được -> Ta sẽ)
+  <img width="1280" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/17c1d783-ed41-4dc9-9bb8-86ead2a242db">
+- git rebase --about: bỏ pull cập nhật từ nhánh chính
+- git log: Kiểm tra chi tiết các commit trên các nhánh
+- git log --online: Kiểm tra tên các commit trên các nhánh 
+  - Các commit nhánh Local: (HEAD -> TênNhánhTrênLocal)
+  - Các commit trên git: (origin/TênNhánh)
+  <img width="1280" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/4343b867-c8b6-48f4-b46a-830bf6dc6efc">
+  <img width="1055" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/81f03fc3-2b84-4105-9f33-4a5f5f55f05a">
+
