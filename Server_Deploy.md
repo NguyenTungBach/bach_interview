@@ -219,3 +219,6 @@ s cd6571c Git Test Multi commit Bach 3
 
 - git reset --soft Mẫ: Quay về commit mình cần mà không làm thay đổi code (cụ thể ở đây là commit trước git reset --soft 706c3bf)
 <img width="1154" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/8d3ad1b1-2115-4659-8db0-9b8357290e21">
+
+- Đối với file chỉ vừa mới git add mà chưa git commit thì chỉ cần git reset
+<img width="1183" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/ba58c114-3486-4fe8-9caa-ed106a2d2d6a">
