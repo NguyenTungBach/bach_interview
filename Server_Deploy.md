@@ -174,4 +174,39 @@ RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
   <img width="1280" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/67061a49-0f90-479b-aeee-61206efc4ca0">
   <img width="1280" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/cfafd758-53e4-45fa-8d04-46fe49b5f1f2">
 
-- git rebase
+- git rebase -i Head~N: Gộp sửa các nhánh git (cụ thể ở đây là git rebase -i Head~3).
+  <img width="1045" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/af27a847-b493-4c43-af73-e6073cad31f4">
+- Sửa lại đoạn này (s ở đây là squash, dùng để gộp với phía trước)
+
+```sh
+  hint: Waiting for your editor to close the file...
+pick 754135b Git Test Multi commit Bach 1
+s fa5d4d9 Git Test Multi commit Bach 2
+s cd6571c Git Test Multi commit Bach 3
+
+# Rebase d3e2cd5..cd6571c onto d3e2cd5 (3 commands)
+#
+# Commands:
+# p, pick <commit> = use commit
+# r, reword <commit> = use commit, but edit the commit message
+# e, edit <commit> = use commit, but stop for amending
+# s, squash <commit> = use commit, but meld into previous commit
+# f, fixup [-C | -c] <commit> = like "squash" but keep only the previous
+#                    commit's log message, unless -C is used, in which case
+#                    keep only this commit's message; -c is same as -C but
+#                    opens the editor
+# x, exec <command> = run command (the rest of the line) using shell
+# b, break = stop here (continue rebase later with 'git rebase --continue')
+# d, drop <commit> = remove commit
+# l, label <label> = label current HEAD with a name
+```
+- Sau khi lưu xong sẽ có thông báo đã được thay đổi dưới đây
+  <img width="1280" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/73a23709-050e-48c9-a831-b59532d8bafc">
+  <img width="1280" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/90443932-8b9d-4750-8cbb-8e4f8711e149">
+- git commit --amend: Để đổi lại tên git commit
+  <img width="1259" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/6268be80-c725-4b96-95a9-26b1b14920b2">
+  <img width="745" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/67826a6c-4eb7-4323-af8c-4064e03ae98f">
+
+- Sau khi xong thì thì có thể git push lên như thường (nếu muốn chắc hơn dùng git rebase --continue). (Ở đây là local đã push code lên nhánh bach)
+  <img width="768" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/eb61adfd-158c-41b1-83f0-94ae5af2660c">
+
