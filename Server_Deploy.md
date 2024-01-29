@@ -148,3 +148,7 @@ RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
 ## chạy unit test
 - test file: php artisan test tests/Feature/tên_file.php
 - test hàm trong file: php artisan test tests/Feature/tên_file.php --filter=tên_hàm
+
+//////////////////////////
+## cập nhật lên server php 8.2
+- php82 -f /usr/local/bin/composer update: Cập nhật lên 8.2
