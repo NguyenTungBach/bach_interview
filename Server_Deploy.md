@@ -208,5 +208,10 @@ s cd6571c Git Test Multi commit Bach 3
   <img width="745" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/67826a6c-4eb7-4323-af8c-4064e03ae98f">
 
 - Sau khi xong thì thì có thể git push lên như thường (nếu muốn chắc hơn dùng git rebase --continue). (Ở đây là local đã push code lên nhánh bach)
+  
   <img width="768" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/eb61adfd-158c-41b1-83f0-94ae5af2660c">
 
+//////////////////////////
+## Reset commit
+- Nếu git add sai và đã nhỡ commit rồi
+<img width="1271" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/7f5b2c9f-b025-4a6d-8ef6-4be86b4582a9">
