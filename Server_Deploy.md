@@ -212,6 +212,11 @@ s cd6571c Git Test Multi commit Bach 3
   <img width="768" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/eb61adfd-158c-41b1-83f0-94ae5af2660c">
 
 //////////////////////////
+## Đổi nhánh nhưng vẫn muốn giữ lại những file những thay đổi
+- git stash: lưu file vừa sửa vào bộ nhớ tạm
+- git stash apply (sau khi git stash): lấy file thay đổi từ bộ nhớ tạm
+
+//////////////////////////
 ## Reset commit
 - Nếu git add sai và đã nhỡ commit rồi. VD
 <img width="1271" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/7f5b2c9f-b025-4a6d-8ef6-4be86b4582a9">
