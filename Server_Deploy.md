@@ -213,5 +213,9 @@ s cd6571c Git Test Multi commit Bach 3
 
 //////////////////////////
 ## Reset commit
-- Nếu git add sai và đã nhỡ commit rồi
+- Nếu git add sai và đã nhỡ commit rồi. VD
 <img width="1271" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/7f5b2c9f-b025-4a6d-8ef6-4be86b4582a9">
+<img width="1266" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/eaecde0e-7af1-48c2-b8d8-f38ef3ef9b1e">
+
+- git reset --soft Mẫ: Quay về commit mình cần mà không làm thay đổi code (cụ thể ở đây là commit trước git reset --soft 706c3bf)
+<img width="1154" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/8d3ad1b1-2115-4659-8db0-9b8357290e21">
