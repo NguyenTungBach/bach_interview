@@ -160,7 +160,7 @@ RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
   <img width="1280" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/17c1d783-ed41-4dc9-9bb8-86ead2a242db">
 - git rebase --about: bỏ pull cập nhật từ nhánh chính
 - git log: Kiểm tra chi tiết các commit trên các nhánh
-- git log --online: Kiểm tra tên các commit trên các nhánh 
+- git log --oneline: Kiểm tra tên các commit trên các nhánh 
   - Các commit nhánh Local: (HEAD -> TênNhánhTrênLocal)
   - Các commit trên git: (origin/TênNhánh)
   <img width="1280" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/4343b867-c8b6-48f4-b46a-830bf6dc6efc">
@@ -168,7 +168,7 @@ RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
 
 //////////////////////////
 ## Gộp nhiều commit
-- git log --online: Kiểm tra tên các commit trên các nhánh 
+- git log --oneline: Kiểm tra tên các commit trên các nhánh 
   - Các commit nhánh Local: (HEAD -> TênNhánhTrênLocal)
   - Các commit trên git: (origin/TênNhánh)
   <img width="1280" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/67061a49-0f90-479b-aeee-61206efc4ca0">
