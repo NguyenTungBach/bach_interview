@@ -155,7 +155,7 @@ RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
 
 //////////////////////////
 ## Lưu ý pull code
-- git rebase: pull code về để check conflic mà không update thêm 1 commit. Mục đích là để cho commit sạch
+- git pull --rebase origin TênNhánh: pull code về để check conflic mà không update thêm 1 commit. Mục đích là để cho commit sạch
 - git rebase --continue (trong khi đang git rebase): kiểm tra xem nhánh hiện tại tiếp nhận cập nhật nhánh chính ok chưa (Nếu OK thì git add + push lên là được -> Ta sẽ)
   <img width="1280" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/17c1d783-ed41-4dc9-9bb8-86ead2a242db">
 - git rebase --about: bỏ pull cập nhật từ nhánh chính
