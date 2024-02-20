@@ -31,6 +31,7 @@
 | \d | tìm các số từ 0-9 | <p>Tìm tất cả số:</p> <img width="644" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/274ab53d-c7d9-4e0f-b91f-5c901683460d">  <p>Tìm tất cả ký tự số liền nhau:</p> <img width="646" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/14a69697-8430-4a03-a534-745de5185684"> <p>Tìm ký tự số liền nhau ở vị trí cuối cùng:</p> <img width="647" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/ff5bfca8-f9ba-4367-be0e-08c86a49f772"> |
 | \w | Tìm ký tự la tinh và dấu gạch chân (A-Z a-z 0-9 _) | Tìm toàn bộ chữ la tinh <img width="677" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/ffd24441-0c9b-4ffd-a495-39b6846046ee"> |
 | \s | Tìm dấu cách | Tìm toàn bộ dấu cách <img width="689" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/ddfc57a6-e8b2-464d-b47a-36f4e0219c66"> |
+| \S | Tìm ký tự không phải dấu cách | Tìm ký tự không phải dấu cách <img width="805" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/64880fd7-d542-4a35-afaa-0bc5181619a9"> |
 | . | Tìm bất kỳ ký tự trong văn bản | Tìm toàn bộ 2 ký tự kèm số 6 <img width="649" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/623fa385-2206-480f-b8dd-898a4f1caa1f"> |
 
 ### 3.3: Sets and  ranges (Tập hợp và Khoảng ký tự)
@@ -42,7 +43,16 @@ VD1: tìm toàn bộ ký tự có chữ m,t,p,c
 
 <img width="650" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/619dc0b6-ed9e-4c51-937c-e12d82e8f3ba">
 
-VD2: tìm chữ có đuôi op và ký tự đằng trước có chữ m,t,p,c 
+VD2: tìm chữ có đuôi op và ký tự đằng trước có chữ m,t,p,c
 
 <img width="652" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/d8a3485f-7932-43cd-bce2-ae52bc6370d3">
+
+#### 3.3.2: Ranges (Khoảng ký tự)
+VD1: tìm ký tự đầu # và các ký tự khoảng a-z 0-9 lặp 3 lần
+
+<img width="647" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/7da1105a-38c7-42c2-b579-5cf86e55d104">
+
+VD2: tìm các ký tự không nằm trong khoảng từ 1-5
+
+<img width="650" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/0cb8d955-2eb8-4377-970e-beb124b1d11e">
 
