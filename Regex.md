@@ -57,6 +57,7 @@ VD2: tìm các ký tự không nằm trong khoảng từ 1-5
 
 <img width="650" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/0cb8d955-2eb8-4377-970e-beb124b1d11e">
 
+
 ### 3.4. Greedy Quantifiers (Nhóm định lượng x+ x*): giúp không phải lặp đi lặp lại ký tự nhiều lần
 
 <img width="389" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/5946a64a-4fec-4ae9-aff9-78ae1fb0670a">
@@ -81,11 +82,13 @@ VD5: tất cả colou(bất kỳ)r, với chữ **bất kỳ** có thể có ho�
 
 <img width="646" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/20277cd1-cba9-4bcf-83d0-6f0914a47992">
 
+
 ### 3.5. Lazy Quantifiers (x+? x*?):
 
 VD1: tìm những ký tự nằm trong dấu ""
 
 <img width="650" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/3b852b39-cc1e-47c7-b550-6fb65cd78133">
+
 
 ### 3.6. Capturing groups (nhóm nhiều ký tự, lấy riêng tên): (?<name>x)
 
@@ -97,5 +100,4 @@ VD1: tìm những ký tự chữ go
 
 VD2: tìm tách lấy ra năm và tháng có đặt tên year, month
 
-<img width="629" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/5a232210-ce18-4c1f-b0f1-7e05fbf688ce">
-
+<img width="620" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/2304484d-ee19-4ea5-980f-a444e63fee25">
