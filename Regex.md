@@ -32,6 +32,7 @@
 | \w | Tìm ký tự la tinh và dấu gạch chân (A-Z a-z 0-9 _) | Tìm toàn bộ chữ la tinh <img width="677" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/ffd24441-0c9b-4ffd-a495-39b6846046ee"> |
 | \s | Tìm dấu cách | Tìm toàn bộ dấu cách <img width="689" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/ddfc57a6-e8b2-464d-b47a-36f4e0219c66"> |
 | \S | Tìm ký tự không phải dấu cách | Tìm ký tự không phải dấu cách <img width="805" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/64880fd7-d542-4a35-afaa-0bc5181619a9"> |
+| + | Tìm ký tự lặp đi lặp lại ít nhất 1 lần | Tìm các số <img width="646" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/c17ae214-8f7c-49b8-8ae7-16c77c025560"> |
 | . | Tìm bất kỳ ký tự trong văn bản | Tìm toàn bộ 2 ký tự kèm số 6 <img width="649" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/623fa385-2206-480f-b8dd-898a4f1caa1f"> |
 
 ### 3.3: Sets and  ranges (Tập hợp và Khoảng ký tự)
@@ -55,4 +56,46 @@ VD1: tìm ký tự đầu # và các ký tự khoảng a-z 0-9 lặp 3 lần
 VD2: tìm các ký tự không nằm trong khoảng từ 1-5
 
 <img width="650" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/0cb8d955-2eb8-4377-970e-beb124b1d11e">
+
+### 3.4. Greedy Quantifiers (Nhóm định lượng x+ x*): giúp không phải lặp đi lặp lại ký tự nhiều lần
+
+<img width="389" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/5946a64a-4fec-4ae9-aff9-78ae1fb0670a">
+
+VD1: tìm những số lặp đi lặp lại 5 lần
+
+<img width="647" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/c598730c-eac3-4484-9391-ed90441da1ea">
+
+VD2: tìm những số lặp đi lặp lại khoảng 3-4 lần
+
+<img width="485" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/39e3ca77-03a2-4967-b5a8-c43752582892">
+
+VD3: tìm những số lặp đi lặp lại ít nhất 4 lần
+
+<img width="527" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/2e439e41-e57d-4e50-bfca-f6001fa45a3f">
+
+VD4: tìm một số theo sau đó có thể là 1 dãy các số 0 hoặc không có
+
+<img width="462" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/65eaa6b8-6109-42e8-83cf-02f8e4dd9d6c">
+
+VD5: tất cả colou(bất kỳ)r, với chữ **bất kỳ** có thể có hoặc không. Ví dụ ở đây chữ u có thể có hoặc không
+
+<img width="646" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/20277cd1-cba9-4bcf-83d0-6f0914a47992">
+
+### 3.5. Lazy Quantifiers (x+? x*?):
+
+VD1: tìm những ký tự nằm trong dấu ""
+
+<img width="650" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/3b852b39-cc1e-47c7-b550-6fb65cd78133">
+
+### 3.6. Capturing groups (nhóm nhiều ký tự, lấy riêng tên): (?<name>x)
+
+<img width="540" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/b836602d-96d8-41e8-947a-145b0464c7a2">
+
+VD1: tìm những ký tự chữ go
+
+<img width="647" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/aa81f584-4c99-467b-af40-4dfe64f844e4">
+
+VD2: tìm tách lấy ra năm và tháng có đặt tên year, month
+
+<img width="629" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/5a232210-ce18-4c1f-b0f1-7e05fbf688ce">
 
