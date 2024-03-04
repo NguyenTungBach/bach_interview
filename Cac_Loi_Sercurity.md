@@ -59,3 +59,13 @@ http://example.com/download.php?file=example.txt
 http://example.com/1
 ```
 ### 3.1.2 Khi mở tệp tin, hãy chỉ định một thư mục (directory) cố định và đảm bảo rằng tên tệp (file) không chứa tên thư mục (Directory)
+
+# 4 Lỗi quản lý session
+-  Session Id dễ đoán và dễ lấy, không có thời gian sử dụng có thể khiến kẻ tấn công lấy được thông tin (Ở đây chủ yếu nói đến là token)
+
+## 4.1 Các giải pháp
+### 4.1.1 Tạo Session ID khó đoán 
+### 4.1.2 Không lưu trữ session ID trong tham số URL.
+### 4.1.3 Sau khi đăng nhập thành công,  tạo một session mới 
+### 4.1.4 Sau khi đăng nhập thành công, phát hành một thông tin bí mật riêng biệt khác với Session ID hiện có và kiểm tra giá trị này sau mỗi chuyển trang
+### 4.1.5 Khi đặt Session ID vào Cookie, chú ý đến thiết lập thời hạn hoạt động của nó
