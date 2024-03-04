@@ -27,3 +27,11 @@ User::where("name",$name)
   - giảm thiểu kẻ tấn công biết lỗi truyền SQL
 ### 1.1.5 Cấp quyền truy cập hợp lý cho tài khoản cơ sở dữ liệu.
   - Chỉ cho phép tài khoản người dùng truy cập vào phạm vi cơ sở dữ liệu cho phép. Ví dụ phân quyền
+
+# 2. OS Command Injection
+  - Là kiểu tấn công cho phép kẻ tấn công thực thi mọi lệnh trên hệ điều hành. Tương tự SQL Injection
+  
+```sh
+// Ví dụ tấn công thông qua url bằng câu lệnh whoami
+http://localhost:8000/api/cicd&&whoami
+```
