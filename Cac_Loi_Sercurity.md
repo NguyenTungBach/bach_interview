@@ -69,3 +69,25 @@ http://example.com/1
 ### 4.1.3 Sau khi đăng nhập thành công,  tạo một session mới 
 ### 4.1.4 Sau khi đăng nhập thành công, phát hành một thông tin bí mật riêng biệt khác với Session ID hiện có và kiểm tra giá trị này sau mỗi chuyển trang
 ### 4.1.5 Khi đặt Session ID vào Cookie, chú ý đến thiết lập thời hạn hoạt động của nó
+
+# 5 Tấn công Cross-Site Scripting (XSS)
+- Sử dụng câu lệnh java script để truy cập vào server
+VD: người dùng nhập đoạn script đơn giản như sau
+
+![image](https://github.com/NguyenTungBach/bach_interview/assets/78024702/1b2072aa-a85f-4806-8e2f-65c6057b4eb5)
+
+Lúc đó sau khi nhấn nút “Search”, script được nhập sẽ được thực hiện.
+
+![image](https://github.com/NguyenTungBach/bach_interview/assets/78024702/b4fd5f89-6b4a-42a8-b2e4-0e93ec88d43b)
+
+## 5.1 Các giải pháp
+### 5.1.1 Không tạo nội dung của các phần tử <script>...</script> một cách động
+### 5.1.2 Không cho phép tải các tệp stylesheet từ bất kỳ trang web nào
+
+# 6 Tấn công Cross-Site Request Forgery (CSRF)
+- Kiểu tấn công giả dạng người dùng, khi người dùng tương tác một trang web không phải của bạn nhưng trang web này lại giả dạng request người dùng gửi đến trang của web của bạn. Trang web bạn nhận thấy cookie người dùng sẽ nghĩ là bình thường nhưng lại là request do hacker tạo ra.
+
+## 6.1 Các giải pháp
+### 6.1.1 Tạo Session ID khó đoán 
+### 6.1.2 Sử dụng SameSite Cookies
+  - Đặt cờ SameSite cho cookies để giảm nguy cơ CSRF. Cờ SameSite có thể được đặt thành "Strict" hoặc "Lax" để chỉ cho phép các yêu cầu từ cùng một trang web
