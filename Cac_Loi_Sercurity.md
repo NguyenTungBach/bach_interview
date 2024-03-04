@@ -1,5 +1,11 @@
 # 1. Tấn công SQL Injection
-  - abc
+  - Là kiểu tấn công chèn câu lệnh SQL vào hệ thống
+
+VD: kẻ tấn công ô input trên web và truyền câu lệnh SQL dưới đây để lấy toàn bộ thông tin người dùng
+```sh
+SELECT * FROM users WHERE username = '' OR 1=1--' AND password = 'mypass'
+```
+
 ## 1.1 Các giải pháp
 ### 1.1.1 Tất cả các câu lệnh SQL đều được thực hiện bằng cách sử dụng placeholders
   - abc
