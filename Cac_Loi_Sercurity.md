@@ -8,7 +8,7 @@ SELECT * FROM users WHERE username = '' OR 1=1--' AND password = 'mypass'
 
 ## 1.1 Các giải pháp
 ### 1.1.1 Tất cả các câu lệnh SQL đều được thực hiện bằng cách sử dụng placeholders
-  - Truyền vào bằng cách thêm placeholders không định danh hoặc placeholders định danh. Trong laravel là eloquent
+  - Truyền vào bằng cách thêm placeholders không định danh hoặc placeholders định danh tránh truyền trực tiếp câu lệnh. Trong laravel là eloquent
 
 ```sh
 // Ví dụ code thông thường
@@ -22,10 +22,8 @@ $name = request()->get('name');
 User::where("name",$name)
 ```
 ### 1.1.2 Khi xây dựng câu lệnh SQL bằng cách nối chuỗi, đảm bảo rằng các biến của ứng dụng được cấu trúc chính xác như các literal SQL
-  - abc
-### 1.1.3 Tránh truyền trực tiếp câu lệnh SQL thông qua các tham số được chuyển vào ứng dụng web
-  - abc
-### 1.1.4 Không hiển thị thông báo lỗi trực tiếp cho trình duyệt.
-  - abc
+  - **Giống 1.1.1**
+### 1.1.3 Không hiển thị thông báo lỗi trực tiếp cho trình duyệt.
+  - giảm thiểu kẻ tấn công biết lỗi truyền SQL
 ### 1.1.5 Cấp quyền truy cập hợp lý cho tài khoản cơ sở dữ liệu.
-  - abc
+  - Chỉ cho phép tài khoản người dùng truy cập vào phạm vi cơ sở dữ liệu cho phép. Ví dụ phân quyền
