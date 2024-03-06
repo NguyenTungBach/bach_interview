@@ -91,3 +91,31 @@ Lúc đó sau khi nhấn nút “Search”, script được nhập sẽ được
 ### 6.1.1 Tạo Session ID khó đoán 
 ### 6.1.2 Sử dụng SameSite Cookies
   - Đặt cờ SameSite cho cookies để giảm nguy cơ CSRF. Cờ SameSite có thể được đặt thành "Strict" hoặc "Lax" để chỉ cho phép các yêu cầu từ cùng một trang web
+
+# 7 Tấn công email (email spoofing)
+- Là kiểu tấn công thay đổi hoặc làm giả thông tin trong tiêu đề email để đánh lừa người nhận. Mục tiêu là để lừa người nhận tin tưởng tin nhắn từ email giả mạo để nhấn vào đường link kẻ tấn công
+
+## 7.1 Các giải pháp
+### 7.1.1 Đặt các phần tử trong email header thành các giá trị cố định và xuất tất cả đầu vào từ bên ngoài vào nội dung email 
+### 7.1.2 Loại bỏ các ký tự xuống dòng từ tất cả đầu vào từ bên ngoài 
+
+# 8 Clickjacking
+- Dụ người dùng click vào để link đến 1 trang nào đó
+
+## 8.1 Các giải pháp
+### 8.1.1 Đảm bảo rằng các thao tác quan trọng không thể thực hiện chỉ bằng chuột
+
+
+# 10 Buffer Overflow
+- Lỗ hổng bảo mật xảy ra khi chương trình ghi dữ liệu nhiều hơn một vùng nhớ chỉ định
+
+## 10.1 Các giải pháp
+### 10.1.1 Sử dụng ngôn ngữ lập trình không thể truy cập trực tiếp vào bộ nhớ
+### 10.1.2 Giới hạn tối đa việc sử dụng ngôn ngữ lập trình có thể truy cập trực tiếp vào bộ nhớ
+
+# 11 Thiếu kiểm soát truy cập và kiểm soát phê duyệt
+- Lỗ hổng bảo mật xảy ra khi chương trình ghi dữ liệu nhiều hơn một vùng nhớ chỉ định
+
+## 11.1 Các giải pháp
+### 11.1.1 Sử dụng ngôn ngữ lập trình không thể truy cập trực tiếp vào bộ nhớ
+### 11.1.2 Giới hạn tối đa việc sử dụng ngôn ngữ lập trình có thể truy cập trực tiếp vào bộ nhớ 
