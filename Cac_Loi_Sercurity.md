@@ -117,5 +117,5 @@ Lúc đó sau khi nhấn nút “Search”, script được nhập sẽ được
 - Lỗ hổng bảo mật xảy ra khi chương trình ghi dữ liệu nhiều hơn một vùng nhớ chỉ định
 
 ## 11.1 Các giải pháp
-### 11.1.1 Sử dụng ngôn ngữ lập trình không thể truy cập trực tiếp vào bộ nhớ
-### 11.1.2 Giới hạn tối đa việc sử dụng ngôn ngữ lập trình có thể truy cập trực tiếp vào bộ nhớ 
+### 11.1.1 Đối với các trang web cần sử dụng các biện pháp bảo vệ dựa trên quản lý truy cập, thiết lập chức năng xác thực như mật khẩu cho việc nhập thông tin bí mật.
+### 11.1.2 Ngoài chức năng xác thực, thực hiện kiểm soát phê duyệt để ngăn chặn người dùng đang đăng nhập xâm nhập vào tài khoản của người khác
