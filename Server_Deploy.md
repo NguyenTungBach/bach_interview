@@ -230,3 +230,30 @@ s cd6571c Git Test Multi commit Bach 3
 
 - Đối với file chỉ vừa mới git add mà chưa git commit thì chỉ cần git reset
 <img width="1183" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/ba58c114-3486-4fe8-9caa-ed106a2d2d6a">
+
+//////////////////////////
+## htop: Lệnh kiểm tra tiến trình chạy trong hệ thống
+- PID (Process ID): ID của tiến trình.
+- USER: Tên người dùng chạy tiến trình.
+- PR: Độ ưu tiên của tiến trình.
+- NI: Ưu tiên của tiến trình.
+- VIRT: Tổng lượng bộ nhớ ảo được sử dụng.
+- RES: Lượng bộ nhớ vật lý thực sự được sử dụng bởi tiến trình.
+- SHR: Lượng bộ nhớ được chia sẻ bởi nhiều tiến trình.
+- S: Trạng thái của tiến trình (đang chạy, đang ngủ, đang đợi, v.v.).
+- %CPU: Phần trăm CPU sử dụng bởi tiến trình.
+- %MEM: Phần trăm bộ nhớ RAM sử dụng bởi tiến trình.
+- TIME+: Thời gian CPU đã sử dụng bởi tiến trình.
+
+<img width="1236" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/6b59dc08-65f5-4ce5-a238-cc51b46d58fe">
+
+//////////////////////////
+## amazon-linux-extras list: Lệnh liệt kê các phần mềm, các gói môi trường đang chạy trên Amazon Linux
+- Tên các phần mở rộng: Đây là danh sách các phần mở rộng có thể được cài đặt hoặc kích hoạt trên hệ thống. Ví dụ, nó có thể bao gồm các gói như "nginx1.12", "php7.2", "python3.8", và nhiều hơn nữa.
+- Phiên bản: Đôi khi, lệnh có thể cung cấp thông tin về phiên bản của các phần mở rộng có sẵn để cài đặt.
+- Mô tả: Có thể cung cấp mô tả ngắn về mỗi phần mở rộng, giúp người dùng hiểu rõ hơn về chúng và công dụng của chúng.
+
+<img width="852" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/aeb9b5c4-4eab-4832-b460-1f70c0588772">
+<img width="721" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/acc6e314-e818-4195-9c7b-8768db104d0f">
+
+
