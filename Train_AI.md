@@ -25,3 +25,6 @@
 
 # 4. Hugging Face
 - Là một nơi thư viện chứa nhiều api để hỗ trợ train AI, fine tune
+
+# 5. Google Colab
+- Giải quyết vấn đề train model vì máy yếu nên train lâu
