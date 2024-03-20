@@ -11,7 +11,17 @@
   - Positional Encoding: Đánh dấu thứ tự từ nào trước từ nào sau trong câu văn
   - Attendtion và Self Atendtion: Nhận biết, liên hệ được giữa các từ trong câu. Để biết cần chú trọng vào từ nào
 
-# 3. Fine_turning
+# 3. Fine turning (Tinh chỉnh)
 - Lấy một model đã được train, ta train nó thành của mình để ta sử dụng cho bản thân
 
 <img width="880" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/8e0e96c5-a904-466e-9dc7-5d331faa5835">
+
+- Có 3 cách Fine turning
+  -  Self-supervised: Kiểm một model tự học và một dữ liệu text của chúng ta, ném vào cho model tự học. Sau một thời gian tự học sẽ sinh ra câu văn theo dữ liệu của chúng ta
+  -  Supervised: Kiếm một input và output để train cho nó thành một model question answear
+  -  Reinforcing (gia cố): ???
+
+<img width="864" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/7bd22548-15b1-4872-b212-c0d58913136b">
+
+# 4. Hugging Face
+- Là một nơi thư viện chứa nhiều api để hỗ trợ train AI, fine tune
