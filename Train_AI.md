@@ -28,3 +28,16 @@
 
 # 5. Google Colab
 - Giải quyết vấn đề train model vì máy yếu nên train lâu
+
+# 6. LangChain
+- Chanin là một chuỗi mắt xích kèm block được thục hiện lần lượt. Ví dụ mắt xích 1 có in out, thì mắt xích 2 sẽ lấy out mắt xích 1 để xử lý ra out
+- Là một framework giúp hỗ trợ phát triển Large Language Model. Cấu trúc tổng quan gồm
+  - Model I/O
+    - Model: Large Language Model, sử dụng để load vào LangTrain, hiểu ý định người dùng và sinh ra các từ ngữ đoán
+    - Prompt: Dấu nhắc để đưa vào trong Model, giúp model hiểu ý muốn
+  - Retrieval
+    - Retriever: Cơ sở dữ liệu lưu dạng vector
+    - Document Loader: Load toàn bộ văn bản cần xử lý, query nhanh chóng thay vì ta phải viết hàm đọc file PDF thủ công
+    - Vector Store: DB lưu vector đặc trưng từng văn bản
+    - Text Spliter: Thay vì lưu cả văn bản dài thì sẽ chia văn bản thành từng đoạn nhỏ
+    - Embedding Model: Chuyển văn bản thành một vector đặc trưng. Giúp tìm ra văn bản phù hợp với query để LLM trả ra cho người dùng
