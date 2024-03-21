@@ -41,3 +41,20 @@
     - Vector Store: DB lưu vector đặc trưng từng văn bản
     - Text Spliter: Thay vì lưu cả văn bản dài thì sẽ chia văn bản thành từng đoạn nhỏ
     - Embedding Model: Chuyển văn bản thành một vector đặc trưng. Giúp tìm ra văn bản phù hợp với query để LLM trả ra cho người dùng
+
+# 7. Vector DB
+- Vì LLM không thể nào nhìn được toàn bộ văn bản, chỉ nhìn được một đoạn. Nên ta sẽ chia nhỏ văn bản ra thành nhiều đoạn, mỗi đoạn sẽ được đi qua model embedding để sinh ra vector đặc trưng và vector này sẽ được đưa vào DB nên được gọi là vector DB
+
+<img width="825" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/703d5d5b-ce55-4b34-baf6-8468745af019">
+
+<img width="770" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/5b3e71b1-3af6-40bb-a3b7-276305ddbd81">
+
+- Khi dùng nhập vào một văn bản, nó sẽ được embedding thành vector. Vector này sẽ được đưa vào Vector DB so sánh để lấy ra những đoạn văn bản mà liên quan nhất đến câu query đấy. Những văn bản được lấy ra sẽ được đưa cho LLM để sinh ra trả lời cho người dùng
+
+- Luồng model để query chat hỏi đáp nội dung văn bản:
+  - Chuẩn bị dữ liệu câu trả lời, văn bản để chia nhỏ và embedding vào vector DB lưu trữ. Ở đây ta sử dụng Text Spliter và Model Embedding
+  - B1: Khi người dùng nhập câu hỏi. Prompt sẽ đưa vào Model LLM để biết cần query gì?
+  - B2: LLM sẽ xử lý embedding nội dụng câu hỏi và gọi vào Vector DB để lấy các câu trả lời
+  - B3: Sau khi nhận câu trả lời từ Vector DB, LLM sẽ chọn generate câu trả lời cho người dùng 
+
+<img width="885" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/cdbb194a-5a70-46c4-b0ab-19af01e72ace">
