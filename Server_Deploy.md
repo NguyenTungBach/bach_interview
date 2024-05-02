@@ -232,6 +232,12 @@ s cd6571c Git Test Multi commit Bach 3
 <img width="1183" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/ba58c114-3486-4fe8-9caa-ed106a2d2d6a">
 
 //////////////////////////
+## Tìm nhánh git hiện tại
+- git branch --show-current
+
+<img width="803" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/effe13db-50ca-4559-b4ea-0df892d9d5aa">
+
+//////////////////////////
 ## htop: Lệnh kiểm tra tiến trình chạy trong hệ thống
 - PID (Process ID): ID của tiến trình.
 - USER: Tên người dùng chạy tiến trình.
