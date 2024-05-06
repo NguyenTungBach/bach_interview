@@ -61,6 +61,7 @@ RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
 - php artisan config:clear : lệnh clear cache nếu dữ liệu env không nhận
 - gặp lỗi này thì ở storage tạo thư mục **framework và bên trong framework có 3 thư mục cache,sessions,views:** Script @php artisan package:discover --ansi handling the post-autoload-dump event returned with error code 1
 - Cấp quyền toàn bộ: sudo chmod -R 777 storage
+- nvm alias default <version>: lệnh đổi node trên server
 
 //////////////////////////
 ## tương tấc với server bằng php storm 2021.2
