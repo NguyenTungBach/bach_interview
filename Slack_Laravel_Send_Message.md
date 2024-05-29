@@ -1,7 +1,6 @@
 # Sơ qua các bước
 - B1: Cấu hình đăng ký slack
 - B2: Tạo laravel và code
-- B3: Tạo server ảo Ngrok giúp kết nối giữa localhost và internet
 
 ## B1: Cấu hình đăng ký slack
 ### 1.1 tạo tài khoản slack (đăng ký bằng google cho nhanh)
