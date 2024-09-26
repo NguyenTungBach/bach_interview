@@ -264,4 +264,11 @@ s cd6571c Git Test Multi commit Bach 3
 <img width="852" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/aeb9b5c4-4eab-4832-b460-1f70c0588772">
 <img width="721" alt="image" src="https://github.com/NguyenTungBach/bach_interview/assets/78024702/acc6e314-e818-4195-9c7b-8768db104d0f">
 
+//////////////////////////
+## Câu lệnh kiểm tra dung lượng các ổ đĩa trên server
+- `df -h`
 
+<img width="524" alt="image" src="https://github.com/user-attachments/assets/e878b2db-ee03-4eed-8451-c27f695b914a">
+
+## Câu lệnh kiểm tra dung lượng của các folder trong 1 folder
+- `du -hs * | sort -h`
