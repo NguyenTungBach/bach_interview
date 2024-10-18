@@ -271,4 +271,4 @@ s cd6571c Git Test Multi commit Bach 3
 <img width="524" alt="image" src="https://github.com/user-attachments/assets/e878b2db-ee03-4eed-8451-c27f695b914a">
 
 ## Câu lệnh kiểm tra dung lượng của các folder trong 1 folder
-- `du -hs * | sort -h`
+- `du -hs * | sort -hr`
