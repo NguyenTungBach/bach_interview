@@ -275,4 +275,5 @@ s cd6571c Git Test Multi commit Bach 3
 
 ## Câu lệnh kiểm tra docker trên server
 - `sudo docker ps`
+
 ![image](https://github.com/user-attachments/assets/2af509ca-a43f-47dd-b174-32ca6d4e6351)
