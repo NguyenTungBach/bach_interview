@@ -280,12 +280,23 @@ s cd6571c Git Test Multi commit Bach 3
 
 ## Câu lệnh kiểm tra toàn bộ docker đang tồn tại trên server
 - `docker images`
+
 ![image](https://github.com/user-attachments/assets/240dc9e8-1b9b-4265-a74b-20468f1b1dfa)
+
+## Câu lệnh xóa docker trong CONTAINER (khu vực lưu trữ docker được chạy)
+- `docker rm ID_contant`
+
+![image](https://github.com/user-attachments/assets/e2d193b6-12ee-4e08-bfae-1009508c77ff)
+
+## Câu lệnh xóa docker trong IMAGES (khu vực lưu trữ docker)
+- `docker rmi ID_images`
+
+![image](https://github.com/user-attachments/assets/6b942642-bdac-4a6e-8245-ab49333e9380)
 
 
 ## Build docker trên server
 - `sudo docker ps` câu lệnh trên để kiểm tra xem có những docker nào đang chạy
 - `docker stop ID_contant`: dừng chạy docker
-- `docker rm ID_contant`: xóa docker
+- `docker rm ID_contant`: xóa docker trong CONTAINER
 - `docker build -t TênDocker .`: Build lại docker hoặc tạo. Lưu ý **bắt buộc phải vào project**
 - `docker run -d -p port:port TênDocker`: Chạy docker. Lưu ý port phải không tồn tại trong `docker ps` và tên docker là ở `docker build -t TênDocker .`
