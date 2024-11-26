@@ -278,6 +278,11 @@ s cd6571c Git Test Multi commit Bach 3
 
 ![image](https://github.com/user-attachments/assets/2af509ca-a43f-47dd-b174-32ca6d4e6351)
 
+## Câu lệnh kiểm tra toàn bộ docker đang tồn tại trên server
+- `docker images`
+![image](https://github.com/user-attachments/assets/240dc9e8-1b9b-4265-a74b-20468f1b1dfa)
+
+
 ## Build docker trên server
 - `sudo docker ps` câu lệnh trên để kiểm tra xem có những docker nào đang chạy
 - `docker stop ID_contant`: dừng chạy docker
