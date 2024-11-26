@@ -273,7 +273,14 @@ s cd6571c Git Test Multi commit Bach 3
 ## Câu lệnh kiểm tra dung lượng của các folder trong 1 folder
 - `du -hs * | sort -hr`
 
-## Câu lệnh kiểm tra docker trên server
+## Câu lệnh kiểm tra docker nào đang chạy trên trên server
 - `sudo docker ps`
 
 ![image](https://github.com/user-attachments/assets/2af509ca-a43f-47dd-b174-32ca6d4e6351)
+
+## Build docker trên server
+- `sudo docker ps` câu lệnh trên để kiểm tra xem có những docker nào đang chạy
+- `docker stop ID_contant`: dừng chạy docker
+- `docker rm ID_contant`: xóa docker
+- `docker build -t TênDocker .`: Build lại docker hoặc tạo. Lưu ý **bắt buộc phải vào project**
+- `docker run -d -p port:port TênDocker`: Chạy docker. Lưu ý port phải không tồn tại trong `docker ps` và tên docker là ở `docker build -t TênDocker .`
