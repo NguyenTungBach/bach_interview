@@ -60,8 +60,11 @@
 ## Xử lý vấn đề log pm2 làm đầy bộ nhớ
 - `sudo du -sh /home/*`: kiểm tra dung lượng home
 
+![image](https://github.com/user-attachments/assets/765c7928-92f5-4a5a-90de-088c07b8e70e)
+
 - `sudo du -sh /home/ec2-user/*`: kiểm tra dung lượng ec2-user
 
 - `pm2 flush`: lệnh xóa toàn bộ log pm2 *(Không xóa đi file mà chỉ xóa nội dung log)*
+
 ![image](https://github.com/user-attachments/assets/a29afb4f-04de-4851-b2ec-9b3030f81083)
 
