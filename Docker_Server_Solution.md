@@ -74,7 +74,7 @@
   - CustomDockerfile (khai báo trong docker-compose.yml, dùng để cập nhật build docker)
   - file deploy ci/cd (vì không có tên rõ ràng chỉ biết đuôi yml)
 
-# docker-compose.yml
+### docker-compose.yml
 ```
 version: '3.3'
 services:
@@ -87,7 +87,7 @@ services:
     restart: always
 ```
 
-# CustomDockerfile (Ví dụ)
+### CustomDockerfile (Ví dụ)
 ```
 FROM node:20-alpine AS runner
 
@@ -124,7 +124,7 @@ ENV HOSTNAME "0.0.0.0"
 CMD ["node", "server.js"]
 ```
 
-# ci/cd ( .yml) (mở `npm run build` và đoạn deploy quy định đẩy lên)
+### ci/cd ( .yml) (mở `npm run build` và đoạn deploy quy định đẩy lên)
 ```
 
       - uses: actions/setup-node@v3
@@ -151,3 +151,7 @@ CMD ["node", "server.js"]
         env:
           DEPLOY_USER: deploy
 ```
+### Trên server đảm bảo kiểm tra chính sách khởi động lại (restart policy), nếu `always` (khởi động lại nếu docker chết) thì đúng, nếu là `no` thì là sai
+`sudo docker inspect --format '{{.HostConfig.RestartPolicy.Name}}'`
+
+![image](https://github.com/user-attachments/assets/5a94304d-10bb-4046-b7c8-0a5dadfb82ba)
