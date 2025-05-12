@@ -68,3 +68,86 @@
 
 ![image](https://github.com/user-attachments/assets/a29afb4f-04de-4851-b2ec-9b3030f81083)
 
+## Build docker với nextjs không bị bộ nhớ cao trên server
+- Yêu cầu cần có:
+  - docker-compose.yml (chứa cấu hình docker)
+  - CustomDockerfile (khai báo trong docker-compose.yml, dùng để cập nhật build docker)
+  - file deploy ci/cd (vì không có tên rõ ràng chỉ biết đuôi yml)
+
+# docker-compose.yml
+```
+version: '3.3'
+services:
+  ai_chat_1on1_admin_web: # tên build phải khác nhau
+    build:
+      context: .                   # Thư mục gốc chứa Dockerfile
+      dockerfile: CustomDockerfile  # Tên Dockerfile tùy chỉnh
+    ports:
+      - "3005:3005"                # Liên kết cổng (cấm được trùng port trên server `docker ps` và phải giống port trong, thay đổi nếu cần)
+    restart: always
+```
+
+# CustomDockerfile (Ví dụ)
+```
+FROM node:20-alpine AS runner
+
+
+WORKDIR /app
+
+# Set NODE_ENV to production
+ENV NODE_ENV production
+
+# Disable Next.js telemetry
+# Learn more here: https://nextjs.org/telemetry
+ENV NEXT_TELEMETRY_DISABLED 1
+
+# Set correct permissions for nextjs user and don't run as root
+RUN addgroup nodejs
+RUN adduser -SDH nextjs
+RUN mkdir .next
+RUN chown nextjs:nodejs .next
+
+# Copy các file và thư mục đã build từ server gốc vào Docker image
+COPY --chown=nextjs:nodejs ./.next/standalone ./
+COPY --chown=nextjs:nodejs ./public ./public
+COPY --chown=nextjs:nodejs ./.next/static ./.next/static
+
+USER nextjs
+
+# Exposed port (for orchestrators and dynamic reverse proxies)
+EXPOSE 3005
+ENV PORT 3005
+ENV HOSTNAME "0.0.0.0"
+# HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 CMD [ "wget", "-q0", "http://localhost:3005/health" ]
+
+# Run the nextjs app
+CMD ["node", "server.js"]
+```
+
+# ci/cd ( .yml) (mở `npm run build` và đoạn deploy quy định đẩy lên)
+```
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy
+        run: |
+          #rsync -rzu --delete --exclude='.next/**' --exclude='.next' --exclude=.env ./ deploy@${{ env.deploy_host }}:${{ env.deploy_path }}
+          # ssh deploy@${{ env.deploy_host }} "cd ${{ env.deploy_path }}"
+          if [ "${{ github.ref }}" == "refs/heads/develop" ]; then
+          export HOST="18.180.33.240"
+          export USER="deploy"
+          export DEPLOYPATH="/var/www/aichat/aichat-fe-admin"
+          fi
+          rsync -rzu --delete --exclude=.env ./ $USER@$HOST:$DEPLOYPATH
+          ssh $USER@$HOST "cd $DEPLOYPATH && docker-compose up -d --build"
+        env:
+          DEPLOY_USER: deploy
+```
