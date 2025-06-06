@@ -17,11 +17,14 @@ Job for httpd.service invalid.
 ```
 ## 2.2 Các bước kiểm tra
 ### 2.2.1 Kiểm tra các file .conf cấu hình lỗi
-- Lệnh `sudo apachectl configtest`
+- Lệnh `sudo apachectl configtest` để kiểm tra cấu hình lỗi 
   - Nếu file không lỗi cuối dòng sẽ có từ `Syntax OK`
  ![image](https://github.com/user-attachments/assets/0f69f8dc-2cd8-4388-a404-36feed4c7dcd)
 
  - Nếu file có lỗi thì vị trí và tên file sẽ được báo
  ![image](https://github.com/user-attachments/assets/a20c0705-dc19-4ef0-950c-68d9c8abadd1)
 
-   
+### 2.2.2 Kiểm tra trạng thái dịch vụ
+- Lệnh `sudo systemctl status httpd` kiểm tra trạng thái dịch vụ
+  - Ví dụ trong hình là báo lỗi ngày 4/6/2025 về việc `Apache (httpd) đã dừng (inactive/failed) nên không thể thực hiện reload`
+  ![image](https://github.com/user-attachments/assets/c7ad9633-fa52-419d-aa41-4168cf664887)
