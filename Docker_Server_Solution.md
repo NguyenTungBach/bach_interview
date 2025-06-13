@@ -45,6 +45,7 @@
   - Xóa image không sử dụng: `docker image prune -a -f`
   - Xóa volume không dùng: `docker volume prune -f`
   - Xóa mọi thứ không còn sử dụng (container, image, volume, build cache): `docker system prune -a -f`
+  - Xóa mọi thứ không còn sử dụng (container, image, volume): `docker system prune -a --volumes`
 
 - VD dùng lệnh xóa mọi thứ không còn sử dụng (container, image, volume, build cache): `docker system prune -a -f`
 
