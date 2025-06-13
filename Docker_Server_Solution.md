@@ -47,6 +47,16 @@
   - Xóa mọi thứ không còn sử dụng (container, image, volume, build cache): `docker system prune -a -f`
   - Xóa mọi thứ không còn sử dụng (container, image, volume): `docker system prune -a --volumes`
 
+  - Xóa mọi thứ không còn sử dụng: container dừng, image không dùng, network, volume rác, build cache: `sudo docker system prune -a --volumes -f`
+    - Lệnh này:
+        - Xóa mọi thứ không còn sử dụng: container dừng, image không dùng, network, volume rác, build cache.
+        - Không cần xác nhận thủ công (-f).
+        - Yêu cầu quyền sudo (tùy hệ thống, có thể không cần nếu user đã trong nhóm docker).
+        ![image](https://github.com/user-attachments/assets/cee892dd-aa6f-451a-aac7-3aeb11799f7f)
+        ![image](https://github.com/user-attachments/assets/cb630875-3e35-4a82-8e27-e52a1e72657c)
+
+
+
 - VD dùng lệnh xóa mọi thứ không còn sử dụng (container, image, volume, build cache): `docker system prune -a -f`
 
 ![image](https://github.com/user-attachments/assets/06fadb58-89e3-4f16-a1d6-94e2b03423ca)
