@@ -28,3 +28,7 @@ Job for httpd.service invalid.
 - Lệnh `sudo systemctl status httpd` kiểm tra trạng thái dịch vụ
   - Ví dụ trong hình là báo lỗi ngày 4/6/2025 về việc `Apache (httpd) đã dừng (inactive/failed) nên không thể thực hiện reload`
   ![image](https://github.com/user-attachments/assets/c7ad9633-fa52-419d-aa41-4168cf664887)
+
+## 3. Lệnh chạy docker migrate:fresh
+- `docker exec -it tênImages npm run migrate:fresh`
+- Ví dụ `docker exec -it aichat_workspace_develop npm run migrate:fresh`
