@@ -34,6 +34,11 @@ Job for httpd.service invalid.
 - Ví dụ `docker exec -it aichat_workspace_develop npm run migrate:fresh`
 
 # 4. Xử lý trường hợp server từ reboot thủ công sang reboot hệ thống:
+## 4.0 Kiểm tra xem người dùng có chủ động reboot không
+- `last -x | egrep "shutdown|reboot"`
+
+![image](https://github.com/user-attachments/assets/5ce3d85c-a41c-49c7-ba91-3d57c0224662)
+
 ## 4.1 Kiểm tra Apache đang chạy
 - Lệnh `ps aux | grep httpd`
 
