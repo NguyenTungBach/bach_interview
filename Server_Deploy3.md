@@ -39,6 +39,9 @@ Job for httpd.service invalid.
 
 ![image](https://github.com/user-attachments/assets/5ce3d85c-a41c-49c7-ba91-3d57c0224662)
 
+- Lần reboot gần nhất: Nov 26 — không có dòng shutdown đi kèm. Thì khả năng reboot bằng lệnh reboot
+- Dòng shutdown ngay trước dòng reboot (ví dụ: Nov 5 và Nov 4) → chứng tỏ các lần đó là shutdown chủ động (thủ công), sau đó là khởi động lại (reboot)
+
 ## 4.1 Kiểm tra Apache đang chạy
 - Lệnh `ps aux | grep httpd`
 
