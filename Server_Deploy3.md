@@ -32,3 +32,22 @@ Job for httpd.service invalid.
 ## 3. Lệnh chạy docker migrate:fresh
 - `docker exec -it tênImages npm run migrate:fresh`
 - Ví dụ `docker exec -it aichat_workspace_develop npm run migrate:fresh`
+
+# 4. Xử lý trường hợp server từ reboot thủ công sang reboot hệ thống:
+## 4.1 Kiểm tra Apache đang chạy
+- Lệnh `ps aux | grep httpd`
+
+- Như này là đang chạy bình thường
+
+![image](https://github.com/user-attachments/assets/a95d3b28-48ec-4f93-8eff-f87efaa7b2c6)
+
+## 4.2 Tắt toàn bộ Apache
+- `sudo pkill -9 httpd`: (buộc dừng toàn bộ các tiến trình (process) có tên là httpd)
+
+![image](https://github.com/user-attachments/assets/976568f3-d0ca-4850-9947-1982c4290c7c)
+
+## 4.3 Khởi động lại dịch vụ Apache
+- `sudo systemctl start httpd`: Khởi động lại dịch vụ Apache
+- `sudo status httpd`: Kiểm tra lại trạng thái dịch vụ
+
+![image](https://github.com/user-attachments/assets/9208864b-c506-47d5-9bb7-cb1731ed932b)
