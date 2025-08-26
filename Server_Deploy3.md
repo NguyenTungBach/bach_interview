@@ -59,3 +59,32 @@ Job for httpd.service invalid.
 - `sudo status httpd`: Kiểm tra lại trạng thái dịch vụ
 
 ![image](https://github.com/user-attachments/assets/9208864b-c506-47d5-9bb7-cb1731ed932b)
+
+# 3. Larvel setup .env thư nhưng cấu hình vẫn nhận thư cũ
+`php artisan queue:restart`: dành cho trường hợp chạy queue nếu setup email .env nhưng vẫn sử dụng mail cũ (lệnh này buộc các queue worker hiện tại khởi động lại) 
+
+Khi nào nên chạy queue:restart?
+| Trường hợp                               | Có nên chạy `queue:restart`? |
+| ---------------------------------------- | ---------------------------- |
+| Bạn vừa cập nhật code                    | ✅ Nên chạy                   |
+| Bạn thay đổi nội dung job, hoặc mailable | ✅ Nên chạy                   |
+| Bạn update `.env` (như đổi MAIL\_\*)     | ✅ Nên chạy                   |
+| Gặp lỗi kỳ lạ trong queue                | ✅ Nên chạy                   |
+| Muốn kill tất cả job đang chạy           | ✅ Nên chạy                   |
+
+VD: đã cập nhật mail trong env
+- Lúc trước:
+  - `MAIL_FROM_ADDRESS=driveelink-stage.help@driveelink.co.jp`
+- Sau đó:
+  - `MAIL_FROM_ADDRESS=driveelink-stage.help@driveelink.co.jp`
+  - Kể cả có chạy `php artisan config:clear` thì cũng sẽ không cập nhật dược cấu hình queue
+
+<img width="1530" height="607" alt="image" src="https://github.com/user-attachments/assets/bf8078ed-d233-47fe-ad8b-67cb78746343" />
+
+- Để khắc phục cần chạy `php artisan queue:restart`
+<img width="737" height="102" alt="image" src="https://github.com/user-attachments/assets/c4ef216e-96a3-4b50-8456-39f0f0829c43" />
+
+- Sau khi khắc phục
+
+<img width="1537" height="720" alt="image" src="https://github.com/user-attachments/assets/257aa753-f0de-445a-9b00-6795e2e36e91" />
+
