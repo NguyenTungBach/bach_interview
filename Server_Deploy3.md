@@ -77,7 +77,7 @@ VD: đã cập nhật mail trong env
   - `MAIL_FROM_ADDRESS=driveelink-stage.help@driveelink.co.jp`
 - Sau đó:
   - `MAIL_FROM_ADDRESS=driveelink-stage.help@driveelink.co.jp`
-  - Kể cả có chạy `php artisan config:clear` thì cũng sẽ không cập nhật dược cấu hình queue
+  - Kể cả có chạy `php artisan config:clear` thì cũng sẽ không cập nhật được cấu hình queue
 
 <img width="1530" height="607" alt="image" src="https://github.com/user-attachments/assets/bf8078ed-d233-47fe-ad8b-67cb78746343" />
 
