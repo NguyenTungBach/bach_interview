@@ -88,3 +88,11 @@ VD: đã cập nhật mail trong env
 
 <img width="1537" height="720" alt="image" src="https://github.com/user-attachments/assets/257aa753-f0de-445a-9b00-6795e2e36e91" />
 
+# Các lệnh điều tra khi server nặng
+- `sudo du -sh /home/*`: Thống kê dung lượng toàn bộ trong folder cụ thể ở đây là folder `home`
+
+<img width="622" height="853" alt="image" src="https://github.com/user-attachments/assets/480c44b1-4477-4161-a2cc-51895f6f606c" />
+
+- Giả sử Sau khi chi tiết tìm được file nào trên server nặng thống kê 10 file nặng `sudo du -ah /home/deploy | sort -rh | head -n 10`
+
+<img width="880" height="308" alt="image" src="https://github.com/user-attachments/assets/9a799a9c-5e7a-4fed-b8d3-46d28fcad51f" />
