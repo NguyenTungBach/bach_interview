@@ -93,6 +93,11 @@ VD: đã cập nhật mail trong env
 
 <img width="622" height="853" alt="image" src="https://github.com/user-attachments/assets/480c44b1-4477-4161-a2cc-51895f6f606c" />
 
+- `sudo du -sh /home/* | sort -hr` thêm sắp xếp nhưng sẽ lâu nếu nhiều file
+
+<img width="796" height="808" alt="image" src="https://github.com/user-attachments/assets/da263f6c-12e4-4e9a-aaf2-18efef6ad5ad" />
+
+
 - Giả sử Sau khi chi tiết tìm được file nào trên server nặng thống kê 10 file nặng `sudo du -ah /home/deploy | sort -rh | head -n 10`
 
 <img width="880" height="308" alt="image" src="https://github.com/user-attachments/assets/9a799a9c-5e7a-4fed-b8d3-46d28fcad51f" />
