@@ -177,7 +177,11 @@ Các bước
 ***
 
 ### 13.1 Setup image aivis cho docker
-- Trên server tạo 1 folder để làm nơi chứa file docker-compose.yml và danh sách giọng nói đã tải về
+- Trên server tạo 1 folder để làm nơi chứa file docker-compose.yml và danh sách giọng nói đã tải về cụ thể là file models
+
+<img width="1733" height="537" alt="image" src="https://github.com/user-attachments/assets/fca44002-ba78-4ae0-b3e1-327b1152ecc8" />
+
+
 - `docker-compose.yml`: Với image đã được build lấy ở trên mạng cụ thể `ghcr.io/aivis-project/aivisspeech-engine:cpu-ubuntu20.04-1.1.0-dev`
 ```
 aivis-engine:
@@ -192,4 +196,46 @@ aivis-engine:
 - Sau khi build xong thì sẽ thế này
 
 <img width="1918" height="1033" alt="image" src="https://github.com/user-attachments/assets/7c7a0e69-8f32-454c-a272-95e79e86205c" />
+
+- Lưu ý nhớ cấu hình aphache để tạo server
+```
+<VirtualHost *:80>
+    ServerName aivis.vw-dev.com
+    #ServerAlias aivis.vw-dev.com
+    ProxyRequests Off
+    ProxyPreserveHost On
+    ProxyVia Full
+    <Proxy *>
+        Require all granted
+    </Proxy>
+    ProxyPass / http://127.0.0.1:10101/
+    ProxyPassReverse / http://127.0.0.1:10101/
+    ErrorLog /var/log/httpd/aivis.vw-dev.com-error.log
+    CustomLog /var/log/httpd/aivis.vw-dev.com-access.log combined
+    RewriteEngine on
+    RewriteCond %{SERVER_NAME} =aivis.vw-dev.com
+    RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
+</VirtualHost>
+```
+
+- Sau khi tạo xong thì sẽ có link api đã được build
+<img width="1235" height="390" alt="image" src="https://github.com/user-attachments/assets/d72aa0e4-5f5f-404d-8ae3-b8ac3c3bd3aa" />
+
+- Vì trong này có nhiều nên tôi chỉ ví dụ đoạn show danh sách api hiện tại đang có trên server `https://aivis.vw-dev.com/docs#/%E8%A9%B1%E8%80%85%E6%83%85%E5%A0%B1/speakers`
+
+<img width="1918" height="807" alt="image" src="https://github.com/user-attachments/assets/a9613f38-db75-4237-aba4-ba324bb77177" />
+
+- Để biết được giọng nói lấy ở đâu và tải về để đâu hãy xem bước tiếp
+
+### 13.2 Tải giọng hoặc chọn
+- Link chọn giọng `https://hub.aivis-project.com/search`
+
+<img width="1918" height="972" alt="image" src="https://github.com/user-attachments/assets/2670a11b-58ed-4fe3-a28e-aed54ba7aeea" />
+
+- Tải giọng mình muốn với định dạng `aivmx`
+
+<img width="1918" height="892" alt="image" src="https://github.com/user-attachments/assets/0ae7f5f1-33c2-40b0-a870-1ce148191bd4" />
+
+- Sau khi tải về xong hãy ném file lên server chỗ thư mục đã lưu tên mặc định là models
+<img width="1857" height="523" alt="image" src="https://github.com/user-attachments/assets/3a0b7cfe-2e5e-4859-9a32-4c41a6f2c740" />
 
