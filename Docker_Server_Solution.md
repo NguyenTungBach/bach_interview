@@ -172,8 +172,8 @@ CMD ["node", "server.js"]
 ***
 Các bước
   1. Setup image aivis cho docker
-  2. Tải giọng hoặc chọn
-  3. Tìm giọng nói sau khi đã build
+  2. Tìm và tải giọng hoặc chọn
+  3. 
 ***
 
 ### 13.1 Setup image aivis cho docker
@@ -239,3 +239,9 @@ aivis-engine:
 - Sau khi tải về xong hãy ném file lên server chỗ thư mục đã lưu tên mặc định là models
 <img width="1857" height="523" alt="image" src="https://github.com/user-attachments/assets/3a0b7cfe-2e5e-4859-9a32-4c41a6f2c740" />
 
+- Lưu ý sau khi upload giọng nói này lên server thì phải build lại để có id cụ thể chạy lệnh `docker-compose.yml`: Với image đã được build lấy ở trên mạng cụ thể `ghcr.io/aivis-project/aivisspeech-engine:cpu-ubuntu20.04-1.1.0-dev` và xem ở trong danh sách api
+
+<img width="1870" height="807" alt="image" src="https://github.com/user-attachments/assets/bc7afaf5-9d4e-43bb-aef7-317a14f820cb" />
+
+
+### 13.3 
