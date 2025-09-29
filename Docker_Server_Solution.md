@@ -177,3 +177,19 @@ Các bước
 ***
 
 ### 13.1 Setup image aivis cho docker
+- Trên server tạo 1 folder để làm nơi chứa file docker-compose.yml và danh sách giọng nói đã tải về
+- `docker-compose.yml`: Với image đã được build lấy ở trên mạng cụ thể `ghcr.io/aivis-project/aivisspeech-engine:cpu-ubuntu20.04-1.1.0-dev`
+```
+aivis-engine:
+  container_name: aivis-engine
+  image: ghcr.io/aivis-project/aivisspeech-engine:cpu-ubuntu20.04-1.1.0-dev
+  ports:
+    - "10101:10101"
+  volumes:
+    - ./models:/root/.local/share/AivisSpeech-Engine/Models
+  restart: unless-stopped
+```
+- Sau khi build xong thì sẽ thế này
+
+<img width="1918" height="1033" alt="image" src="https://github.com/user-attachments/assets/7c7a0e69-8f32-454c-a272-95e79e86205c" />
+
