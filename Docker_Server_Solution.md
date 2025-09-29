@@ -1,41 +1,41 @@
 //////////////////////////
-## Câu lệnh kiểm tra dung lượng các ổ đĩa trên server
+## 1. Câu lệnh kiểm tra dung lượng các ổ đĩa trên server
 - `df -h`
 
 <img width="524" alt="image" src="https://github.com/user-attachments/assets/e878b2db-ee03-4eed-8451-c27f695b914a">
 
-## Câu lệnh kiểm tra dung lượng của các folder trong 1 folder
+## 2. Câu lệnh kiểm tra dung lượng của các folder trong 1 folder
 - `du -hs * | sort -hr`
 
-## Câu lệnh kiểm tra docker nào đang chạy trên trên server
+## 3. Câu lệnh kiểm tra docker nào đang chạy trên trên server
 - `sudo docker ps`
 
 ![image](https://github.com/user-attachments/assets/2af509ca-a43f-47dd-b174-32ca6d4e6351)
 
-## Câu lệnh kiểm tra toàn bộ docker đang tồn tại trên server
+## 4. Câu lệnh kiểm tra toàn bộ docker đang tồn tại trên server
 - `docker images`
 
 ![image](https://github.com/user-attachments/assets/240dc9e8-1b9b-4265-a74b-20468f1b1dfa)
 
-## Câu lệnh xóa docker trong CONTAINER (khu vực lưu trữ docker được chạy)
+## 5. Câu lệnh xóa docker trong CONTAINER (khu vực lưu trữ docker được chạy)
 - `docker rm ID_contant`
 
 ![image](https://github.com/user-attachments/assets/e2d193b6-12ee-4e08-bfae-1009508c77ff)
 
-## Câu lệnh xóa docker trong IMAGES (khu vực lưu trữ docker)
+## 6. Câu lệnh xóa docker trong IMAGES (khu vực lưu trữ docker)
 - `docker rmi ID_images`
 
 ![image](https://github.com/user-attachments/assets/6b942642-bdac-4a6e-8245-ab49333e9380)
 
 
-## Build docker trên server
+## 7. Build docker trên server
 - `sudo docker ps` câu lệnh trên để kiểm tra xem có những docker nào đang chạy
 - `docker stop ID_contant`: dừng chạy docker
 - `docker rm ID_contant`: xóa docker trong CONTAINER
 - `docker build -t TênDocker .`: Build lại docker hoặc tạo. Lưu ý **bắt buộc phải vào project**
 - `docker run -d -p port:port TênDocker`: Chạy docker. Lưu ý port phải không tồn tại trong `docker ps` và tên docker là ở `docker build -t TênDocker .`
 
-## Xử lý vấn đề docker làm đầy bộ nhớ
+## 8. Xử lý vấn đề docker làm đầy bộ nhớ
 - Kiểm tra toàn bộ dung lượng docker `sudo docker system df`
 
 ![image](https://github.com/user-attachments/assets/c00a4a45-2c67-45a7-bed9-df8b09e6f495)
@@ -68,7 +68,7 @@
 ![image](https://github.com/user-attachments/assets/3f047259-f2bd-4062-bb52-b95d4ce7339a)
 ![image](https://github.com/user-attachments/assets/b0ad8fb6-74bf-4850-9146-3f4e18f7da8b)
 
-## Xử lý vấn đề log pm2 làm đầy bộ nhớ
+## 9. Xử lý vấn đề log pm2 làm đầy bộ nhớ
 - `sudo du -sh /home/*`: kiểm tra dung lượng home
 
 ![image](https://github.com/user-attachments/assets/765c7928-92f5-4a5a-90de-088c07b8e70e)
@@ -79,13 +79,13 @@
 
 ![image](https://github.com/user-attachments/assets/a29afb4f-04de-4851-b2ec-9b3030f81083)
 
-## Build docker với nextjs không bị bộ nhớ cao trên server
+## 10. Build docker với nextjs không bị bộ nhớ cao trên server
 - Yêu cầu cần có:
   - docker-compose.yml (chứa cấu hình docker)
   - CustomDockerfile (khai báo trong docker-compose.yml, dùng để cập nhật build docker)
   - file deploy ci/cd (vì không có tên rõ ràng chỉ biết đuôi yml)
 
-### docker-compose.yml
+### 10.1 docker-compose.yml
 ```
 version: '3.3'
 services:
@@ -98,7 +98,7 @@ services:
     restart: always
 ```
 
-### CustomDockerfile (Ví dụ)
+### 10.2 CustomDockerfile (Ví dụ)
 ```
 FROM node:20-alpine AS runner
 
@@ -135,7 +135,7 @@ ENV HOSTNAME "0.0.0.0"
 CMD ["node", "server.js"]
 ```
 
-### ci/cd ( .yml) (mở `npm run build` và đoạn deploy quy định đẩy lên)
+### 10.3 ci/cd ( .yml) (mở `npm run build` và đoạn deploy quy định đẩy lên)
 ```
 
       - uses: actions/setup-node@v3
@@ -162,7 +162,18 @@ CMD ["node", "server.js"]
         env:
           DEPLOY_USER: deploy
 ```
-### Trên server đảm bảo kiểm tra chính sách khởi động lại (restart policy), nếu `always` (khởi động lại nếu docker chết) thì đúng, nếu là `no` thì là sai
+### 12. Trên server đảm bảo kiểm tra chính sách khởi động lại (restart policy), nếu `always` (khởi động lại nếu docker chết) thì đúng, nếu là `no` thì là sai
 `sudo docker inspect --format '{{.HostConfig.RestartPolicy.Name}}'`
 
 ![image](https://github.com/user-attachments/assets/5a94304d-10bb-4046-b7c8-0a5dadfb82ba)
+
+//////////////////////////
+## 13. Hướng dẫn build giọng nói aivis
+***
+Các bước
+  1. Setup image aivis cho docker
+  2. Tải giọng hoặc chọn
+  3. Tìm giọng nói sau khi đã build
+***
+
+### 13.1 Setup image aivis cho docker
