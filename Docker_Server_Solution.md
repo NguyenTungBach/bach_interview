@@ -251,7 +251,6 @@ aivis-engine:
 
 - Lưu ý sau khi upload giọng nói này lên server thì phải build lại để có id cụ thể chạy lệnh `docker-compose.yml`: Với image đã được build lấy ở trên mạng cụ thể `docker run -d   --name aivis-engine   -p 10101:10101   -v /var/www/aivis:/home/user/.local/share/AivisSpeech-Engine-Dev   --user 0:0 --restart always  ghcr.io/aivis-project/aivisspeech-engine:cpu-ubuntu20.04-1.1.0-dev` và xem ở trong danh sách api
 
-<img width="1870" height="807" alt="image" src="https://github.com/user-attachments/assets/bc7afaf5-9d4e-43bb-aef7-317a14f820cb" />
-
+<img width="1841" height="802" alt="image" src="https://github.com/user-attachments/assets/026cee01-0a19-4f5b-a4be-1a77a0c5e641" />
 
 ### 13.3 
