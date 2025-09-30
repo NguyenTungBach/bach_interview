@@ -181,7 +181,6 @@ Các bước
 
 <img width="1733" height="537" alt="image" src="https://github.com/user-attachments/assets/fca44002-ba78-4ae0-b3e1-327b1152ecc8" />
 
-
 - `docker-compose.yml`: Với image đã được build lấy ở trên mạng cụ thể `ghcr.io/aivis-project/aivisspeech-engine:cpu-ubuntu20.04-1.1.0-dev`
 ```
 aivis-engine:
@@ -193,9 +192,20 @@ aivis-engine:
     - ./models:/root/.local/share/AivisSpeech-Engine/Models
   restart: unless-stopped
 ```
-- Sau khi build `docker run -d   --name aivis-engine   -p 10101:10101   -v ~/aivis/models:/root/.local/share/AivisSpeech-Engine/Models   --restart always   ghcr.io/aivis-project/aivisspeech-engine:cpu-ubuntu20.04-1.1.0-dev` xong thì sẽ thế này
+- Sau khi build `docker run -d   --name aivis-engine   -p 10101:10101   -v /var/www/aivis:/home/user/.local/share/AivisSpeech-Engine-Dev   --user 0:0 --restart always  ghcr.io/aivis-project/aivisspeech-engine:cpu-ubuntu20.04-1.1.0-dev` xong thì sẽ thế này
 
 <img width="1918" height="1033" alt="image" src="https://github.com/user-attachments/assets/7c7a0e69-8f32-454c-a272-95e79e86205c" />
+
+- Giải thích qua câu lệnh build
+  - `-v /var/www/aivis:/home/user/.local/share/AivisSpeech-Engine-Dev` là lệnh báo cho image, đây là nơi nó sẽ liên kết ví dụ nếu trong file của nó có image/home/user/.local/share/AivisSpeech-Engine-Dev/Models mà mình báo /var/www/aivis/Models thì mặc định nó sẽ nhận diện /var/www/aivis/Models
+  - `--restart always`: trạng thái của docker khi build nếu chết thì sẽ build lại
+
+- Lưu ý trước khi build
+  - Đây là một số setup sẵn ban đầu và chủ yếu là file Models (nơi chứa các voice có sẵn)
+    <img width="486" height="67" alt="image" src="https://github.com/user-attachments/assets/4ea2d27d-df26-4a89-b71f-06134755f83d" />
+  - Sau khi build thì nó sẽ lưu thông tin trong này nên có vài file mới được cập nhật thế nên hãy xóa `rm -rf aivm_infos_cache.json BertModelCaches Logs presets.yaml user_dict.json`
+    <img width="1132" height="62" alt="image" src="https://github.com/user-attachments/assets/3da70763-1961-4060-896d-c4206677c575" />
+
 
 - Lưu ý nhớ cấu hình aphache để tạo server
 ```
@@ -239,7 +249,7 @@ aivis-engine:
 - Sau khi tải về xong hãy ném file lên server chỗ thư mục đã lưu tên mặc định là models
 <img width="1857" height="523" alt="image" src="https://github.com/user-attachments/assets/3a0b7cfe-2e5e-4859-9a32-4c41a6f2c740" />
 
-- Lưu ý sau khi upload giọng nói này lên server thì phải build lại để có id cụ thể chạy lệnh `docker-compose.yml`: Với image đã được build lấy ở trên mạng cụ thể `docker run -d   --name aivis-engine   -p 10101:10101   -v ~/aivis/models:/root/.local/share/AivisSpeech-Engine/Models   --restart always   ghcr.io/aivis-project/aivisspeech-engine:cpu-ubuntu20.04-1.1.0-dev` và xem ở trong danh sách api
+- Lưu ý sau khi upload giọng nói này lên server thì phải build lại để có id cụ thể chạy lệnh `docker-compose.yml`: Với image đã được build lấy ở trên mạng cụ thể `docker run -d   --name aivis-engine   -p 10101:10101   -v /var/www/aivis:/home/user/.local/share/AivisSpeech-Engine-Dev   --user 0:0 --restart always  ghcr.io/aivis-project/aivisspeech-engine:cpu-ubuntu20.04-1.1.0-dev` và xem ở trong danh sách api
 
 <img width="1870" height="807" alt="image" src="https://github.com/user-attachments/assets/bc7afaf5-9d4e-43bb-aef7-317a14f820cb" />
 
