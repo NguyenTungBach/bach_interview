@@ -101,3 +101,8 @@ VD: đã cập nhật mail trong env
 - Giả sử Sau khi chi tiết tìm được file nào trên server nặng thống kê 10 file nặng `sudo du -ah /home/deploy | sort -rh | head -n 10`
 
 <img width="880" height="308" alt="image" src="https://github.com/user-attachments/assets/9a799a9c-5e7a-4fed-b8d3-46d28fcad51f" />
+
+# 240 encodeBase64
+```
+LS0tLS1CRUdJTiBPUEVOU1NIIFBSSVZBVEUgS0VZLS0tLS0KYjNCbGJuTnphQzFyWlhrdGRqRUFBQUFBQkc1dmJtVUFBQUFFYm05dVpRQUFBQUFBQUFBQkFBQUFNd0FBQUF0emMyZ3RaVwpReU5UVXhPUUFBQUNCRG1ZY2ZhSkxOQmlwanptREZXMlQ5bXJqZ2VnOE92cXNFT2RuNW5XR1NQd0FBQUpBclNCN3lLMGdlCjhnQUFBQXR6YzJndFpXUXlOVFV4T1FBQUFDQkRtWWNmYUpMTkJpcGp6bURGVzJUOW1yamdlZzhPdnFzRU9kbjVuV0dTUHcKQUFBRUFMRVRhQjRKZXFCd1lSR01WazdiTTkvSDI1MU5MMUpxdnJUSWpBL2szVnpFT1poeDlva3MwR0ttUE9ZTVZiWlAyYQp1T0I2RHc2K3F3UTUyZm1kWVpJL0FBQUFCbVJsY0d4dmVRRUNBd1FGQmdjPQotLS0tLUVORCBPUEVOU1NIIFBSSVZBVEUgS0VZLS0tLS0K
+```
