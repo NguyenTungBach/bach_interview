@@ -136,3 +136,61 @@ Ví  dụ
 
 # Gia hạn toàn bộ ssl
 - `sudo certbot renew --post-hook "systemctl reload httpd"`
+
+# build server 167
+- Tạo cấu hình VD: `awa-stage.vw-dev.conf`
+```
+<VirtualHost *:80>
+        ServerName awa-stage.d-dxlab.com
+        DocumentRoot /var/www/awa/stage/public
+        <Directory /var/www/awa/stage/public>
+                AllowOverride All
+        </Directory>
+        <ifModule mod_rewrite.c>
+              #RewriteEngine On
+              RewriteCond %{HTTPS} off
+              RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+        </ifModule>
+RewriteEngine on
+RewriteCond %{SERVER_NAME} =awa-stage.d-dxlab.com
+RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
+</VirtualHost>
+```
+<img width="830" height="455" alt="image" src="https://github.com/user-attachments/assets/aee24891-d7c7-4ae9-b969-5d5ab2c5f6a1" />
+
+- Dừng dịch vụ apache `sudo systemctl stop httpd`
+<img width="878" height="162" alt="image" src="https://github.com/user-attachments/assets/e59a1f18-3a7b-4d92-a813-d0b577e537d7" />
+
+- Đăng ký ssl `sudo certbot certonly`
+<img width="1896" height="737" alt="image" src="https://github.com/user-attachments/assets/9e02de1b-a0f1-4288-baa5-42a782e26cca" />
+
+- Chọn 2
+<img width="1002" height="678" alt="image" src="https://github.com/user-attachments/assets/bc523853-8b85-4549-be6c-471038cd612f" />
+
+- Nhập tên domain ví dụ `awa-stage.d-dxlab.com`. Sau khi enter nếu có 2 file pem hiện lên là thành công
+<img width="1538" height="698" alt="image" src="https://github.com/user-attachments/assets/607ce22d-4fa5-4584-a0e8-99a6abfde9f6" />
+<img width="1452" height="757" alt="image" src="https://github.com/user-attachments/assets/6c9a681c-2f80-44ee-9583-08b282db5844" />
+
+- Khởi chạy lại `sudo systemctl restart httpd`
+<img width="992" height="748" alt="image" src="https://github.com/user-attachments/assets/d3ad219b-bc93-4d69-906d-2a26ff98f5f6" />
+
+- Thêm ngoài (có thể skip). Sau khi có 2 file pem kia thì thêm thông tin cấu hình ssl `awa-stage.vw-dev.conf`
+```
+<VirtualHost *:80>
+        ServerName awa-stage.d-dxlab.com
+        DocumentRoot /var/www/awa/stage/public
+        <Directory /var/www/awa/stage/public>
+                AllowOverride All
+        </Directory>
+        <ifModule mod_rewrite.c>
+              #RewriteEngine On
+              RewriteCond %{HTTPS} off
+              RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+        </ifModule>
+RewriteEngine on
+RewriteCond %{SERVER_NAME} =awa-stage.d-dxlab.com
+RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
+</VirtualHost>
+
+
+```
