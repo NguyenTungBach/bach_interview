@@ -128,6 +128,9 @@ Ví  dụ
 - `pm2 start ecosystem.config.js`
 <img width="1637" height="276" alt="image" src="https://github.com/user-attachments/assets/3cb6b3fa-aea3-4ea5-b24d-0fe630c735c2" />
 
+- `pm2 save` lưu pm2 này
+<img width="1815" height="495" alt="image" src="https://github.com/user-attachments/assets/4250ec1d-9430-44ab-8efb-80ca725aaf2b" />
+
 - `pm2 startup`: khởi động lại khi reboot
 <img width="1815" height="193" alt="image" src="https://github.com/user-attachments/assets/3b2b7dd5-4bb9-448c-b68a-0a5e92b448d7" />
 
