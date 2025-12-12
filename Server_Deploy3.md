@@ -192,5 +192,20 @@ RewriteCond %{SERVER_NAME} =awa-stage.d-dxlab.com
 RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
 </VirtualHost>
 
+<VirtualHost *:443>
+    ServerName awa-stage.d-dxlab.com
+    ServerAlias awa-stage.d-dxlab.com
 
+    DocumentRoot /var/www/awa/stage/public
+
+    <Directory "/var/www/awa/stage/public">
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+   SSLEngine on
+   SSLCertificateFile /etc/letsencrypt/live/awa-stage.d-dxlab.com/fullchain.pem
+   SSLCertificateKeyFile /etc/letsencrypt/live/awa-stage.d-dxlab.com/privkey.pem
+</VirtualHost>
 ```
+<img width="896" height="728" alt="image" src="https://github.com/user-attachments/assets/40627c3c-1453-4b55-861a-ed45b084aae5" />
