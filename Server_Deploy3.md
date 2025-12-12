@@ -171,7 +171,7 @@ RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
 <img width="1538" height="698" alt="image" src="https://github.com/user-attachments/assets/607ce22d-4fa5-4584-a0e8-99a6abfde9f6" />
 <img width="1452" height="757" alt="image" src="https://github.com/user-attachments/assets/6c9a681c-2f80-44ee-9583-08b282db5844" />
 
-- Khởi chạy lại `sudo systemctl restart httpd`
+- Khởi chạy lại `sudo systemctl restart httpd`. Là xong
 <img width="992" height="748" alt="image" src="https://github.com/user-attachments/assets/d3ad219b-bc93-4d69-906d-2a26ff98f5f6" />
 
 - Thêm ngoài (có thể skip). Sau khi có 2 file pem kia thì thêm thông tin cấu hình ssl `awa-stage.vw-dev.conf`
