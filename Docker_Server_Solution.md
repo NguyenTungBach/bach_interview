@@ -253,4 +253,75 @@ aivis-engine:
 
 <img width="1841" height="802" alt="image" src="https://github.com/user-attachments/assets/026cee01-0a19-4f5b-a4be-1a77a0c5e641" />
 
-### 13.3 
+## 14 Cấu hình chạy docker với n8n
+- `Lệnh chạy`
+```
+sudo docker run -d  --name n8n -p 5678:5678  -v /var/www/n8n:/home/node/.n8n  -e N8N_BASIC_AUTH_ACTIVE=true -e N8N_BASIC_AUTH_USER=admin -e N8N_BASIC_AUTH_PASSWORD=123456 -e N8N_HOST=n8n.vw-dev.com -e N8N_PORT=5678  -e N8N_PROTOCOL=http  -e N8N_EDITOR_BASE_URL=https://n8n.vw-dev.com -e WEBHOOK_URL=https://n8n.vw-dev.com  --restart always  docker.n8n.io/n8nio/n8n
+```
+
+- `apache`
+`n8n.vw-dev.com.conf`
+```
+<VirtualHost *:80>
+    ServerName n8n.vw-dev.com
+
+    ProxyRequests Off
+    ProxyPreserveHost On
+    ProxyVia Full
+
+    <Proxy *>
+        Require all granted
+    </Proxy>
+
+    ProxyPass / http://127.0.0.1:5678/
+    ProxyPassReverse / http://127.0.0.1:5678/
+
+    ErrorLog /var/log/httpd/n8n.vw-dev.com-error.log
+    CustomLog /var/log/httpd/n8n.vw-dev.com-access.log combined
+RewriteEngine on
+RewriteCond %{SERVER_NAME} =n8n.vw-dev.com
+RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
+</VirtualHost>
+```
+
+`n8n.vw-dev.com-le-ssl.conf`
+```
+<IfModule mod_ssl.c>
+<VirtualHost *:443>
+    ServerName n8n.vw-dev.com
+
+    ProxyRequests Off
+    ProxyPreserveHost On
+    ProxyVia Full
+
+    <Proxy *>
+        Require all granted
+    </Proxy>
+
+    ProxyPass / http://127.0.0.1:5678/
+    ProxyPassReverse / http://127.0.0.1:5678/
+
+    ErrorLog /var/log/httpd/n8n.vw-dev.com-error.log
+    CustomLog /var/log/httpd/n8n.vw-dev.com-access.log combined
+RewriteEngine on
+# Some rewrite rules in this file were disabled on your HTTPS site,
+# because they have the potential to create redirection loops.
+
+# RewriteCond %{SERVER_NAME} =n8n.vw-dev.com
+# RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
+
+
+    # ===== WebSocket (CỰC KỲ QUAN TRỌNG) =====
+    RewriteEngine On
+    RewriteCond %{HTTP:Upgrade} =websocket [NC]
+    RewriteRule /(.*) ws://127.0.0.1:5678/$1 [P,L]
+
+    RewriteCond %{HTTP:Upgrade} !=websocket [NC]
+    RewriteRule /(.*) http://127.0.0.1:5678/$1 [P,L]
+
+SSLCertificateFile /etc/letsencrypt/live/n8n.vw-dev.com/fullchain.pem
+SSLCertificateKeyFile /etc/letsencrypt/live/n8n.vw-dev.com/privkey.pem
+Include /etc/letsencrypt/options-ssl-apache.conf
+</VirtualHost>
+</IfModule>
+```
