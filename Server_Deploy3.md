@@ -209,3 +209,7 @@ RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
 </VirtualHost>
 ```
 <img width="896" height="728" alt="image" src="https://github.com/user-attachments/assets/40627c3c-1453-4b55-861a-ed45b084aae5" />
+
+
+# Lệnh kiểm tra lỗi httpd
+`sudo tail -n 120 /var/log/httpd/error_log`
