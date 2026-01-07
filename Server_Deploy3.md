@@ -213,3 +213,5 @@ RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
 
 # Lệnh kiểm tra lỗi httpd
 `sudo tail -n 120 /var/log/httpd/error_log`
+
+<img width="1870" height="707" alt="image" src="https://github.com/user-attachments/assets/7c37fb37-72ae-4c3c-9827-b78f919bf3db" />
