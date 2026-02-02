@@ -215,3 +215,9 @@ RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
 `sudo tail -n 120 /var/log/httpd/error_log`
 
 <img width="1870" height="707" alt="image" src="https://github.com/user-attachments/assets/7c37fb37-72ae-4c3c-9827-b78f919bf3db" />
+
+
+# Lệnh xem toàn bộ port trên server
+- `sudo ss -tulpn`
+
+<img width="1807" height="777" alt="image" src="https://github.com/user-attachments/assets/441de2a5-3e7e-4a1b-bfe7-7665e1b3cb73" />
