@@ -221,3 +221,6 @@ RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
 - `sudo ss -tulpn`
 
 <img width="1807" height="777" alt="image" src="https://github.com/user-attachments/assets/441de2a5-3e7e-4a1b-bfe7-7665e1b3cb73" />
+
+# Lệnh kiểm tra bảo mật next (cụ thể là update luôn)
+`npx fix-react2shell-next`
