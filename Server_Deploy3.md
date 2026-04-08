@@ -134,6 +134,8 @@ Ví  dụ
 - `pm2 startup`: khởi động lại khi reboot
 <img width="1815" height="193" alt="image" src="https://github.com/user-attachments/assets/3b2b7dd5-4bb9-448c-b68a-0a5e92b448d7" />
 
+- Ví dụ lệnh pm2 chạy ngay `pm2 start "php artisan queue:work --sleep=3 --tries=3 --timeout=90" --name awa-job-dev --cwd /var/www/awa/awa`
+
 # Gia hạn toàn bộ ssl
 - `sudo certbot renew --post-hook "systemctl reload httpd"`
 
