@@ -226,3 +226,7 @@ RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
 
 # Lệnh kiểm tra bảo mật next (cụ thể là update luôn)
 `npx fix-react2shell-next`
+
+# Lệnh gọi thẳng vào node không cần `nvm use`
+`env PATH=/home/deploy/.nvm/versions/node/{version}/bin:$PATH {lệnh}`
+- Example: `env PATH=/home/deploy/.nvm/versions/node/v20.20.1/bin:$PATH npm run build`
