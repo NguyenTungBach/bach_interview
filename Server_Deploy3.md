@@ -230,3 +230,25 @@ RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
 # Lệnh gọi thẳng vào node không cần `nvm use`
 `env PATH=/home/deploy/.nvm/versions/node/{version}/bin:$PATH {lệnh}`
 - Example: `env PATH=/home/deploy/.nvm/versions/node/v20.20.1/bin:$PATH npm run build`
+
+# Lệnh SQL
+```
+SET FOREIGN_KEY_CHECKS = 0;
+
+SET SESSION group_concat_max_len = 1000000;
+
+SET @tables = NULL;
+
+SELECT GROUP_CONCAT(CONCAT('`', table_name, '`'))
+INTO @tables
+FROM information_schema.tables
+WHERE table_schema = 'dx_driveelink_stg';
+
+SET @tables = CONCAT('DROP TABLE IF EXISTS ', @tables);
+
+PREPARE stmt FROM @tables;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;
+
+SET FOREIGN_KEY_CHECKS = 1;
+```
