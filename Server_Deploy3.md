@@ -252,3 +252,18 @@ DEALLOCATE PREPARE stmt;
 
 SET FOREIGN_KEY_CHECKS = 1;
 ```
+
+# Xử lý lỡ đẩy code lên git rồi
+<img width="1917" height="960" alt="image" src="https://github.com/user-attachments/assets/d2eb8546-f885-46c6-99ac-7337d2541f9e" />
+
+- Chạy `git reset --soft HEAD~1` để bỏ commit cũ
+<img width="962" height="691" alt="image" src="https://github.com/user-attachments/assets/b6dda00c-3e09-4fd1-971e-25a529e71b33" />
+
+- `git reset HEAD` bỏ các file định đẩy lên
+<img width="920" height="321" alt="image" src="https://github.com/user-attachments/assets/6eb5d6a3-7125-47bc-89c2-cda8b3ec2de3" />
+<img width="906" height="672" alt="image" src="https://github.com/user-attachments/assets/6e7f5293-323e-4ce3-ad52-72bddfdb90ee" />
+
+- Sau đó cứ git add + commit bình thường
+
+- `git push --force-with-lease origin {nhánh}` để ghi đè các commit lên nhánh
+<img width="981" height="435" alt="image" src="https://github.com/user-attachments/assets/64220334-1d6c-46dd-9997-7f4d44a02ab2" />
