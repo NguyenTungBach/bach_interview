@@ -16,3 +16,33 @@
 - Call api: restfull webservice (body truyền đi là json) và soap(xml)
 - File: ví dụ gọi vào file để đọc ra các giao dịch cần đối soát trong ngày. Không lo cơ chế authen mà chỉ cần authen File server
 - Message queue: giao tiếp thông qua một thằng thứ 3 như rabbitMQ, redit, kapca  
+
+# 4. Gateway
+- Là 1 api trung gian để gọi đến các api từ service khác. 
+Giả sử có một service quản lý dân cư
+- Phía FE sẽ không gọi trực tiếp `https://resident-service.com/users/1` mà gọi `https://api-gateway.com/users/1`
+- Bên trong Gateway 
+```
+GET /users/1
+        │
+        ▼
+Forward đến:
+https://resident-service.com/users/1
+trả về
+{
+  "id": 1,
+  "name": "Lê Văn A"
+}
+```
+
+Ví dụ bằng code
+```
+// Gateway
+app.get("/users/:id", async (req, res) => {
+    const result = await fetch(
+        `https://resident-service.com/users/${req.params.id}`
+    );
+
+    res.json(await result.json());
+});
+```
