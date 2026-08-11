@@ -26,6 +26,23 @@ cùng 1 phương thức đó nhưng được thể hiện nhiều cách khác*
 
 - heap(lỗi: out of memory: tràn bộ nhớ, xảy ra khi tạo new đối tượng không đủ): chứa các kiểu dữ liệu **object**  
 - stack(stack overflow): nhỏ hơn heap, thường lưu kiểu dữ liệu nguyên thủy
+- Note 1:
+  - C++ (Tốc độ làm vua):
+    - Ưu điểm: Chạy thẳng trên phần cứng nên cực nhanh.
+    - Nhược điểm: Dễ bị Out of memory hoặc Null pointer vì lập trình viên phải tự cấp phát và tự xóa bộ nhớ bằng tay. Quên xóa là tràn ram.
+  - Java (An toàn là trên hết):
+    - Ưu điểm: Không lo tràn ram nhờ có Garbage Collector (Bộ thu gom rác) tự động tìm và xóa các biến không còn dùng.
+    - Nhược điểm: Hiệu năng chậm hơn vì máy phải tốn thời gian và tài nguyên để chạy ngầm bộ thu gom rác này.
+  - Tóm lại: C++ tối ưu tốc độ, phó mặc bộ nhớ cho lập trình viên; Java tối ưu an toàn, hy sinh một chút tốc độ để máy tự quản lý bộ nhớ.
+
+- Note 2:
+  - Java không có con trỏ để: ĐẢM BẢO AN TOÀN
+    - Ngăn lập trình viên can thiệp bậy bạ vào bộ nhớ RAM
+    - Tránh các lỗi chí mạng như hacker hack bộ nhớ, làm sập ứng dụng hoặc sập hệ thống ngân hàng/doanh nghiệp
+  - C++ có con trỏ để: ĐẠT HIỆU NĂNG TỐI ĐA
+    - Cho phép lập trình viên toàn quyền điều khiển và giao tiếp trực tiếp với phần cứng máy tính.
+    - Tối ưu hóa tốc độ xử lý đến từng mili-giây, cực kỳ cần thiết cho game đồ họa nặng, hệ điều hành hoặc robot
+  - Tóm lại: Java bỏ con trỏ để "chậm mà chắc", C++ giữ con trỏ để "nhanh và liều" 
 
 ### 6.Luồng
 
