@@ -234,23 +234,26 @@ RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
 # Lệnh SQL
 ```
 SET FOREIGN_KEY_CHECKS = 0;
-
 SET SESSION group_concat_max_len = 1000000;
-
 SET @tables = NULL;
 
-SELECT GROUP_CONCAT(CONCAT('`', table_name, '`'))
+-- SỬA Ở ĐÂY: Thêm tên database 'log_nagareyama_full_time_stg' trước từng tên bảng
+SELECT GROUP_CONCAT(CONCAT('`log_nagareyama_full_time_stg`.`', table_name, '`'))
 INTO @tables
 FROM information_schema.tables
-WHERE table_schema = 'dx_driveelink_stg';
+WHERE table_schema = 'log_nagareyama_full_time_stg';
 
+-- Kiểm tra trước chuỗi lệnh sắp chạy để đảm bảo an toàn
+SELECT @tables; 
+
+-- Chỉ chạy các lệnh dưới đây khi chuỗi @tables đã hiển thị đúng database stg
 SET @tables = CONCAT('DROP TABLE IF EXISTS ', @tables);
-
 PREPARE stmt FROM @tables;
 EXECUTE stmt;
 DEALLOCATE PREPARE stmt;
 
 SET FOREIGN_KEY_CHECKS = 1;
+
 ```
 
 # Xử lý lỡ đẩy code lên git rồi
