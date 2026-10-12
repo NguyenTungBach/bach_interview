@@ -30,3 +30,10 @@ Thay vì cài đặt các môi trường để chạy, thì Docker sẽ giúp ta
 - None: tắt hoàn toàn mạng của container
 
 ## Lệnh thông dụng
+- `docker ps` câu lệnh trên để kiểm tra xem có những Container nào đang chạy
+- `docker stop ID_contant`: dừng chạy docker
+- `docker rm ID_contant`: xóa docker trong CONTAINER
+- `docker build -t TênDocker .`: Build lại docker hoặc tạo. Lưu ý **bắt buộc phải vào project**
+- `docker run -d -p port:port TênDocker`: Chạy docker. Lưu ý port phải không tồn tại trong `docker ps` và tên docker là ở `docker build -t TênDocker .`
+- `docker logs`: 
+- `docker exec -it`: Chui vào bên trong Container để gõ lệnh trực tiếp.
