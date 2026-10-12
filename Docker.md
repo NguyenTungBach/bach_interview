@@ -11,8 +11,8 @@ Thay vì cài đặt các môi trường để chạy, thì Docker sẽ giúp ta
 - Container là các tiến trình chạy từ image. Ngoài ra thì muốn chạy container thì cần hệ điều hành linux vì thế nếu chạy trên Window sẽ cần cài máy ảo linux để chạy container
 
 ## Docker khác gì so với Máy ảo (VM)
-- Docker thì nó được build sẵn các môi trường
-- Máy ảo là một hệ điều hành riêng nên rất nặng và chậm
+- Docker dùng chung hệ điều hành Linux có sẵn nên cực kỳ nhẹ và chạy ngay lập tức
+- Máy ảo là một hệ điều hành nên rất nặng và chậm
 
 ## Docker Compose là gì
 - Docker Compose dùng để quản lý nhiều container cùng lúc và chạy các lệnh docker.
@@ -25,7 +25,7 @@ Thay vì cài đặt các môi trường để chạy, thì Docker sẽ giúp ta
 - Để gán các cấu hình hay dữ liệu trong container. Đảm bảo sau khi container mất đi thì những dữ liệu gán đó không bị mất
 
 ## Các loại Network cơ bản trong Docker?
-- Bridge: định, cô lập cho các container trên cùng máy chủ
+- Bridge: mặc định, cô lập cho các container trên cùng máy chủ
 - Host: dùng chung mạng với máy chủ
 - None: tắt hoàn toàn mạng của container
 
