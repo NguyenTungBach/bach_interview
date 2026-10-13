@@ -20,6 +20,10 @@ Thay vì cài đặt các môi trường để chạy, thì Docker sẽ giúp ta
 ## Docker Hub là gì?
 - Là kho lưu trữ các Docker Image trên mạng, cho phép người dùng có thể tải về để sử dụng
 
+## Phân biệt CMD và ENTRYPOINT (gợi ý đều là cấu hình trong Dockerfile)
+- CMD: là các lệnh khi start container
+- ENTRYPOINT: dòng lệnh cố định của image khi gõ lệnh docker run <image>
+
 # Lưu trữ & Mạng
 ## Docker Volume để làm gì?
 - Để gán các cấu hình hay dữ liệu trong container. Đảm bảo sau khi container mất đi thì những dữ liệu gán đó không bị mất
